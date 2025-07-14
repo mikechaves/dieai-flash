@@ -22,7 +22,7 @@ Runs in any modern browser—no legacy plugins required.
 ```text
 dieai-flash/
 ├── assets/
-│   └── dieai.swf      # original Flash build
+│   └── DieAI.swf      # original Flash build
 ├── index.html         # Ruffle loader
 ├── README.md          # this file
 └── LICENSE            # MIT by default
