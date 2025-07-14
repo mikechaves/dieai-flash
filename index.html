@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>DieAI – Flash Revival</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Quick dark backdrop and center alignment -->
+  <style>
+    :root {
+      --accent: #0f0;           /* neon green accent */
+      --bg: #111;               /* deep charcoal */
+      --txt: #eee;              /* light text */
+    }
+    * { box-sizing: border-box; }
+    html,body { height: 100%; margin: 0; background: var(--bg); color: var(--txt); font-family: Arial, Helvetica, sans-serif; }
+    main { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 1rem; }
+    ruffle-player { width: 100%; max-width: 800px; height: 600px; border: 2px solid var(--accent); box-shadow: 0 0 20px var(--accent); }
+    footer { font-size: 0.8rem; color: #888; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <!-- Load Ruffle from CDN -->
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+  <main>
+    <!-- Your Flash game -->
+    <ruffle-player src="assets/dieai.swf"></ruffle-player>
+
+    <footer>
+      Play more projects at <a href="https://mikechaves.io" target="_blank" rel="noopener">mikechaves.io</a>
+    </footer>
+  </main>
+</body>
+</html>
