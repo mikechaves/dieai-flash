@@ -15,7 +15,35 @@
     * { box-sizing: border-box; }
     html,body { height: 100%; margin: 0; background: var(--bg); color: var(--txt); font-family: Arial, Helvetica, sans-serif; }
     main { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 1rem; }
-    ruffle-player { width: 100%; max-width: 1000px; height: 600px; border: 2px solid var(--accent); box-shadow: 0 0 20px var(--accent); }
+    #ruffle {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
+    #ruffle > * {
+      width: 100%;
+      aspect-ratio: 5/3.2;
+      max-width: 1000px;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 24px var(--accent), 0 2px 24px #000a;
+      background: #181818;
+      border-radius: 12px;
+      transition: box-shadow 0.2s;
+    }
+    @media (max-width: 700px) {
+      #ruffle {
+        max-width: 98vw;
+        min-height: 180px;
+      }
+      #ruffle > * {
+        max-width: 98vw;
+        border-radius: 8px;
+      }
+    }
     footer { font-size: 0.8rem; color: #888; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -24,30 +52,27 @@
 
 <body>
   <main>
-    <!-- Your Flash game -->
-    <ruffle-player src="assets/DieAI.swf"></ruffle-player>
+    <!-- My Flash game -->
+    <div id="ruffle"></div>
     <footer>
       Play more projects at <a href="https://mikechaves.io" target="_blank" rel="noopener">mikechaves.io</a>
     </footer>
   </main>
   <!-- Load Ruffle from CDN -->
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-  <div id="ruffle"></div>
-
-<script>
-  window.RufflePlayer = window.RufflePlayer || {};
-  window.addEventListener("DOMContentLoaded", () => {
-    let ruffle = window.RufflePlayer.newest();
-    let player = ruffle.createPlayer();
-    let container = document.getElementById("ruffle"); // Assuming you used "ruffle" as the div ID
-    container.appendChild(player);
-    player.load({
-      url: "assets/DieAI.swf", // Replace with the actual path to your SWF file
-      backgroundColor: "#000",
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("DOMContentLoaded", () => {
+      let ruffle = window.RufflePlayer.newest();
+      let player = ruffle.createPlayer();
+      let container = document.getElementById("ruffle"); // Assuming you used "ruffle" as the div ID
+      container.appendChild(player);
+      player.load({
+        url: "assets/DieAI.swf", // Replace with the actual path to your SWF file
+        backgroundColor: "#000",
+      });
+      // Remove JS width/height styling; CSS now controls size
     });
-    player.style.width = "1000px"; // Adjust width as needed
-    player.style.height = "600px"; // Adjust height as needed
-  });
-</script>
+  </script>
 </body>
 </html>
