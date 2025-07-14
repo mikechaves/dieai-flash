@@ -22,11 +22,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 300px;
+      min-height: 600px;
     }
     #ruffle > * {
       width: 100%;
-      aspect-ratio: 5/3.2;
+      aspect-ratio: 5/3;
       max-width: 1000px;
       border: 2px solid var(--accent);
       box-shadow: 0 0 24px var(--accent), 0 2px 24px #000a;
@@ -37,7 +37,7 @@
     @media (max-width: 700px) {
       #ruffle {
         max-width: 98vw;
-        min-height: 180px;
+        min-height: calc(98vw * 3 / 5);
       }
       #ruffle > * {
         max-width: 98vw;
