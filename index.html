@@ -32,5 +32,22 @@
   </main>
   <!-- Load Ruffle from CDN -->
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <div id="ruffle"></div>
+
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.addEventListener("DOMContentLoaded", () => {
+    let ruffle = window.RufflePlayer.newest();
+    let player = ruffle.createPlayer();
+    let container = document.getElementById("ruffle"); // Assuming you used "ruffle" as the div ID
+    container.appendChild(player);
+    player.load({
+      url: "assets/DieAI.swf", // Replace with the actual path to your SWF file
+      backgroundColor: "#000",
+    });
+    player.style.width = "1000px"; // Adjust width as needed
+    player.style.height = "600px"; // Adjust height as needed
+  });
+</script>
 </body>
 </html>
