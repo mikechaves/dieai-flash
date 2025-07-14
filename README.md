@@ -3,11 +3,7 @@
 This repo hosts a **Ruffle-powered** resurrection of my 2018 Flash game **DieAI**.  
 Runs in any modern browser—no legacy plugins required.
 
-<div align="center">
-  <a href="https://mikechaves.github.io/dieai-flash/">
-    <img src="https://img.shields.io/badge/Play-Now-Live-Demo-brightgreen" alt="Play DieAI">
-  </a>
-</div>
+[![Play Now – Live Demo](https://img.shields.io/badge/Play%20Now-Live%20Demo-brightgreen)](https://mikechaves.github.io/dieai-flash/)
 
 ---
 
@@ -58,7 +54,13 @@ All kinds of help are welcome—bug reports, feature ideas, documentation fixes,
    git checkout -b feature/my-new-feature
    ```
 2. **Commit** your changes with clear messages:
+   ```bash
+   git commit -m "Fix: collision bug in level 2"
+   ```
 3. **Push** your branch and open a pull request:
+   ```bash
+   git push origin feature/my-new-feature
+   ```
 4. Fill in the PR template. The maintainers will review, request tweaks if needed, and merge.
 > **Coding style:** keep functions small, use descriptive variable names, and run `npm run lint` if you add any JS helpers.
 
