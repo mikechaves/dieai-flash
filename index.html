@@ -13,16 +13,17 @@
       --txt: #eee;              /* light text */
     }
     * { box-sizing: border-box; }
-    html,body { height: 100%; margin: 0; background: var(--bg); color: var(--txt); font-family: Arial, Helvetica, sans-serif; }
+    html,body { height: 100%; margin: 0; background: #000; color: var(--txt); font-family: Arial, Helvetica, sans-serif; }
     main { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 1rem; }
     #ruffle {
-      /*width: 100%;*/
       max-width: 1000px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 600px;
+      background: #000;
+      overflow: hidden;
     }
     #ruffle > * {
       width: 100%;
@@ -30,7 +31,7 @@
       max-width: 1000px;
       border: 2px solid var(--accent);
       box-shadow: 0 0 24px var(--accent), 0 2px 24px #000a;
-      background: #181818;
+      background: #000;
       border-radius: 12px;
       transition: box-shadow 0.2s;
     }
@@ -59,6 +60,15 @@
     </footer>
   </main>
   <!-- Load Ruffle from CDN -->
+  <script>
+    /* Global config must exist before Ruffle loads */
+    window.RufflePlayer = {
+      config: {
+        letterbox: "on",     // keep aspect ratio & add black bars
+        backgroundColor: "#000"
+      }
+    };
+  </script>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
   <script>
     window.RufflePlayer = window.RufflePlayer || {};
