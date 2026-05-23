@@ -1,79 +1,70 @@
-# DieAI (Ruffle Web Revival)
+# DieAI
 
-This repo hosts a **Ruffle-powered** resurrection of my 2018 Flash game **DieAI**.  
-Runs in any modern browser—no legacy plugins required.
+DieAI is a Ruffle-powered web revival of my 2018 Flash game. The repo keeps the
+original ActionScript source, the exported SWF, project imagery, and a static web
+wrapper together so the game remains playable in modern browsers without Flash
+Player.
 
-[![Play Now – Live Demo](https://img.shields.io/badge/Play%20Now-Live%20Demo-brightgreen)](https://mikechaves.github.io/dieai-flash/)
+[Play the live demo](https://mikechaves.github.io/dieai-flash/)
 
----
+## How to play
 
-## 🎮 Live demo
+- `WASD` or arrow keys: move
+- `Space`: attack / interact
+- `Esc`: pause / restart
 
-👉 **Play here:** <https://mikechaves.github.io/dieai-flash/>
+If keyboard input does not respond, click once inside the game player to focus
+the Ruffle canvas.
 
-## 🕹 How to play
+## Running locally
 
-- **Arrow keys / WASD** — move  
-- **Space** — primary action (attack / interact)  
-- **Esc** — pause / restart  
+Clone the repository:
 
-## 📦 Project structure
+```bash
+git clone https://github.com/mikechaves/dieai-flash.git
+cd dieai-flash
+```
+
+Start a local static server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Open <http://localhost:8000> in a browser.
+
+## Project structure
 
 ```text
 dieai-flash/
 ├── assets/
-│   └── DieAI.swf      # original Flash build
-├── index.html         # Ruffle loader
-├── README.md          # this file
-└── LICENSE            # MIT by default
-``` 
+│   ├── DieAI.swf           # exported Flash build loaded by Ruffle
+│   ├── DieAI.html          # original Flash embed output
+│   └── images/             # screenshots and promotional artwork
+├── com/greensock/          # bundled GreenSock ActionScript dependency
+├── docs/                   # supporting project documentation
+├── lib/shoot/              # original ActionScript game source
+├── DieAI.fla               # original Flash authoring file
+├── index.html              # modern Ruffle web wrapper
+├── LICENSE
+└── README.md
+```
 
-## 🚀 Running Locally
-Clone the repository
-```bash
-git clone https://github.com/mikechaves/dieai-flash.git
-``` 
-Navigate into the directory
-```bash
-cd dieai-flash
-``` 
-Start a simple local server (requires Python 3)
-```bash
-python -m http.server 8000
-``` 
-Open http://localhost:8000 in your browser
+## Notes
 
+- The live page is intentionally static: no bundler, framework, or build step.
+- Ruffle is loaded from the public `@ruffle-rs/ruffle` package.
+- The original source files are kept in the repo for preservation and review,
+  while `assets/DieAI.swf` is the playable build used by the web wrapper.
 
-## 🤝 Contributing
-
-Thank you for your interest in improving **DieAI**!  
-All kinds of help are welcome—bug reports, feature ideas, documentation fixes, or code contributions.
-
-1. **Fork** the repo and create your branch:  
-   ```bash
-   git checkout -b feature/my-new-feature
-   ```
-2. **Commit** your changes with clear messages:
-   ```bash
-   git commit -m "Fix: collision bug in level 2"
-   ```
-3. **Push** your branch and open a pull request:
-   ```bash
-   git push origin feature/my-new-feature
-   ```
-4. Fill in the PR template. The maintainers will review, request tweaks if needed, and merge.
-> **Coding style:** keep functions small, use descriptive variable names, and run `npm run lint` if you add any JS helpers.
-
-
-## 📄 License
-
-Released under the [MIT License](LICENSE).  
-You may use, modify, and distribute this project—even for commercial purposes—provided you include the original copyright and license notice in any copies or substantial portions of the Software.
-
-## 🙌 Credits
+## Credits
 
 | Contribution | Author / Project |
-|--------------|------------------|
-| Game design, art & original ActionScript code | **Michael Chaves** |
-| Flash → Web revival (WebAssembly emulator) | [Ruffle](https://github.com/ruffle-rs/ruffle) |
-| Preservation reference & inspiration | [Flashpoint Archive](https://flashpointarchive.org/) |
+| --- | --- |
+| Game design, art, and original ActionScript code | Michael Chaves |
+| Flash runtime emulation | [Ruffle](https://ruffle.rs/) |
+| Preservation reference and inspiration | [Flashpoint Archive](https://flashpointarchive.org/) |
+
+## License
+
+Released under the [MIT License](LICENSE).

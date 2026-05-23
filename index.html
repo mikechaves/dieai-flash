@@ -2,85 +2,720 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>DieAI – Flash Revival</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DieAI - Flash Revival</title>
+  <meta
+    name="description"
+    content="Play DieAI, Michael Chaves's 2018 Flash game revived for modern browsers with Ruffle."
+  />
+  <meta property="og:title" content="DieAI - Flash Revival" />
+  <meta
+    property="og:description"
+    content="A playable Ruffle-powered revival of the 2018 Flash game DieAI."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/main-image.png" />
+  <meta name="theme-color" content="#02070b" />
+  <link
+    rel="icon"
+    href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%2302070b"/><text x="32" y="42" fill="%2305e6ff" font-family="Arial" font-size="28" font-weight="700" text-anchor="middle">AI</text></svg>'
+  />
 
-  <!-- Quick dark backdrop and center alignment -->
   <style>
     :root {
-      --accent: #0f0;           /* neon green accent */
-      --bg: #111;               /* deep charcoal */
-      --txt: #eee;              /* light text */
+      color-scheme: dark;
+      --bg: #02070b;
+      --bg-strong: #000;
+      --panel: rgba(3, 13, 18, 0.82);
+      --panel-strong: rgba(0, 0, 0, 0.72);
+      --line: rgba(0, 229, 255, 0.42);
+      --line-soft: rgba(120, 245, 255, 0.18);
+      --accent: #05e6ff;
+      --accent-strong: #36f6ff;
+      --danger: #ff1838;
+      --text: #f2fbff;
+      --muted: #a4b8bf;
+      --shadow: 0 22px 80px rgba(0, 229, 255, 0.16);
+      --max: 1180px;
     }
-    * { box-sizing: border-box; }
-    html,body { height: 100%; margin: 0; background: #000; color: var(--txt); font-family: Arial, Helvetica, sans-serif; }
-    main { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 1rem; }
-    #ruffle {
-      max-width: 1000px;
-      margin: 0 auto;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100%;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      content: "";
+      background:
+        linear-gradient(180deg, rgba(2, 7, 11, 0.18), #02070b 62%),
+        linear-gradient(90deg, rgba(2, 7, 11, 0.88), rgba(2, 7, 11, 0.4) 48%, rgba(2, 7, 11, 0.82)),
+        url("assets/images/main-image.png") center top / cover no-repeat;
+    }
+
+    body::after {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      background-image:
+        linear-gradient(rgba(5, 230, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(5, 230, 255, 0.08) 1px, transparent 1px);
+      background-size: 56px 56px;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.35) 28%, transparent 86%);
+      mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.35) 28%, transparent 86%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line-soft);
+      background: rgba(2, 7, 11, 0.86);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .site-header__inner {
       display: flex;
+      width: min(100% - 32px, var(--max));
+      min-height: 64px;
+      margin: 0 auto;
       align-items: center;
-      justify-content: center;
-      min-height: 600px;
-      background: #000;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .brand__mark {
+      display: inline-grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border: 1px solid var(--accent);
+      background: #00181f;
+      color: var(--accent);
+      font-size: 0.78rem;
+      box-shadow: 0 0 22px rgba(5, 230, 255, 0.38);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--accent-strong);
+      outline: none;
+    }
+
+    main {
       overflow: hidden;
     }
+
+    .play-hero {
+      display: grid;
+      min-height: calc(100svh - 64px);
+      padding: clamp(22px, 4vw, 48px) 0 clamp(26px, 5vw, 56px);
+      align-content: center;
+    }
+
+    .hero-stack {
+      display: grid;
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      gap: clamp(18px, 3vw, 28px);
+    }
+
+    .hero-copy {
+      display: grid;
+      max-width: 850px;
+      gap: 12px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 740px;
+      font-size: clamp(2.25rem, 7vw, 5.6rem);
+      line-height: 0.94;
+      letter-spacing: 0;
+      text-shadow: 0 0 32px rgba(5, 230, 255, 0.38);
+      text-transform: uppercase;
+    }
+
+    .hero-copy p {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.5vw, 1.18rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--accent);
+      padding: 0 18px;
+      background: var(--accent);
+      color: #001014;
+      font-size: 0.9rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 0 28px rgba(5, 230, 255, 0.28);
+    }
+
+    .button--secondary {
+      background: rgba(0, 0, 0, 0.36);
+      color: var(--text);
+      box-shadow: none;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      border-color: var(--accent-strong);
+      background: var(--accent-strong);
+      color: #001014;
+      outline: none;
+    }
+
+    .button--secondary:hover,
+    .button--secondary:focus-visible {
+      background: rgba(5, 230, 255, 0.12);
+      color: var(--accent-strong);
+    }
+
+    .play-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .game-stage,
+    .controls-panel,
+    .story-panel {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .game-stage {
+      display: grid;
+      gap: 12px;
+      padding: clamp(10px, 1.6vw, 16px);
+    }
+
+    #ruffle {
+      display: grid;
+      width: 100%;
+      max-width: 1000px;
+      aspect-ratio: 5 / 3;
+      margin: 0 auto;
+      place-items: center;
+      scroll-margin-top: 92px;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+      background: #000;
+      box-shadow:
+        inset 0 0 34px rgba(0, 0, 0, 0.9),
+        0 0 30px rgba(5, 230, 255, 0.3);
+    }
+
     #ruffle > * {
       width: 100%;
-      aspect-ratio: 5/3;
-      max-width: 1000px;
-      border: 2px solid var(--accent);
-      box-shadow: 0 0 24px var(--accent), 0 2px 24px #000a;
+      height: 100%;
+    }
+
+    .player-message {
+      display: grid;
+      min-height: 100%;
+      place-items: center;
+      padding: 24px;
+      color: var(--muted);
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .player-message strong {
+      color: var(--accent);
+    }
+
+    .player-status {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .player-status.is-ready {
+      color: var(--accent-strong);
+    }
+
+    .player-status.is-error {
+      color: #ff8c9c;
+    }
+
+    .controls-panel {
+      display: grid;
+      align-content: start;
+      gap: 16px;
+      padding: 18px;
+    }
+
+    .controls-panel h2,
+    .story-panel h2,
+    .section-heading h2 {
+      color: var(--text);
+      font-size: clamp(1.35rem, 2vw, 2rem);
+      line-height: 1;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .control-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .control-list li {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    kbd {
+      display: inline-flex;
+      min-height: 32px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.56);
+      color: var(--accent);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      box-shadow: inset 0 -2px 0 rgba(5, 230, 255, 0.18);
+    }
+
+    .panel-note {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 14px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .content-section {
+      padding: clamp(48px, 7vw, 86px) 0;
+      scroll-margin-top: 80px;
+      background: linear-gradient(180deg, rgba(2, 7, 11, 0.28), rgba(2, 7, 11, 0.94));
+    }
+
+    .section-inner {
+      display: grid;
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      gap: 22px;
+    }
+
+    .section-heading {
+      display: grid;
+      max-width: 760px;
+      gap: 10px;
+    }
+
+    .section-heading p,
+    .story-panel p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .screenshot {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .screenshot img {
+      aspect-ratio: 5 / 3;
+      border: 1px solid var(--line);
       background: #000;
-      border-radius: 12px;
-      transition: box-shadow 0.2s;
+      object-fit: cover;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
     }
-    @media (max-width: 700px) {
-      #ruffle {
-        max-width: 98vw;
-        min-height: calc(98vw * 3 / 5);
+
+    .screenshot figcaption {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .story-panel {
+      display: grid;
+      align-content: center;
+      gap: 14px;
+      padding: clamp(20px, 3vw, 34px);
+    }
+
+    .story-image {
+      min-height: 320px;
+      border: 1px solid var(--line);
+      background: #000 url("assets/images/intro-hacked.png") center / cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line-soft);
+      padding: 26px 0;
+      background: #02070b;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .site-footer__inner {
+      display: flex;
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .site-footer a {
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .site-footer a:hover,
+    .site-footer a:focus-visible {
+      color: var(--accent-strong);
+      outline: none;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 980px) {
+      .play-layout,
+      .story-grid {
+        grid-template-columns: 1fr;
       }
-      #ruffle > * {
-        max-width: 98vw;
-        border-radius: 8px;
+
+      .controls-panel {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.9fr);
+      }
+
+      .controls-panel h2 {
+        grid-column: 1 / -1;
+      }
+
+      .panel-note {
+        border-top: 0;
+        border-left: 1px solid var(--line-soft);
+        padding-top: 0;
+        padding-left: 16px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
-    footer { font-size: 0.8rem; color: #888; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    @media (max-width: 680px) {
+      body::before {
+        background-position: center top;
+      }
+
+      .site-header__inner,
+      .site-footer__inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 0;
+      }
+
+      .site-header__inner {
+        min-height: 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .play-hero {
+        min-height: 0;
+      }
+
+      .actions {
+        width: 100%;
+      }
+
+      .button {
+        flex: 1 1 180px;
+      }
+
+      .controls-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .panel-note {
+        border-top: 1px solid var(--line-soft);
+        border-left: 0;
+        padding-top: 14px;
+        padding-left: 0;
+      }
+
+      .control-list li {
+        grid-template-columns: 76px minmax(0, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-image {
+        min-height: 230px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#play" aria-label="DieAI home">
+        <span class="brand__mark" aria-hidden="true">AI</span>
+        <span>DieAI</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#play">Play</a>
+        <a href="#screens">Screens</a>
+        <a href="https://github.com/mikechaves/dieai-flash" target="_blank" rel="noopener">Source</a>
+        <a href="https://mikechaves.io" target="_blank" rel="noopener">Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <!-- My Flash game -->
-    <div id="ruffle"></div>
-    <footer>
-      Play more projects at <a href="https://mikechaves.io" target="_blank" rel="noopener">mikechaves.io</a>
-    </footer>
+    <section class="play-hero" id="play" aria-labelledby="page-title">
+      <div class="hero-stack">
+        <div class="hero-copy">
+          <h1 id="page-title">DieAI</h1>
+          <p>
+            A 2018 Flash game revived with Ruffle so the original SWF can run in modern browsers.
+            Stop AICorp's Buddy Bots before the launch gets out of control.
+          </p>
+          <div class="actions" aria-label="Project links">
+            <a class="button" href="#ruffle">Start game</a>
+            <a class="button button--secondary" href="https://github.com/mikechaves/dieai-flash" target="_blank" rel="noopener">View source</a>
+          </div>
+        </div>
+
+        <div class="play-layout">
+          <div class="game-stage" aria-label="Playable DieAI game">
+            <div id="ruffle" aria-live="polite">
+              <div class="player-message"><strong>Loading</strong>&nbsp;Ruffle player</div>
+            </div>
+            <p class="player-status" id="player-status">
+              The game loads the original Flash build through Ruffle. Click the player once if keyboard input is not active.
+            </p>
+          </div>
+
+          <aside class="controls-panel" aria-labelledby="controls-title">
+            <h2 id="controls-title">Controls</h2>
+            <ul class="control-list">
+              <li><kbd>WASD</kbd><span>Move around the arena</span></li>
+              <li><kbd>Arrows</kbd><span>Alternate movement controls</span></li>
+              <li><kbd>Space</kbd><span>Attack and interact</span></li>
+              <li><kbd>Esc</kbd><span>Pause or restart</span></li>
+            </ul>
+            <p class="panel-note">
+              Ruffle emulates the Flash runtime in WebAssembly, preserving the original ActionScript game without a browser plugin.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="screens" aria-labelledby="screens-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <h2 id="screens-title">Game Screens</h2>
+          <p>
+            DieAI keeps its original Flash-era artwork, chunky type, neon grid, and robot factory setting intact.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="screenshot">
+            <img src="assets/images/start-screen.png" alt="DieAI start screen with a neon grid and play prompt" loading="lazy" />
+            <figcaption>Start screen</figcaption>
+          </figure>
+          <figure class="screenshot">
+            <img src="assets/images/intro-good.png" alt="Story intro showing the Buddy Bot delivery advertisement" loading="lazy" />
+            <figcaption>AICorp launch</figcaption>
+          </figure>
+          <figure class="screenshot">
+            <img src="assets/images/level-one.png" alt="Level one gameplay in Sector 12 with robots entering from both sides" loading="lazy" />
+            <figcaption>Sector 12</figcaption>
+          </figure>
+          <figure class="screenshot">
+            <img src="assets/images/game-over.png" alt="DieAI game over screen with red text over the neon grid" loading="lazy" />
+            <figcaption>Game over</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="preservation-title">
+      <div class="section-inner story-grid">
+        <div class="story-panel">
+          <h2 id="preservation-title">Preserved as a Playable Artifact</h2>
+          <p>
+            This project keeps the original source files, ActionScript classes, GreenSock dependency, exported SWF,
+            and modern web wrapper together so the game remains inspectable and playable.
+          </p>
+          <p>
+            The browser page is deliberately lightweight: static HTML, no build step, and a hosted Ruffle runtime.
+          </p>
+        </div>
+        <div class="story-image" role="img" aria-label="Hacked AICorp intro screen from DieAI"></div>
+      </div>
+    </section>
   </main>
-  <!-- Load Ruffle from CDN -->
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Designed and built by Michael Chaves.</span>
+      <a href="https://mikechaves.io" target="_blank" rel="noopener">More projects at mikechaves.io</a>
+    </div>
+  </footer>
+
   <script>
-    /* Global config must exist before Ruffle loads */
     window.RufflePlayer = {
       config: {
-        letterbox: "on",     // keep aspect ratio & add black bars
-        backgroundColor: "#000"
+        backgroundColor: "#000000",
+        letterbox: "on",
+        warnOnUnsupportedContent: false
       }
     };
   </script>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
   <script>
-    window.RufflePlayer = window.RufflePlayer || {};
-    window.addEventListener("DOMContentLoaded", () => {
-      let ruffle = window.RufflePlayer.newest();
-      let player = ruffle.createPlayer();
-      let container = document.getElementById("ruffle"); // Assuming you used "ruffle" as the div ID
-      container.appendChild(player);
-      player.load({
-        url: "assets/DieAI.swf", // Replace with the actual path to your SWF file
-        backgroundColor: "#000",
-      });
+    window.addEventListener("DOMContentLoaded", async () => {
+      const container = document.getElementById("ruffle");
+      const status = document.getElementById("player-status");
+
+      try {
+        const ruffle = window.RufflePlayer && window.RufflePlayer.newest();
+
+        if (!ruffle) {
+          throw new Error("Ruffle did not initialize.");
+        }
+
+        const player = ruffle.createPlayer();
+        player.setAttribute("aria-label", "Playable DieAI Flash game");
+        container.replaceChildren(player);
+
+        await player.load({
+          url: "assets/DieAI.swf",
+          backgroundColor: "#000000"
+        });
+
+        status.textContent = "Game loaded. Click inside the player to focus controls, then use WASD, arrows, space, or escape.";
+        status.classList.add("is-ready");
+      } catch (error) {
+        container.innerHTML = '<div class="player-message"><strong>Ruffle failed to load.</strong>&nbsp;Refresh the page or try again later.</div>';
+        status.textContent = error.message || "Ruffle could not load the game.";
+        status.classList.add("is-error");
+      }
     });
   </script>
 </body>
