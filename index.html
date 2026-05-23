@@ -755,7 +755,7 @@
         status.textContent = "Game loaded. Click inside the player to focus controls, then use WASD, arrows, space, or escape.";
         status.classList.add("is-ready");
       } catch (error) {
-        showPlayerMessage("Ruffle failed to load", "Refresh the page or try again from a local web server.");
+        showPlayerMessage("Ruffle failed to load", "Check your connection and refresh the page, or try again later.");
         status.textContent = error.message || "Ruffle could not load the game.";
         status.classList.add("is-error");
       }

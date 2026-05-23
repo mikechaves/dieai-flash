@@ -33,8 +33,9 @@ python3 -m http.server 8000
 
 Open <http://localhost:8000> in a browser.
 
-Do not open `index.html` directly from Finder. Ruffle cannot run the SWF from a
-`file://` URL because browsers block required runtime features for local files.
+Do not open `index.html` directly from your file manager. Ruffle cannot run the
+SWF from a `file://` URL because browsers block required runtime features for
+local files.
 
 ## Project structure
 
