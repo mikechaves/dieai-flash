@@ -290,6 +290,7 @@
       display: grid;
       min-height: 100%;
       place-items: center;
+      gap: 12px;
       padding: 24px;
       color: var(--muted);
       font-weight: 800;
@@ -299,6 +300,19 @@
 
     .player-message strong {
       color: var(--accent);
+    }
+
+    .player-message span {
+      max-width: 560px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .player-message code {
+      color: var(--accent-strong);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
     }
 
     .player-status {
@@ -687,13 +701,42 @@
       }
     };
   </script>
-  <script src="https://unpkg.com/@ruffle-rs/ruffle@0.2.0"></script>
   <script>
     window.addEventListener("DOMContentLoaded", async () => {
+      const RUFFLE_SRC = "https://unpkg.com/@ruffle-rs/ruffle@0.2.0";
+      const SWF_URL = "assets/DieAI.swf";
       const container = document.getElementById("ruffle");
       const status = document.getElementById("player-status");
 
+      const showPlayerMessage = (title, message) => {
+        container.innerHTML = `
+          <div class="player-message">
+            <strong>${title}</strong>
+            <span>${message}</span>
+          </div>
+        `;
+      };
+
+      const loadRuffleScript = () => new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = RUFFLE_SRC;
+        script.onload = resolve;
+        script.onerror = () => reject(new Error("Ruffle could not be downloaded."));
+        document.head.appendChild(script);
+      });
+
       try {
+        if (window.location.protocol === "file:") {
+          showPlayerMessage(
+            "Local server required",
+            'Ruffle cannot run this SWF from a file URL. Start <code>python3 -m http.server 8000</code>, then open <code>http://localhost:8000</code>.'
+          );
+          status.textContent = "Open this project through a local web server instead of opening index.html directly.";
+          status.classList.add("is-error");
+          return;
+        }
+
+        await loadRuffleScript();
         const ruffle = window.RufflePlayer && window.RufflePlayer.newest();
 
         if (!ruffle) {
@@ -705,14 +748,14 @@
         container.replaceChildren(player);
 
         await player.load({
-          url: "assets/DieAI.swf",
+          url: SWF_URL,
           backgroundColor: "#000000"
         });
 
         status.textContent = "Game loaded. Click inside the player to focus controls, then use WASD, arrows, space, or escape.";
         status.classList.add("is-ready");
       } catch (error) {
-        container.innerHTML = '<div class="player-message"><strong>Ruffle failed to load.</strong>&nbsp;Refresh the page or try again later.</div>';
+        showPlayerMessage("Ruffle failed to load", "Check your connection and refresh the page, or try again later.");
         status.textContent = error.message || "Ruffle could not load the game.";
         status.classList.add("is-error");
       }
