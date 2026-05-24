@@ -60,14 +60,15 @@ dieai-flash/
 - Ruffle is loaded from the public `@ruffle-rs/ruffle` package.
 - The original source files are kept in the repo for preservation and review,
   while `assets/DieAI.swf` is the playable build used by the web wrapper.
+- Current and deferred project work lives in `docs/backlog/`.
 
 ## Credits
 
-| Contribution | Author / Project |
-| --- | --- |
-| Game design, art, and original ActionScript code | Michael Chaves |
-| Flash runtime emulation | [Ruffle](https://ruffle.rs/) |
-| Preservation reference and inspiration | [Flashpoint Archive](https://flashpointarchive.org/) |
+| Contribution                                     | Author / Project                                     |
+| ------------------------------------------------ | ---------------------------------------------------- |
+| Game design, art, and original ActionScript code | Michael Chaves                                       |
+| Flash runtime emulation                          | [Ruffle](https://ruffle.rs/)                         |
+| Preservation reference and inspiration           | [Flashpoint Archive](https://flashpointarchive.org/) |
 
 ## License
 
