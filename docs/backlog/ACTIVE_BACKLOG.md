@@ -40,14 +40,13 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area              | Item                                                                               | Status   | Validation / Exit Criteria                                                                                                                                            |
-| -------- | ----------------- | ---------------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P0       | Playability       | Add a repeatable browser smoke checklist for GitHub Pages and local-server launch. | TODO     | Checklist covers live demo, local `http://localhost:8000`, direct `file://` guard, SWF `200`, desktop/mobile layout, keyboard focus, and console error expectations.  |
-| P0       | Preservation      | Document SWF provenance and the rebuild path from source artifacts.                | TODO     | Docs identify the source FLA, ActionScript entry points, bundled dependencies, expected publish target, tool assumptions, and known gaps to recreating `DieAI.swf`.   |
-| P1       | Runtime Stability | Decide whether to vendor Ruffle locally instead of relying on a CDN script.        | RESEARCH | Decision note compares pinned CDN, vendored runtime, cache behavior, maintenance burden, and GitHub Pages reliability; chosen path is documented in README/backlog.   |
-| P1       | User Experience   | Improve the Ruffle-unavailable fallback beyond an error message.                   | TODO     | When Ruffle cannot load, the page still gives a useful non-playable experience with screenshots, controls, and clear next action without obscuring the rest of page.  |
-| P1       | QA Evidence       | Capture baseline screenshots for wrapper regression review.                        | TODO     | Desktop and mobile screenshots are regenerated from the live/local page, named predictably, and referenced from a lightweight QA note without committing temp output. |
-| P2       | Licensing         | Confirm public-repo licensing posture for bundled GreenSock ActionScript sources.  | TODO     | LICENSE/README notes clearly distinguish original DieAI code, bundled third-party source, and any redistribution constraints discovered during review.                |
+| Priority | Area              | Item                                                                              | Status   | Validation / Exit Criteria                                                                                                                                            |
+| -------- | ----------------- | --------------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P0       | Preservation      | Document SWF provenance and the rebuild path from source artifacts.               | TODO     | Docs identify the source FLA, ActionScript entry points, bundled dependencies, expected publish target, tool assumptions, and known gaps to recreating `DieAI.swf`.   |
+| P1       | Runtime Stability | Decide whether to vendor Ruffle locally instead of relying on a CDN script.       | RESEARCH | Decision note compares pinned CDN, vendored runtime, cache behavior, maintenance burden, and GitHub Pages reliability; chosen path is documented in README/backlog.   |
+| P1       | User Experience   | Improve the Ruffle-unavailable fallback beyond an error message.                  | TODO     | When Ruffle cannot load, the page still gives a useful non-playable experience with screenshots, controls, and clear next action without obscuring the rest of page.  |
+| P1       | QA Evidence       | Capture baseline screenshots for wrapper regression review.                       | TODO     | Desktop and mobile screenshots are regenerated from the live/local page, named predictably, and referenced from a lightweight QA note without committing temp output. |
+| P2       | Licensing         | Confirm public-repo licensing posture for bundled GreenSock ActionScript sources. | TODO     | LICENSE/README notes clearly distinguish original DieAI code, bundled third-party source, and any redistribution constraints discovered during review.                |
 
 ## Deferred
 
@@ -66,6 +65,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Project README](../../README.md)
 - [Live Demo](https://mikechaves.github.io/dieai-flash/)
 - [Modern Ruffle Wrapper](../../index.html)
+- [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md)
 - [Original ActionScript Source](../../lib/shoot/)
 - [Bundled GreenSock Dependency](../../com/greensock/)
 - [Project Screenshots](../../assets/images/)
