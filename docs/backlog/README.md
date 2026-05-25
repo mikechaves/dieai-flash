@@ -27,6 +27,8 @@ discovers new work, do one of the following in the same change:
 - [Future Backlog](./FUTURE_BACKLOG.md): deferred, long-range, or decision-bound work.
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md): repeatable playability and wrapper
   regression checks.
+- [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md): source artifact and
+  rebuild-path evidence.
 
 ## Rules
 
