@@ -29,6 +29,8 @@ discovers new work, do one of the following in the same change:
   regression checks.
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md): source artifact and
   rebuild-path evidence.
+- [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md): pinned CDN versus
+  vendored-runtime decision.
 
 ## Rules
 

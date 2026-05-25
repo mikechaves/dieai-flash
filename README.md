@@ -57,7 +57,8 @@ dieai-flash/
 ## Notes
 
 - The live page is intentionally static: no bundler, framework, or build step.
-- Ruffle is loaded from the public `@ruffle-rs/ruffle` package.
+- Ruffle is loaded from a pinned public `@ruffle-rs/ruffle` package; see
+  `docs/preservation/RUFFLE_RUNTIME_DECISION.md` for the runtime decision.
 - The original source files are kept in the repo for preservation and review,
   while `assets/DieAI.swf` is the playable build used by the web wrapper.
 - Current and deferred project work lives in `docs/backlog/`.

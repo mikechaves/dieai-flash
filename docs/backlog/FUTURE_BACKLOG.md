@@ -26,7 +26,8 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Wrapper And Runtime
 
-- [ ] Vendor Ruffle locally if CDN reliability, availability, or privacy requirements justify it.
+- [ ] Revisit vendoring Ruffle locally if CDN reliability, availability, privacy, or archival
+      requirements justify it.
 - [ ] Add a tiny static smoke-test script for the wrapper if the repo starts accepting more web
       changes.
 - [ ] Add optional service-worker caching for the SWF and static images if GitHub Pages caching is
