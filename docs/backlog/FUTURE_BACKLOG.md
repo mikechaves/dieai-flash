@@ -18,18 +18,14 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 ## Preservation And Reproducibility
 
 - [ ] Create a full Flash/Animate rebuild guide if the original toolchain can be reproduced.
-- [ ] Record source-to-SWF checksums and artifact metadata for preservation audits.
 - [ ] Convert the supporting project analysis document into accessible Markdown if it is useful
       as historical context.
-- [ ] Add an archive note explaining which assets are original, generated later, or wrapper-only.
 - [ ] Evaluate whether the FLA should be mirrored to a release artifact or external archive.
 
 ## Wrapper And Runtime
 
 - [ ] Revisit vendoring Ruffle locally if CDN reliability, availability, privacy, or archival
       requirements justify it.
-- [ ] Add a tiny static smoke-test script for the wrapper if the repo starts accepting more web
-      changes.
 - [ ] Add optional service-worker caching for the SWF and static images if GitHub Pages caching is
       insufficient.
 - [ ] Add richer OpenGraph/Twitter preview metadata after the final project card copy is settled.
@@ -37,7 +33,6 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Accessibility And Input
 
-- [ ] Add a non-playable story/screens transcript for users who cannot run the Flash game.
 - [ ] Research keyboard focus improvements inside the Ruffle embed.
 - [ ] Research touch controls for mobile play without changing the original desktop-first game.
 - [ ] Research gamepad support through Ruffle/browser APIs.
