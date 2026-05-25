@@ -36,6 +36,8 @@ viewport.
 - [ ] `WASD`, arrow keys, `Space`, and `Esc` are still documented next to the player.
 - [ ] The direct `file://` path shows `Local server required` with the `python3 -m http.server 8000`
       instruction.
+- [ ] If Ruffle cannot initialize on an HTTP target, the player frame shows the non-playable
+      screenshot/control fallback with retry and screenshots actions instead of a bare error.
 - [ ] The direct `file://` path does not attempt to load `assets/DieAI.swf`.
 - [ ] The direct `file://` path does not show Ruffle's default orange protocol error.
 
@@ -55,8 +57,8 @@ Use browser DevTools or a browser automation request log.
 - [ ] HTTP targets have no console errors or warnings from the wrapper.
 - [ ] Ruffle info logs are acceptable.
 - [ ] The direct `file://` path has no uncaught JavaScript exceptions.
-- [ ] If Ruffle fails to download on HTTP targets, the wrapper shows `Ruffle failed to load` with the
-      connection/refresh retry message.
+- [ ] If Ruffle fails to download on HTTP targets, the wrapper shows the screenshot/control fallback
+      with a retry action instead of a bare error.
 
 ## Responsive Checks
 
