@@ -90,6 +90,8 @@ dieai-flash/
   `docs/qa/TOUCH_CONTROL_FEASIBILITY.md`.
 - Gamepad-support feasibility is documented in
   `docs/qa/GAMEPAD_SUPPORT_FEASIBILITY.md`.
+- Reduced-motion posture is documented in
+  `docs/qa/REDUCED_MOTION_POSTURE.md`.
 - Service-worker caching scope is documented in
   `docs/preservation/SERVICE_WORKER_CACHE_DECISION.md`.
 - Original, exported, wrapper-only, and external runtime assets are scoped in

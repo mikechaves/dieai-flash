@@ -99,6 +99,15 @@ Use browser DevTools or a browser automation request log.
 - [ ] Buttons remain readable and do not overlap neighboring content.
 - [ ] Sticky navigation does not cover the player or screenshots when using anchor links.
 
+## Reduced Motion Checks
+
+- [ ] With `prefers-reduced-motion: reduce` emulated, anchor navigation uses immediate scrolling
+      instead of smooth scrolling.
+- [ ] Wrapper-owned hover, focus, fallback, and responsive states do not introduce CSS animation or
+      transition timing outside the preserved SWF.
+- [ ] Ruffle/SWF animation remains preserved game behavior and is not altered by wrapper
+      reduced-motion handling.
+
 ## Suggested Automation Commands
 
 These commands are optional helpers for local verification. Do not commit generated screenshots,

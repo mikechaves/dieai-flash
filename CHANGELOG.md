@@ -20,6 +20,8 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Reduced Motion Posture](docs/qa/REDUCED_MOTION_POSTURE.md) decision, documenting the
+  wrapper-owned motion inventory, `prefers-reduced-motion` coverage, and future animation guidance.
 - Added the [Gamepad Support Feasibility](docs/qa/GAMEPAD_SUPPORT_FEASIBILITY.md) decision,
   deferring gamepad implementation while documenting Ruffle's experimental button-to-key mapping
   path and the required physical-controller validation.

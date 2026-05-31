@@ -40,9 +40,9 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                | Item                                                                 | Status | Validation / Exit Criteria                                                                                                                                                                           |
-| -------- | ------------------- | -------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P2       | Accessibility/Input | Review reduced-motion posture for wrapper effects and documentation. | TODO   | A decision note or wrapper/checklist update confirms current motion behavior, verifies `prefers-reduced-motion` coverage, and leaves future animation guidance clear without changing game behavior. |
+| Priority | Area                | Item                                                                | Status | Validation / Exit Criteria                                                                                                                                                                          |
+| -------- | ------------------- | ------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P1       | Accessibility/Input | Reconcile documented keyboard controls with runtime input evidence. | TODO   | A browser/SWF runtime pass confirms which documented controls actually work, updates wrapper/transcript/checklist copy if needed, and keeps any remaster-specific control changes parked in future. |
 
 ## Deferred
 
@@ -70,6 +70,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Keyboard Focus Audit](../qa/KEYBOARD_FOCUS_AUDIT.md)
 - [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md)
 - [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md)
+- [Reduced Motion Posture](../qa/REDUCED_MOTION_POSTURE.md)
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md)
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)

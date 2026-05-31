@@ -175,6 +175,8 @@ const requiredSnippets = [
   ["Ruffle focus style", "#ruffle:focus-within"],
   ["Ruffle focus status sync", "syncPlayerFocusStatus"],
   ["Ruffle tab stop", 'player.setAttribute("tabindex", "0")'],
+  ["reduced motion media query", "@media (prefers-reduced-motion: reduce)"],
+  ["reduced motion scroll fallback", "scroll-behavior: auto;"],
   ["ready status", "Game loaded. Click inside the player or tab to it"],
   ["focused status", "Player focused. Use WASD"],
   ["WASD control", "<kbd>WASD</kbd>"],
