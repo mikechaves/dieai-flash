@@ -85,6 +85,9 @@ project's preservation or visitor-facing posture.
 
 ### Changed
 
+- Recorded a blocked Adobe Animate scratch-publish attempt in the
+  [Adobe Animate Scratch Publish Worksheet](docs/preservation/ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md),
+  keeping the full rebuild guide deferred until Animate can open and publish the FLA.
 - Refreshed the [DieAI Preservation Case Study](docs/portfolio/PRESERVATION_CASE_STUDY.md) against
   current live-smoke, keyboard-runtime, release-bundle, archive, QA, and deferred-portfolio-link
   evidence.

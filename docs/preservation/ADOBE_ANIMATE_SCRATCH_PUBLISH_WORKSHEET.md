@@ -81,6 +81,86 @@ Required preflight result:
 - `HEAD` matches `origin/main`.
 - Baseline hashes match the table above.
 
+## Attempt Log - 2026-05-31
+
+Status: blocked before FLA open.
+
+This pass verified the repository and artifact preflight, but it did not open or publish
+`DieAI.fla` because Adobe Animate is not installed on this host. This is not a completed scratch
+publish pass.
+
+### Environment Captured
+
+| Field                         | Value |
+| ----------------------------- | ----- |
+| Date                          | `2026-05-31 10:58:56 PDT` |
+| Operator                      | `michaelchaves` local checkout user |
+| Host OS and version           | macOS `26.6` build `25G5028f` |
+| CPU architecture              | `arm64` / Apple M4 Pro |
+| Adobe Animate product version | Not available; no Adobe Animate application found. |
+| Adobe Animate build number    | Not available. |
+| Adobe account/license context | Not tested; Adobe Animate was unavailable. |
+| Java runtime visible          | No; `/usr/bin/java` shim exists, but macOS reports no Java runtime installed. |
+| Repo commit SHA               | `b93a7ced1858ce93c7ce1d47973c1f060fcc7cbd` |
+| Repo path                     | `/Users/michaelchaves/GitHub/dieai-flash` |
+| Scratch output path           | `/tmp/dieai-animate-scratch-publish-20260531` |
+
+### Preflight Result
+
+| Check | Result | Notes |
+| ----- | ------ | ----- |
+| Clean `main` | Pass | `git status --short --branch` showed `## main...origin/main`. |
+| Local/remote sync | Pass | `git rev-list --left-right --count HEAD...origin/main` returned `0 0`. |
+| `DieAI.fla` hash | Pass | SHA-256 matched `a38a6fa7b614a73c1c710fdd9c69d8e05b0af1dd9d200a94369448b779a093df`. |
+| `assets/DieAI.swf` hash | Pass | SHA-256 matched `1cb333d6a97c41752e2a76e617921ae5509b5ae6cd33f71bcc33f673e0992f9e`. |
+| `assets/DieAI.html` hash | Pass | SHA-256 matched `c1f6e1b8e71a154e7a0aaf05193f874a18551daa2e23fa6138dfbc52e64d121a`. |
+| File types | Pass | FLA reported as ZIP archive data; SWF reported as compressed Flash data version `37`; HTML reported as UTF-8 with BOM. |
+| Scratch directory | Pass | `/tmp/dieai-animate-scratch-publish-20260531` was created outside the repo. |
+
+### Tool Availability
+
+| Check | Result | Notes |
+| ----- | ------ | ----- |
+| Adobe Animate app search | Blocked | No Animate or Flash application was found under `/Applications`, `~/Applications`, or Spotlight application metadata. |
+| Flash/Flex/AIR CLI tools | Blocked | `animate`, `Animate`, `flashplayer`, `mxmlc`, `compc`, `adl`, `adt`, and `swfdump` were not found on `PATH`. |
+| Java runtime | Blocked | `/usr/bin/java` exists only as the macOS shim and reported that no Java runtime is installed. |
+
+### Command-Line Publish Settings Cross-Check
+
+The ZIP-backed FLA still emits the known 54-byte central-directory warning under `unzip`, but
+`PublishSettings.xml` remained readable for inspection.
+
+| Setting              | Observed Value                          | Result |
+| -------------------- | --------------------------------------- | ------ |
+| SWF output name      | `DieAI.swf`                             | Pass |
+| HTML output name     | `DieAI.html`                            | Pass |
+| Width / height       | `1000 x 600`                            | Pass |
+| Flash/SWF version    | `37`                                    | Pass |
+| External player      | `FlashPlayer26.0`                       | Pass |
+| ActionScript version | `3`                                     | Pass |
+| Document class       | `lib.shoot.DieAIDoc`                    | Pass |
+| AS3 source path      | `.`                                     | Pass |
+| Compress movie       | `1`                                     | Pass |
+| Use network          | `0`                                     | Pass |
+| HTML template        | Adobe Animate CC 2018 default HTML path | Pass |
+
+### Blocked Checks
+
+| Check | Result | Notes |
+| ----- | ------ | ----- |
+| FLA open result | Blocked | Adobe Animate was unavailable, so `DieAI.fla` was not opened. |
+| Animate UI publish settings comparison | Blocked | Cannot compare Animate UI settings without Adobe Animate. |
+| Scratch SWF/HTML output | Blocked | No scratch publish occurred; no SWF or HTML output was generated. |
+| Scratch SWF browser smoke | Blocked | No scratch SWF exists to test through Ruffle. |
+| Tracked-file cleanliness after attempt | Pass | No tracked game assets changed during the preflight-only attempt. |
+
+### Decision
+
+Keep the full rebuild guide deferred. The next scratch-publish attempt requires a machine with Adobe
+Animate installed and licensed. Resume this worksheet from the FLA open check after confirming the
+app can open `DieAI.fla` and publish to the untracked scratch directory above or a fresh equivalent
+outside the repository.
+
 ## FLA Open Check
 
 Record the result before publishing anything.
