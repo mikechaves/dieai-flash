@@ -42,7 +42,6 @@ Rules:
 
 | Priority | Area                  | Item                                                                                  | Status | Validation / Exit Criteria                                                                                                                                             |
 | -------- | --------------------- | ------------------------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | QA Evidence           | Capture baseline screenshots for wrapper regression review.                           | TODO   | Desktop and mobile screenshots are regenerated from the live/local page, named predictably, and referenced from a lightweight QA note without committing temp output.  |
 | P1       | Preservation Evidence | Record source-to-SWF checksums and artifact metadata for preservation audits.         | TODO   | A preservation metadata note records checksums, sizes, and audit commands for the FLA, SWF, source tree, and wrapper-critical assets; README/provenance links updated. |
 | P1       | Accessibility         | Add a non-playable story/screens transcript for users who cannot run Flash.           | TODO   | A Markdown transcript captures the start, story, controls, level, and game-over context, links to screenshots, and is reachable from README or the wrapper.            |
 | P1       | Runtime QA            | Add a tiny static smoke-test script for the wrapper.                                  | TODO   | Script checks local static assets and wrapper invariants without a build step; smoke checklist documents when to run it.                                               |
@@ -67,6 +66,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Live Demo](https://mikechaves.github.io/dieai-flash/)
 - [Modern Ruffle Wrapper](../../index.html)
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md)
+- [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md)
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md)
 - [Original ActionScript Source](../../lib/shoot/)
