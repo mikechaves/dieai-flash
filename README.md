@@ -88,6 +88,8 @@ dieai-flash/
   `docs/qa/KEYBOARD_FOCUS_AUDIT.md`.
 - Touch-control feasibility is documented in
   `docs/qa/TOUCH_CONTROL_FEASIBILITY.md`.
+- Gamepad-support feasibility is documented in
+  `docs/qa/GAMEPAD_SUPPORT_FEASIBILITY.md`.
 - Service-worker caching scope is documented in
   `docs/preservation/SERVICE_WORKER_CACHE_DECISION.md`.
 - Original, exported, wrapper-only, and external runtime assets are scoped in

@@ -39,6 +39,10 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 - 2026-05-31: Completed the touch-control feasibility audit in
   [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md); implementation remains deferred
   unless it becomes an explicit remaster or experimental wrapper-overlay track.
+- 2026-05-31: Completed the gamepad-support feasibility audit in
+  [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md); implementation remains
+  deferred until Ruffle's experimental button-to-key mapping can be verified with a physical
+  controller.
 
 ## Preservation And Reproducibility
 
@@ -62,7 +66,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
       without changing preservation semantics.
 - [ ] Reconcile documented keyboard controls with a browser/SWF runtime input pass if source-only
       evidence continues to differ from the wrapper's `WASD`, arrows, and `Esc` guidance.
-- Promoted: gamepad-support feasibility is now active as a preservation-safe input decision gate.
+- [ ] Prototype Ruffle `gamepadButtonMapping` only after a physical-controller test plan exists;
+      verify accepted SWF key codes, held-button release behavior, focus requirements, and control
+      copy before publishing gamepad support.
 - Promoted: reduced-motion posture review is now active as a wrapper/accessibility decision gate.
 
 ## Game Remaster Ideas

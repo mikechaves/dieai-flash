@@ -39,6 +39,8 @@ discovers new work, do one of the following in the same change:
   and manual validation notes.
 - [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md): preservation-safe touch-input
   decision and deferred implementation boundary.
+- [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md): preservation-safe gamepad
+  mapping decision and physical-controller validation boundary.
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md): portfolio-ready
   narrative draft for the Flash revival and preservation work.
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md): review map for original,

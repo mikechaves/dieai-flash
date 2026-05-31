@@ -20,6 +20,9 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Gamepad Support Feasibility](docs/qa/GAMEPAD_SUPPORT_FEASIBILITY.md) decision,
+  deferring gamepad implementation while documenting Ruffle's experimental button-to-key mapping
+  path and the required physical-controller validation.
 - Added the [Touch Control Feasibility](docs/qa/TOUCH_CONTROL_FEASIBILITY.md) decision, deferring
   touch-control implementation while documenting the preserved SWF, Ruffle, and browser-input
   constraints.
