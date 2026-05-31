@@ -40,9 +40,11 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area             | Item                        | Status | Validation / Exit Criteria                                                                                                   |
-| -------- | ---------------- | --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| _None_   | _Backlog triage_ | _No active item is queued._ | N/A    | Promote the next preservation-safe item from [Future Backlog](./FUTURE_BACKLOG.md) before starting more implementation work. |
+| Priority | Area                | Item                                                                 | Status | Validation / Exit Criteria                                                                                                                                                                           |
+| -------- | ------------------- | -------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESEARCH | Accessibility/Input | Audit touch-control feasibility for the preserved Ruffle build.      | TODO   | A decision note records browser/Ruffle/SWF constraints, whether touch can be supported without changing the original game, and any implementation remains parked unless preservation-safe.           |
+| RESEARCH | Accessibility/Input | Audit gamepad-support feasibility for the preserved Ruffle build.    | TODO   | A decision note records whether Ruffle or browser gamepad APIs can route input into the preserved SWF, the testing path, and whether support stays deferred as remaster/platform-specific work.      |
+| P2       | Accessibility/Input | Review reduced-motion posture for wrapper effects and documentation. | TODO   | A decision note or wrapper/checklist update confirms current motion behavior, verifies `prefers-reduced-motion` coverage, and leaves future animation guidance clear without changing game behavior. |
 
 ## Deferred
 
@@ -50,7 +52,8 @@ The following remain intentionally non-active:
 
 - Native JavaScript or canvas remaster work.
 - New levels, enemies, scoring systems, or mechanics.
-- Touch controls, gamepad support, and mobile-specific gameplay tuning.
+- Touch/gamepad implementation and mobile-specific gameplay tuning beyond preservation-safe
+  feasibility notes.
 - Leaderboards, analytics, or account-backed features.
 - Broad portfolio-site integration beyond a stable project link.
 

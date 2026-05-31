@@ -33,6 +33,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
   [Service Worker Cache Decision](../preservation/SERVICE_WORKER_CACHE_DECISION.md); implementation
   remains deferred until there is an offline, repeat-load, GitHub Pages cache, or local-vendored
   runtime requirement.
+- 2026-05-31: Promoted touch-control feasibility, gamepad-support feasibility, and reduced-motion
+  posture review to [Active Backlog](./ACTIVE_BACKLOG.md) as preservation-safe accessibility/input
+  decision work.
 
 ## Preservation And Reproducibility
 
@@ -51,9 +54,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Accessibility And Input
 
-- [ ] Research touch controls for mobile play without changing the original desktop-first game.
-- [ ] Research gamepad support through Ruffle/browser APIs.
-- [ ] Add reduced-motion guidance for wrapper effects if animation increases.
+- Promoted: touch-control feasibility is now active as a preservation-safe input decision gate.
+- Promoted: gamepad-support feasibility is now active as a preservation-safe input decision gate.
+- Promoted: reduced-motion posture review is now active as a wrapper/accessibility decision gate.
 
 ## Game Remaster Ideas
 
