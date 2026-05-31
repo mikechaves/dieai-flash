@@ -40,8 +40,9 @@ Rules:
 
 ## Active Workboard
 
-No active work is currently queued. Promote the next preservation-safe item from
-[Future Backlog](./FUTURE_BACKLOG.md) before starting new implementation work.
+| Priority | Area                | Item                                                          | Status | Validation / Exit Criteria                                                                                                                                                                                                                                      |
+| -------- | ------------------- | ------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P1       | Accessibility/Input | Draft the physical-controller gamepad mapping test plan.      | TODO   | A preservation-safe test plan defines browser/controller coverage, Ruffle `gamepadButtonMapping` values for `A`, `D`, and `Space`, focus/menu/game-over checks, pass/fail evidence, and confirms no public gamepad copy or UI ships without a physical pass.     |
 
 ## Deferred
 
