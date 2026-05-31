@@ -20,6 +20,8 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [GitHub Release Publish Runbook](docs/preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md),
+  documenting the approval-gated tag, bundle upload, verification, and rollback checklist.
 - Added the [Gamepad Mapping Test Plan](docs/qa/GAMEPAD_MAPPING_TEST_PLAN.md), defining the
   physical-controller browser pass required before any public gamepad support claim.
 - Added the [Preservation Release Bundle Dry Run](docs/preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md),

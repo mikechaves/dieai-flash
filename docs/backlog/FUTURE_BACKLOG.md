@@ -51,7 +51,7 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 ## Portfolio And Distribution
 
 - [ ] Add an external portfolio-site link to the case study once the portfolio page is published.
-- [ ] Publish the first GitHub preservation release bundle after the active dry run passes and a
+- [ ] Publish the first GitHub preservation release bundle using the approval-gated runbook after a
       release publish pass is explicitly started; include the FLA, SWF, source, wrapper state, docs,
       and SHA-256 manifest.
 - [ ] Evaluate submitting the preserved build to a Flash preservation archive after the GitHub

@@ -82,6 +82,8 @@ dieai-flash/
   `docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md`.
 - The non-publishing release bundle dry run is recorded in
   `docs/preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md`.
+- The GitHub Release publish checklist is recorded in
+  `docs/preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md`.
 - A portfolio-ready preservation case-study draft lives at
   `docs/portfolio/PRESERVATION_CASE_STUDY.md`.
 - Social preview metadata and image dimensions are documented in

@@ -55,6 +55,8 @@ discovers new work, do one of the following in the same change:
   Release bundle decision and external archive deferral.
 - [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md):
   non-publishing bundle inventory, manifest, and archive-checksum evidence.
+- [GitHub Release Publish Runbook](../preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md):
+  approval-gated release tag, bundle upload, verification, and rollback checklist.
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md): public-repo posture for
   bundled third-party ActionScript source.
 - [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md):

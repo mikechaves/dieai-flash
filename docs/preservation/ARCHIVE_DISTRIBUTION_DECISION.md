@@ -88,6 +88,15 @@ The dry run verified that the full committed bundle inventory can be generated f
 that a `SHA256SUMS.txt` manifest can be produced and checked, and that a local zip archive can be
 created without creating a tag, GitHub Release, or uploaded asset.
 
+## Publish Runbook
+
+The approval-gated publish checklist is recorded in
+[GitHub Release Publish Runbook](./GITHUB_RELEASE_PUBLISH_RUNBOOK.md).
+
+The runbook documents clean-main preflight, bundle generation, checksum verification, release notes,
+the approval checkpoint, publish commands, release verification, post-publish documentation, and
+rollback handling.
+
 ## Backlog Impact
 
 - Remove the completed archive-distribution decision row from
