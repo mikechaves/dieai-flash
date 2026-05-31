@@ -51,6 +51,10 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 - 2026-05-31: Completed documented-keyboard-controls reconciliation in
   [Keyboard Runtime Input Audit](../qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md); public control copy now
   reflects the runtime-confirmed `A`, `D`, and `Space` inputs.
+- 2026-05-31: Promoted the preservation release bundle dry run to
+  [Active Backlog](./ACTIVE_BACKLOG.md) as repo-owned distribution readiness work. The actual
+  GitHub Release publish step remains deferred until the dry run passes and a publish pass is
+  explicitly requested.
 
 ## Preservation And Reproducibility
 
@@ -88,8 +92,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 ## Portfolio And Distribution
 
 - [ ] Add an external portfolio-site link to the case study once the portfolio page is published.
-- [ ] Publish the first GitHub preservation release bundle when a release publish pass is explicitly
-      started; include the FLA, SWF, source, wrapper state, docs, and SHA-256 manifest.
+- [ ] Publish the first GitHub preservation release bundle after the active dry run passes and a
+      release publish pass is explicitly started; include the FLA, SWF, source, wrapper state, docs,
+      and SHA-256 manifest.
 - [ ] Evaluate submitting the preserved build to a Flash preservation archive after the GitHub
       preservation release bundle exists and the rights/metadata note is ready.
 

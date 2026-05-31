@@ -40,8 +40,9 @@ Rules:
 
 ## Active Workboard
 
-No active work is currently queued. Promote the next preservation-safe item from
-[Future Backlog](./FUTURE_BACKLOG.md) before starting new implementation work.
+| Priority | Area                      | Item                                                       | Status | Validation / Exit Criteria                                                                                                                                                                                                 |
+| -------- | ------------------------- | ---------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P1       | Preservation/Distribution | Dry-run the first GitHub preservation release bundle path. | TODO   | A clean-main dry run proves the bundle inventory and SHA-256 manifest can be generated in a temporary directory, records any release blockers, and does not create a tag, GitHub Release, or uploaded asset without approval. |
 
 ## Deferred
 
