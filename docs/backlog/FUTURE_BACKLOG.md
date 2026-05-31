@@ -47,6 +47,8 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 - [ ] Add a portfolio case-study link once the case study exists.
 - [ ] Prepare a short project write-up covering original 2018 context, revival process, and tooling.
+- [ ] Publish the first GitHub preservation release bundle when a release publish pass is explicitly
+      started; include the FLA, SWF, source, wrapper state, docs, and SHA-256 manifest.
 - [ ] Evaluate submitting the preserved build to a Flash preservation archive after the GitHub
       preservation release bundle exists and the rights/metadata note is ready.
 - [ ] Add social-preview screenshots optimized for project sharing.

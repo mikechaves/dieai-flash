@@ -22,7 +22,7 @@ project's preservation or visitor-facing posture.
 
 - Added the
   [Archive Distribution Decision](docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md), selecting a
-  GitHub Release preservation bundle as the next FLA distribution gate while deferring external
+  GitHub Release preservation bundle as the FLA distribution path while deferring external
   archive submission.
 - Added the modern Ruffle wrapper fallback path for blocked runtime states, including the
   direct-`file://` guard and screenshot/control fallback.

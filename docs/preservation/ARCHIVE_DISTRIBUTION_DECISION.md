@@ -85,8 +85,7 @@ When publishing the first current preservation release:
 
 - Remove the completed archive-distribution decision row from
   [Active Backlog](../backlog/ACTIVE_BACKLOG.md).
-- Promote the GitHub Release bundle publish step from
-  [Future Backlog](../backlog/FUTURE_BACKLOG.md) to Active Backlog because the decision gate is now
-  closed and the validation path is clear.
+- Keep the GitHub Release bundle publish step in
+  [Future Backlog](../backlog/FUTURE_BACKLOG.md) until a release publish pass is explicitly started.
 - Keep external archive submission in Future Backlog until the release bundle URL, checksum, rights
   note, and collection target are ready.

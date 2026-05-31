@@ -40,9 +40,8 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                 | Item                                                  | Status | Validation / Exit Criteria                                                                                                                                                           |
-| -------- | -------------------- | ----------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| P1       | Archive Distribution | Publish the first GitHub preservation release bundle. | TODO   | A dated release tag exists with a release asset containing the FLA, SWF, source, wrapper state, docs, and SHA-256 manifest; the final release URL and archive checksum are recorded. |
+No active work is currently queued. Promote a future item here only when it is ready to start with
+clear validation and an explicit execution decision.
 
 ## Deferred
 
