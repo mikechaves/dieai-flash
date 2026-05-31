@@ -15,56 +15,6 @@ validation, a reason to beat the current queue, and a preservation-safe implemen
 If another doc records a follow-up, finding, or proposed roadmap item, it must also appear
 here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not work.
 
-## Promotion Notes
-
-- 2026-05-31: Promoted Flash/Animate rebuild-guide feasibility to
-  [Active Backlog](./ACTIVE_BACKLOG.md) as decision-gated preservation/reproducibility work.
-- 2026-05-31: Completed the Flash/Animate rebuild-guide feasibility audit in
-  [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md); a full guide remains
-  deferred until Adobe Animate can complete a scratch publish round trip.
-- 2026-05-31: Promoted the pinned Ruffle CDN versus vendored-runtime review to
-  [Active Backlog](./ACTIVE_BACKLOG.md) as decision-gated wrapper/runtime work.
-- 2026-05-31: Completed the Ruffle CDN versus vendored-runtime review in
-  [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md); vendoring remains deferred
-  until a concrete reliability, privacy, or self-contained archival requirement appears.
-- 2026-05-31: Promoted service-worker caching scope to
-  [Active Backlog](./ACTIVE_BACKLOG.md) as a wrapper/runtime decision before any implementation.
-- 2026-05-31: Completed the service-worker cache scope decision in
-  [Service Worker Cache Decision](../preservation/SERVICE_WORKER_CACHE_DECISION.md); implementation
-  remains deferred until there is an offline, repeat-load, GitHub Pages cache, or local-vendored
-  runtime requirement.
-- 2026-05-31: Promoted touch-control feasibility, gamepad-support feasibility, and reduced-motion
-  posture review to [Active Backlog](./ACTIVE_BACKLOG.md) as preservation-safe accessibility/input
-  decision work.
-- 2026-05-31: Completed the touch-control feasibility audit in
-  [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md); implementation remains deferred
-  unless it becomes an explicit remaster or experimental wrapper-overlay track.
-- 2026-05-31: Completed the gamepad-support feasibility audit in
-  [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md); implementation remains
-  deferred until Ruffle's experimental button-to-key mapping can be verified with a physical
-  controller.
-- 2026-05-31: Completed the reduced-motion posture review in
-  [Reduced Motion Posture](../qa/REDUCED_MOTION_POSTURE.md); future wrapper-owned animation must
-  include reduced-motion coverage before shipping.
-- 2026-05-31: Promoted documented-keyboard-controls reconciliation to
-  [Active Backlog](./ACTIVE_BACKLOG.md) after the reduced-motion review cleared the active queue.
-- 2026-05-31: Completed documented-keyboard-controls reconciliation in
-  [Keyboard Runtime Input Audit](../qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md); public control copy now
-  reflects the runtime-confirmed `A`, `D`, and `Space` inputs.
-- 2026-05-31: Promoted the preservation release bundle dry run to
-  [Active Backlog](./ACTIVE_BACKLOG.md) as repo-owned distribution readiness work. The actual
-  GitHub Release publish step remains deferred until the dry run passes and a publish pass is
-  explicitly requested.
-- 2026-05-31: Completed the preservation release bundle dry run in
-  [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md);
-  the actual GitHub Release publish step remains deferred until explicitly requested.
-- 2026-05-31: Promoted the physical-controller gamepad mapping test plan to
-  [Active Backlog](./ACTIVE_BACKLOG.md) as the prerequisite for any future Ruffle gamepad prototype.
-- 2026-05-31: Expanded [Active Backlog](./ACTIVE_BACKLOG.md) to the next seven preservation-safe
-  slices: gamepad test planning, release publish runbook, external archive readiness, Animate
-  scratch-publish worksheet, live browser smoke evidence, case-study refresh, and archive-scope
-  reconciliation.
-
 ## Preservation And Reproducibility
 
 - [ ] Write a full Flash/Animate rebuild guide after Adobe Animate can open `DieAI.fla`, publish a
