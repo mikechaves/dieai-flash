@@ -82,6 +82,11 @@ The release bundle includes the wrapper that references the pinned Ruffle CDN pa
 include Ruffle JavaScript or WASM bytes. This is intentional and matches
 [Ruffle Runtime Decision](./RUFFLE_RUNTIME_DECISION.md).
 
+The first GitHub preservation release does not require a self-contained Ruffle runtime. The release
+bundle is allowed to preserve the current wrapper's external pinned runtime reference as long as the
+publish pass records a clean smoke result and the release notes make clear that runtime emulation is
+provided by the wrapper through the pinned Ruffle package.
+
 If a future release requires a fully self-contained runtime, first promote the vendoring task from
 [Future Backlog](../backlog/FUTURE_BACKLOG.md), vendor the exact runtime package and license files,
 update `index.html`, and re-run live/local browser smoke before publishing.

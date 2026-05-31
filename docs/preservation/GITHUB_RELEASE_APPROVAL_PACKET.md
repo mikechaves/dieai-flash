@@ -22,6 +22,11 @@ Ready for approval review, not approved for publishing.
 No release blocker was found in the local bundle build. Publishing remains gated on explicit human
 approval and a final clean-main rebuild.
 
+Runtime note: the first preservation release does not require vendored Ruffle bytes. The candidate
+bundle keeps the current wrapper's pinned external Ruffle reference, consistent with
+[Ruffle Runtime Decision](./RUFFLE_RUNTIME_DECISION.md). If approval requires an offline or fully
+self-contained runtime bundle, stop and vendor Ruffle before regenerating the final approval values.
+
 ## Self-Reference Note
 
 The release inventory includes `docs/**`. Because this approval packet is itself a documentation file,
@@ -113,6 +118,10 @@ Includes:
 
 The accompanying `.zip.sha256` asset records the SHA-256 for the uploaded archive.
 ```
+
+If the final release notes are adjusted, keep the runtime wording clear: the repository bundle
+contains the wrapper and preserved SWF, while browser emulation is provided by the wrapper through the
+pinned external Ruffle package unless a later vendoring decision changes that.
 
 ## Approval Gate
 

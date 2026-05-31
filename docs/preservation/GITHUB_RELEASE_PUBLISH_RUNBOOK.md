@@ -200,6 +200,10 @@ Because the release inventory includes `docs/**`, any committed approval-packet 
 final bundle checksum. Treat that packet as a review draft and regenerate the final bundle values
 from the approved release commit before creating a tag or GitHub Release.
 
+The first preservation release does not currently require vendored Ruffle runtime bytes. If approval
+adds a self-contained-runtime requirement, stop before tagging, vendor Ruffle through the future
+backlog path, and rebuild the release candidate after browser smoke passes.
+
 ## Post-Publish Documentation
 
 After a successful publish pass:

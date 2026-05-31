@@ -88,6 +88,9 @@ project's preservation or visitor-facing posture.
 
 ### Changed
 
+- Decided the first GitHub preservation release does not require vendored Ruffle runtime bytes,
+  keeping the pinned external runtime acceptable unless approval adds a self-contained-runtime
+  requirement.
 - Refreshed the [Preservation Release Bundle Dry Run](docs/preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md)
   from current `main`, including manifest verification, archive checksum, and zip integrity
   evidence.

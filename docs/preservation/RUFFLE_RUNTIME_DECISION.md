@@ -22,6 +22,32 @@ problem.
 Revisit vendoring only if CDN reliability, privacy, availability, or archival requirements become
 stronger than the current need to keep the repository small and easy to inspect.
 
+## First Preservation Release Decision
+
+Decision: the first GitHub preservation release does not need to be self-contained for Ruffle.
+
+The release bundle may include the current wrapper that references the pinned external runtime, while
+keeping Ruffle JavaScript, WASM, source maps, and license files outside the repository bundle. This
+matches the current no-build GitHub Pages wrapper and the release inventory in
+[Archive Release Inventory Reconciliation](./ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md).
+
+Rationale:
+
+- The preservation release is a curated repository artifact, not an offline runtime distribution.
+- The bundle includes the original FLA, exported SWF, legacy generated HTML, source, wrapper, docs,
+  and checksums needed to inspect the preserved game.
+- The live wrapper continues to load and play through the pinned external runtime.
+- Vendoring would add about `29,000,511` unpacked bytes plus maintenance and license-copying work
+  without solving a current release blocker.
+- The approval packet and release runbook both require rebuilding from final `main`, so vendoring can
+  still be promoted before publishing if an explicit self-contained-runtime requirement appears.
+
+Publish implication: do not vendor Ruffle before the first release unless the approval process adds a
+new requirement that the uploaded zip must run without any external runtime fetch. If that requirement
+appears, stop the publish path, promote the vendoring task from
+[Future Backlog](../backlog/FUTURE_BACKLOG.md), vendor the exact runtime package and license files,
+update `RUFFLE_SRC`, rerun browser smoke, and regenerate the release bundle.
+
 ## Current Runtime Path
 
 `index.html` defines:
@@ -123,6 +149,7 @@ Observed HTTP behavior:
 - The matching WASM runtime request returns `200`.
 - CDN responses use long cache headers for pinned package assets.
 - The live GitHub Pages page returns `200`.
+- The live `assets/DieAI.swf` request returns `200`.
 
 ## Cache Behavior
 
