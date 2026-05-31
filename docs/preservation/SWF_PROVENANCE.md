@@ -171,6 +171,11 @@ Current feasible guidance:
    ActionScript source files alone.
 3. Do not replace `assets/DieAI.swf` from an unverified rebuild.
 
+Use [Adobe Animate Scratch Publish Worksheet](./ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md) to
+capture the first successful or failed scratch round trip. The worksheet defines the environment
+fields, publish-settings comparison, scratch output hashes, and browser-smoke evidence needed before
+writing a full rebuild guide.
+
 Write a full rebuild guide only after this round trip succeeds in a scratch output directory:
 
 1. Open `DieAI.fla` in Adobe Animate, preferably a version compatible with Animate Windows `24.0`

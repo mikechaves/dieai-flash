@@ -67,6 +67,9 @@ discovers new work, do one of the following in the same change:
   and manifest commands.
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md): source artifact and
   rebuild-path evidence.
+- [Adobe Animate Scratch Publish Worksheet](../preservation/ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md):
+  environment, publish-settings, scratch output, and browser-smoke capture form for future rebuild
+  tests.
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md): pinned CDN versus
   vendored-runtime decision.
 - [Service Worker Cache Decision](../preservation/SERVICE_WORKER_CACHE_DECISION.md): cache-scope

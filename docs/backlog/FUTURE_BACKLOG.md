@@ -17,9 +17,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Preservation And Reproducibility
 
-- [ ] Write a full Flash/Animate rebuild guide after Adobe Animate can open `DieAI.fla`, publish a
-      scratch SWF/HTML pair, and record emitted sizes, hashes, warnings, and browser-smoke results
-      without changing tracked game assets.
+- [ ] Write a full Flash/Animate rebuild guide after the scratch-publish worksheet proves Adobe
+      Animate can open `DieAI.fla`, publish a scratch SWF/HTML pair, and record emitted sizes,
+      hashes, warnings, and browser-smoke results without changing tracked game assets.
 
 ## Wrapper And Runtime
 

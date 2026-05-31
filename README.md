@@ -78,6 +78,8 @@ dieai-flash/
   while `assets/DieAI.swf` is the playable build used by the web wrapper.
 - Preservation checksums and artifact sizes are recorded in
   `docs/preservation/ARTIFACT_METADATA.md`.
+- The Adobe Animate scratch-publish worksheet is recorded in
+  `docs/preservation/ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md`.
 - The archive distribution path for the FLA and release bundle is recorded in
   `docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md`.
 - The non-publishing release bundle dry run is recorded in

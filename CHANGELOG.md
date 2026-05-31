@@ -20,6 +20,9 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Adobe Animate Scratch Publish Worksheet](docs/preservation/ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md),
+  defining the environment, publish-settings, scratch output, hash, and browser-smoke capture needed
+  before a full rebuild guide can be written.
 - Added the [External Archive Submission Readiness](docs/preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md),
   documenting Internet Archive and Flashpoint metadata, rights language, prerequisites, and blockers.
 - Added the [GitHub Release Publish Runbook](docs/preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md),

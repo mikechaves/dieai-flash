@@ -42,7 +42,6 @@ Rules:
 
 | Priority | Area                      | Item                                                                 | Status | Validation / Exit Criteria                                                                                                                                                                                                                                  |
 | -------- | ------------------------- | -------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Preservation/Rebuild      | Draft the Adobe Animate scratch-publish worksheet.                   | TODO   | A worksheet defines the Adobe Animate version/OS fields, publish settings to verify, scratch output capture, hash comparison commands, and browser-smoke evidence needed before a full rebuild guide can be written.                                        |
 | P1       | QA/Runtime                | Run and document a current live GitHub Pages browser smoke pass.      | TODO   | A QA note or checklist update records live HTTPS wrapper load, Ruffle player focus, `A`/`D`/`Space` controls, fallback expectations, console/network observations, responsive spot checks, and any follow-up blockers.                                      |
 | P1       | Portfolio/Presentation    | Refresh the preservation case study against current evidence.         | TODO   | The case study links current keyboard-runtime, release-bundle dry-run, archive, QA, and control-copy evidence while keeping the external portfolio-site link deferred until a portfolio page exists.                                                        |
 | P1       | Preservation/Metadata     | Reconcile archive asset scope with the release-bundle inventory.      | TODO   | Archive-scope docs, dry-run inventory, temp-artifact exclusions, Ruffle external-runtime posture, and checksum-manifest expectations agree before any real release publish pass.                                                                            |
@@ -87,6 +86,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md)
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md)
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md)
+- [Adobe Animate Scratch Publish Worksheet](../preservation/ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md)
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md)
 - [Service Worker Cache Decision](../preservation/SERVICE_WORKER_CACHE_DECISION.md)
 - [Original ActionScript Source](../../lib/shoot/)
