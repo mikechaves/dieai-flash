@@ -29,6 +29,8 @@ discovers new work, do one of the following in the same change:
   regression checks.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md): temporary desktop and mobile screenshot
   evidence for wrapper regression review.
+- [Artifact Metadata](../preservation/ARTIFACT_METADATA.md): preservation audit checksums, sizes,
+  and manifest commands.
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md): source artifact and
   rebuild-path evidence.
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md): pinned CDN versus

@@ -63,6 +63,8 @@ dieai-flash/
   controls, and the next action instead of hiding the rest of the page.
 - The original source files are kept in the repo for preservation and review,
   while `assets/DieAI.swf` is the playable build used by the web wrapper.
+- Preservation checksums and artifact sizes are recorded in
+  `docs/preservation/ARTIFACT_METADATA.md`.
 - Current and deferred project work lives in `docs/backlog/`.
 
 ## Credits

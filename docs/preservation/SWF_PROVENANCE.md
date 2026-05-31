@@ -29,6 +29,9 @@ Observed metadata:
 - Size: `3,223,681` bytes.
 - SHA-256: `1cb333d6a97c41752e2a76e617921ae5509b5ae6cd33f71bcc33f673e0992f9e`.
 
+The broader audit manifest for the FLA, SWF, source tree, GreenSock dependency, wrapper, and
+screenshots lives in [Artifact Metadata](./ARTIFACT_METADATA.md).
+
 `DieAI.fla` contains a publish-history entry with `publishSize="3223681"` and
 `publishTime="1540935999"` (`2018-10-30T21:46:39Z`), which matches the byte size of the
 tracked SWF.
