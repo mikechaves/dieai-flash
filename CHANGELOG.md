@@ -20,6 +20,9 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [DieAI Preservation Case Study](docs/portfolio/PRESERVATION_CASE_STUDY.md) as a
+  portfolio-ready project draft covering original context, revival approach, tooling decisions, and
+  artifact links.
 - Added the
   [Archive Distribution Decision](docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md), selecting a
   GitHub Release preservation bundle as the FLA distribution path while deferring external

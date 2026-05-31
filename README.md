@@ -80,6 +80,8 @@ dieai-flash/
   `docs/preservation/ARTIFACT_METADATA.md`.
 - The archive distribution path for the FLA and release bundle is recorded in
   `docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md`.
+- A portfolio-ready preservation case-study draft lives at
+  `docs/portfolio/PRESERVATION_CASE_STUDY.md`.
 - Original, exported, wrapper-only, and external runtime assets are scoped in
   `docs/preservation/ARCHIVE_ASSET_SCOPE.md`.
 - A non-playable story and screens transcript is available at

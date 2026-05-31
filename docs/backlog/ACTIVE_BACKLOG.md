@@ -40,11 +40,10 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                | Item                                               | Status | Validation / Exit Criteria                                                                                                                                                       |
-| -------- | ------------------- | -------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Project Framing     | Write the preservation project case-study draft.   | TODO   | A concise Markdown write-up covers the original 2018 context, revival process, Ruffle/tooling choices, artifact links, and portfolio-ready summary; README or evidence links it. |
-| P1       | Wrapper Metadata    | Finalize social-preview metadata and image assets. | TODO   | `index.html` includes complete OpenGraph/Twitter metadata, preview image dimensions are documented or validated, and wrapper smoke coverage checks the critical meta tags.       |
-| P2       | Accessibility/Input | Audit keyboard focus behavior inside Ruffle.       | TODO   | A wrapper fix or decision note records whether focus can be improved, updates the browser smoke checklist, and keeps the click-to-focus instruction accurate.                    |
+| Priority | Area                | Item                                               | Status | Validation / Exit Criteria                                                                                                                                                 |
+| -------- | ------------------- | -------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P1       | Wrapper Metadata    | Finalize social-preview metadata and image assets. | TODO   | `index.html` includes complete OpenGraph/Twitter metadata, preview image dimensions are documented or validated, and wrapper smoke coverage checks the critical meta tags. |
+| P2       | Accessibility/Input | Audit keyboard focus behavior inside Ruffle.       | TODO   | A wrapper fix or decision note records whether focus can be improved, updates the browser smoke checklist, and keeps the click-to-focus instruction accurate.              |
 
 ## Deferred
 
@@ -68,6 +67,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md)
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
+- [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md)
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md)
