@@ -20,6 +20,9 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [GitHub Release Approval Packet](docs/preservation/GITHUB_RELEASE_APPROVAL_PACKET.md),
+  documenting the draft tag/title, candidate bundle path, file counts, manifest verification,
+  archive size/hash, release notes, and no-publish confirmation for the first preservation release.
 - Added the [Live GitHub Pages Smoke - 2026-05-31](docs/qa/LIVE_GITHUB_PAGES_SMOKE_2026-05-31.md),
   documenting current public HTTPS wrapper load, Ruffle focus, runtime controls, network responses,
   responsive checks, console observations, and the direct-file guard.

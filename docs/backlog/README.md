@@ -62,6 +62,8 @@ discovers new work, do one of the following in the same change:
   non-publishing bundle inventory, manifest, and archive-checksum evidence.
 - [GitHub Release Publish Runbook](../preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md):
   approval-gated release tag, bundle upload, verification, and rollback checklist.
+- [GitHub Release Approval Packet](../preservation/GITHUB_RELEASE_APPROVAL_PACKET.md): draft
+  approval-checkpoint values for the first current preservation release bundle.
 - [External Archive Submission Readiness](../preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md):
   Internet Archive and Flashpoint metadata, rights, and blocker notes.
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md): public-repo posture for

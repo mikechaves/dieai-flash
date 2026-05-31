@@ -191,6 +191,15 @@ unzip -t "$BUNDLE_NAME.zip"
 
 The release is not complete until the downloaded archive passes checksum and zip integrity checks.
 
+## Approval Packet
+
+The current draft approval-checkpoint values are recorded in
+[GitHub Release Approval Packet](./GITHUB_RELEASE_APPROVAL_PACKET.md).
+
+Because the release inventory includes `docs/**`, any committed approval-packet update changes the
+final bundle checksum. Treat that packet as a review draft and regenerate the final bundle values
+from the approved release commit before creating a tag or GitHub Release.
+
 ## Post-Publish Documentation
 
 After a successful publish pass:

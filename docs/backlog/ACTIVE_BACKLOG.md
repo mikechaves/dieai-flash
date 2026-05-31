@@ -46,7 +46,6 @@ preserved SWF, creating a tag, uploading release assets, or starting remaster wo
 | Priority | Area                       | Item                                                                            | Status | Validation / Exit Criteria                                                                                                                                                       |
 | -------- | -------------------------- | ------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | P1       | Preservation/Rebuild       | Run the Adobe Animate scratch-publish worksheet.                                | BLOCKED | Preflight-only attempt is recorded; resume when Adobe Animate is installed/licensed so the FLA can be opened, scratch-published, browser-smoked, and checked against clean git state. |
-| P1       | Release/Packaging          | Prepare the first GitHub Release approval packet without publishing.            | TODO   | Approval checkpoint values are ready for review: proposed tag/title, release commit, bundle path, file count, manifest count, archive size, archive hash, and no tag/release made. |
 | P1       | Runtime/Distribution       | Decide whether the first preservation release must be self-contained for Ruffle. | TODO   | Runtime/release docs state whether the pinned CDN wrapper remains acceptable for the first release or vendoring must happen before publishing.                                    |
 | P1       | External Archive Readiness | Prepare Internet Archive pre-upload metadata against the reconciled inventory.  | TODO   | External readiness notes contain final-release placeholders, rights text, file list expectations, collection/mediatype questions, and blockers without creating an upload.        |
 | P1       | External Archive Readiness | Shape the Flashpoint curation preflight plan.                                   | TODO   | Readiness notes define duplicate search, curation package layout, launch-command decision, local test path, and blockers without creating or submitting a curation.              |
@@ -87,6 +86,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)
 - [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md)
 - [GitHub Release Publish Runbook](../preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md)
+- [GitHub Release Approval Packet](../preservation/GITHUB_RELEASE_APPROVAL_PACKET.md)
 - [External Archive Submission Readiness](../preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
 - [Archive Release Inventory Reconciliation](../preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md)
