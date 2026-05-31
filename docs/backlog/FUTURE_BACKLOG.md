@@ -19,6 +19,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 - 2026-05-31: Promoted Flash/Animate rebuild-guide feasibility to
   [Active Backlog](./ACTIVE_BACKLOG.md) as decision-gated preservation/reproducibility work.
+- 2026-05-31: Completed the Flash/Animate rebuild-guide feasibility audit in
+  [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md); a full guide remains
+  deferred until Adobe Animate can complete a scratch publish round trip.
 - 2026-05-31: Promoted the pinned Ruffle CDN versus vendored-runtime review to
   [Active Backlog](./ACTIVE_BACKLOG.md) as decision-gated wrapper/runtime work.
 - 2026-05-31: Promoted service-worker caching scope to
@@ -26,8 +29,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Preservation And Reproducibility
 
-- Promoted: Flash/Animate rebuild-guide feasibility is now active as a decision gate before any
-  full guide is written.
+- [ ] Write a full Flash/Animate rebuild guide after Adobe Animate can open `DieAI.fla`, publish a
+      scratch SWF/HTML pair, and record emitted sizes, hashes, warnings, and browser-smoke results
+      without changing tracked game assets.
 
 ## Wrapper And Runtime
 

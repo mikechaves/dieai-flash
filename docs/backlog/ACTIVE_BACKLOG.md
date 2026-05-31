@@ -40,11 +40,10 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                         | Item                                                            | Status | Validation / Exit Criteria                                                                                                                                                                                 |
-| -------- | ---------------------------- | --------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESEARCH | Preservation/Reproducibility | Determine whether a Flash/Animate rebuild guide is feasible.    | TODO   | `docs/preservation/SWF_PROVENANCE.md` records the tested toolchain path or blocker, exact commands/tool versions where available, and whether a full guide should be written without changing game assets. |
-| RESEARCH | Wrapper/Runtime              | Re-evaluate the pinned Ruffle CDN versus vendored runtime path. | TODO   | `docs/preservation/RUFFLE_RUNTIME_DECISION.md` records current runtime availability, package size/license tradeoffs, vendoring triggers, and the decision; `node scripts/smoke-wrapper.mjs` passes.        |
-| P2       | Wrapper/Runtime              | Decide whether service-worker caching is warranted.             | TODO   | A decision note or wrapper change defines the cache scope for `assets/DieAI.swf` and static images; if implemented, browser smoke verifies first-load and repeat-load behavior without stale runtime risk. |
+| Priority | Area            | Item                                                            | Status | Validation / Exit Criteria                                                                                                                                                                                 |
+| -------- | --------------- | --------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESEARCH | Wrapper/Runtime | Re-evaluate the pinned Ruffle CDN versus vendored runtime path. | TODO   | `docs/preservation/RUFFLE_RUNTIME_DECISION.md` records current runtime availability, package size/license tradeoffs, vendoring triggers, and the decision; `node scripts/smoke-wrapper.mjs` passes.        |
+| P2       | Wrapper/Runtime | Decide whether service-worker caching is warranted.             | TODO   | A decision note or wrapper change defines the cache scope for `assets/DieAI.swf` and static images; if implemented, browser smoke verifies first-load and repeat-load behavior without stale runtime risk. |
 
 ## Deferred
 

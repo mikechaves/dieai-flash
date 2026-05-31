@@ -2,7 +2,7 @@
 
 > Source-of-truth notes for the preserved DieAI Flash build.
 
-_Current as of: 2026-05-30_
+_Current as of: 2026-05-31_
 
 ---
 
@@ -142,11 +142,52 @@ Use this only when intentionally regenerating `assets/DieAI.swf`.
    - Desktop/mobile layouts have no horizontal overflow.
    - Console output has no wrapper errors or warnings.
 
+## Rebuild Guide Feasibility Audit
+
+Audit date: 2026-05-31.
+
+Decision: a full step-by-step rebuild guide should not be written yet. The repository contains
+enough metadata to document the expected Adobe Animate publish path, but this checkout does not have
+a verified local authoring toolchain that can open `DieAI.fla`, publish a scratch SWF, and compare
+the rebuilt output without changing tracked game assets.
+
+Tested local environment:
+
+| Check                     | Result                                                                                                                                                                              |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Adobe Animate application | Not found under `/Applications` or Spotlight application metadata.                                                                                                                  |
+| Flash/Flex/AIR CLI tools  | `mxmlc`, `compc`, `adl`, `adt`, `swfdump`, `animate`, `Animate`, and `flashplayer` missing.                                                                                         |
+| Java runtime              | `/usr/bin/java` shim exists, but macOS reports no Java runtime is installed.                                                                                                        |
+| Info-ZIP version          | `UnZip 6.00 of 20 April 2009`, Apple build.                                                                                                                                         |
+| FLA compressed-data test  | `unzip -t DieAI.fla` reports the known 54-byte central-directory warning, then reports no compressed-data errors.                                                                   |
+| FLA inspection extraction | `unzip -q DieAI.fla -d "$tmp"` exits `2` because of the ZIP warning, but extracts `87` files including `DOMDocument.xml`, `PublishSettings.xml`, `DieAI.xfl`, and `DieAI_beta.xfl`. |
+
+Current feasible guidance:
+
+1. Use the artifact and publish-profile details in this note to inspect the FLA and verify expected
+   settings.
+2. Treat Adobe Animate as the authoritative opener because the FLA contains timeline symbols,
+   embedded media, library linkages, and publish settings that are not reproducible from the
+   ActionScript source files alone.
+3. Do not replace `assets/DieAI.swf` from an unverified rebuild.
+
+Write a full rebuild guide only after this round trip succeeds in a scratch output directory:
+
+1. Open `DieAI.fla` in Adobe Animate, preferably a version compatible with Animate Windows `24.0`
+   build `14`, XFL `23.0`, and Flash Player 26 / SWF 37 publishing.
+2. Confirm the source path `.` resolves `lib/shoot/*.as` and `com/greensock/` from the repo root.
+3. Publish `DieAI.swf` and `DieAI.html` to an untracked scratch directory.
+4. Record the Animate version, host OS, publish settings, emitted file sizes, SHA-256 hashes, and any
+   warnings.
+5. Run the browser smoke checklist against the scratch SWF before deciding whether the guide is
+   stable enough to publish.
+
 ## Known Gaps
 
 - The repo does not currently include an automated command-line SWF rebuild.
-- The exact Adobe Animate version required to round-trip the FLA without changes is not proven.
-  The FLA metadata says it was saved by Animate Windows `24.0` build `14`, while the publish
+- A local Adobe Animate/Flex/AIR/Flash toolchain was not available during the 2026-05-31 feasibility
+  audit, so the exact Adobe Animate version required to round-trip the FLA without changes is not
+  proven. The FLA metadata says it was saved by Animate Windows `24.0` build `14`, while the publish
   template path references Adobe Animate CC 2018.
 - `DieAI.fla` emits a ZIP central-directory length warning in `unzip`; Adobe Animate should be
   treated as the authoritative opener.

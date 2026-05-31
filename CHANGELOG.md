@@ -20,6 +20,9 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added a Flash/Animate rebuild-guide feasibility audit to
+  [SWF Provenance And Rebuild Notes](docs/preservation/SWF_PROVENANCE.md), documenting the local
+  toolchain blocker and the required scratch-publish gate before a full guide is written.
 - Added the [Keyboard Focus Audit](docs/qa/KEYBOARD_FOCUS_AUDIT.md), a visible Ruffle focus state,
   and a keyboard-reachable player tab stop while preserving the original SWF input handling.
 - Added dedicated social-preview metadata and a `1200x630` preview image for the wrapper, with static
