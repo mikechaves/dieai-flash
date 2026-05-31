@@ -15,16 +15,24 @@ validation, a reason to beat the current queue, and a preservation-safe implemen
 If another doc records a follow-up, finding, or proposed roadmap item, it must also appear
 here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not work.
 
+## Promotion Notes
+
+- 2026-05-31: Promoted Flash/Animate rebuild-guide feasibility to
+  [Active Backlog](./ACTIVE_BACKLOG.md) as decision-gated preservation/reproducibility work.
+- 2026-05-31: Promoted the pinned Ruffle CDN versus vendored-runtime review to
+  [Active Backlog](./ACTIVE_BACKLOG.md) as decision-gated wrapper/runtime work.
+- 2026-05-31: Promoted service-worker caching scope to
+  [Active Backlog](./ACTIVE_BACKLOG.md) as a wrapper/runtime decision before any implementation.
+
 ## Preservation And Reproducibility
 
-- [ ] Create a full Flash/Animate rebuild guide if the original toolchain can be reproduced.
+- Promoted: Flash/Animate rebuild-guide feasibility is now active as a decision gate before any
+  full guide is written.
 
 ## Wrapper And Runtime
 
-- [ ] Revisit vendoring Ruffle locally if CDN reliability, availability, privacy, or archival
-      requirements justify it.
-- [ ] Add optional service-worker caching for the SWF and static images if GitHub Pages caching is
-      insufficient.
+- Promoted: Ruffle vendoring review is now active as a runtime decision gate.
+- Promoted: service-worker caching scope is now active as a cache-scope decision gate.
 
 ## Accessibility And Input
 
