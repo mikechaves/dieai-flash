@@ -116,6 +116,10 @@ dieai-flash/
   `docs/historical/CHAVES_RHETORICAL_ANALYSIS.md`.
 - Preservation release notes and the update convention live in `CHANGELOG.md`.
 - Current and deferred project work lives in `docs/backlog/`.
+- The latest live GitHub Pages smoke evidence is recorded in
+  `docs/qa/LIVE_GITHUB_PAGES_SMOKE_2026-05-31.md`.
+- Release-bundle inventory, exclusions, runtime posture, and checksum expectations are reconciled in
+  `docs/preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md`.
 
 ## Credits
 

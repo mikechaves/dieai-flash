@@ -88,6 +88,16 @@ The dry run verified that the full committed bundle inventory can be generated f
 that a `SHA256SUMS.txt` manifest can be produced and checked, and that a local zip archive can be
 created without creating a tag, GitHub Release, or uploaded asset.
 
+## Inventory Reconciliation
+
+Archive asset scope, release-bundle inventory, temporary-artifact exclusions, external Ruffle runtime
+posture, and checksum expectations are reconciled in
+[Archive Release Inventory Reconciliation](./ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md).
+
+That note is the current cross-check before any real preservation release publish pass. The
+historical dry-run archive must not be reused because the final bundle must be rebuilt from the
+approved release commit.
+
 ## Publish Runbook
 
 The approval-gated publish checklist is recorded in

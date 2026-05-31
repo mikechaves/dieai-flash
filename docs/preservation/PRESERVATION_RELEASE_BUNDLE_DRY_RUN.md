@@ -52,6 +52,14 @@ Using all of `docs/**` keeps the release bundle aligned with the repository's pr
 QA records, backlog governance, portfolio case study, accessibility notes, historical notes, and
 source-of-truth decisions.
 
+The current inventory contract and exclusions are reconciled in
+[Archive Release Inventory Reconciliation](./ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md).
+
+The counts and archive checksum below are historical evidence for this dry-run commit. Because
+`docs/**` is part of the intended release bundle and documentation continues to evolve, a real
+publish pass must rebuild the bundle from the final release commit instead of reusing this archive or
+expecting these exact counts.
+
 ## Results
 
 | Output                  | Result                                                                  |

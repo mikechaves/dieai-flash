@@ -27,6 +27,15 @@ the pinned Ruffle and SWF constants, controls, focus affordances, fallback UI te
 social-preview metadata, and the `file://` guard that prevents Ruffle from loading before the
 custom local-server message.
 
+## Latest Recorded Pass
+
+The latest live GitHub Pages pass is recorded in
+[Live GitHub Pages Smoke - 2026-05-31](../qa/LIVE_GITHUB_PAGES_SMOKE_2026-05-31.md).
+
+That pass verified HTTPS load, Ruffle initialization, `assets/DieAI.swf`, player focus,
+runtime-confirmed `A`/`D`/`Space` controls, desktop/mobile overflow, network responses, console
+observations, and the direct `file://` guard.
+
 ## Targets
 
 | Target             | URL or Command                                                                       | Expected Outcome                                                                                      |

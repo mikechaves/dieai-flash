@@ -11,7 +11,8 @@ _Current as of: 2026-05-31_
 Use this note to understand what each committed artifact represents before reviewing,
 redistributing, rebuilding, or pruning the archive. It complements the checksum manifest in
 [Artifact Metadata](./ARTIFACT_METADATA.md) and the build-path details in
-[SWF Provenance And Rebuild Notes](./SWF_PROVENANCE.md).
+[SWF Provenance And Rebuild Notes](./SWF_PROVENANCE.md). Release-bundle inclusion rules are
+reconciled in [Archive Release Inventory Reconciliation](./ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md).
 
 This is a preservation-scope note, not legal advice. The bundled GreenSock ActionScript source has a
 separate project posture note in [GreenSock License Review](./GREENSOCK_LICENSE_REVIEW.md).
@@ -54,6 +55,22 @@ The current public page uses three layers:
 
 The Ruffle runtime bytes are intentionally not committed. The current decision and vendoring trigger
 live in [Ruffle Runtime Decision](./RUFFLE_RUNTIME_DECISION.md).
+
+## Release Bundle Inventory
+
+The first GitHub preservation release bundle should include the curated repository surface documented
+in [Archive Release Inventory Reconciliation](./ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md):
+
+- original authoring and exported Flash artifacts;
+- wrapper imagery and modern wrapper files;
+- original ActionScript source and bundled GreenSock dependency;
+- `README.md`, `CHANGELOG.md`, `LICENSE`, and `docs/**`;
+- a generated `SHA256SUMS.txt` inside the bundle;
+- a separate `.zip.sha256` checksum asset beside the release archive.
+
+Do not include the external Ruffle CDN runtime bytes, `/tmp/dieai-*` validation output, Playwright
+traces/screenshots, local server logs, or temporary tool installs unless a future decision explicitly
+changes the archive model.
 
 ## Review Checklist
 

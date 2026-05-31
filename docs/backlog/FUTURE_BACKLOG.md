@@ -53,7 +53,7 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 - [ ] Add an external portfolio-site link to the case study once the portfolio page is published.
 - [ ] Publish the first GitHub preservation release bundle using the approval-gated runbook after a
       release publish pass is explicitly started; include the FLA, SWF, source, wrapper state, docs,
-      and SHA-256 manifest.
+      the reconciled release inventory, and SHA-256 manifest.
 - [ ] Evaluate submitting the preserved build to Internet Archive or Flashpoint after the GitHub
       preservation release bundle exists, the final checksum is recorded, target-specific metadata is
       finalized, and any Flashpoint curation package passes local testing.

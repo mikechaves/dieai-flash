@@ -36,8 +36,10 @@ Before building a real release candidate:
 2. The release commit is the intended final preservation commit.
 3. `node scripts/smoke-wrapper.mjs` passes.
 4. The release bundle dry-run path remains valid.
-5. GitHub CLI authentication and repository permissions are available.
-6. A human has approved moving past the approval checkpoint.
+5. The inventory still matches
+   [Archive Release Inventory Reconciliation](./ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md).
+6. GitHub CLI authentication and repository permissions are available.
+7. A human has approved moving past the approval checkpoint.
 
 ## Clean-Main Preflight
 

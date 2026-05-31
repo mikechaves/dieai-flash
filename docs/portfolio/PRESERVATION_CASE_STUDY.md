@@ -71,14 +71,28 @@ browsers block runtime features needed by the emulator on local file URLs.
 
 [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md) records the FLA metadata,
 publish settings, ActionScript entry points, symbol dependencies, and expected Adobe Animate rebuild
-path. [Artifact Metadata](../preservation/ARTIFACT_METADATA.md) records checksums and byte sizes for
-the core preservation set.
+path.
+[Adobe Animate Scratch Publish Worksheet](../preservation/ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md)
+captures the future round-trip evidence needed before writing a full rebuild guide.
+[Artifact Metadata](../preservation/ARTIFACT_METADATA.md) records checksums and byte sizes for the
+core preservation set.
 
 ### Third-Party Dependency Posture
 
 The original source depends on bundled GreenSock ActionScript files. The project keeps those files as
 third-party source for rebuild compatibility and documents the posture in
 [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md).
+
+### Release And Archive Posture
+
+The archive path is approval-gated rather than automatic.
+[Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md) selects a GitHub
+Release preservation bundle as the first distribution gate, while
+[Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md) proves
+the local bundle and manifest command shape.
+[Archive Release Inventory Reconciliation](../preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md)
+aligns the archive asset scope, release inventory, external Ruffle posture, temporary-artifact
+exclusions, and checksum expectations before any real publish pass.
 
 ## User Experience
 
@@ -100,10 +114,20 @@ The project uses lightweight checks rather than a build pipeline:
 
 - `node scripts/smoke-wrapper.mjs` verifies wrapper-critical paths, constants, fallback copy,
   controls, and the local-file guard.
+- [Live GitHub Pages Smoke - 2026-05-31](../qa/LIVE_GITHUB_PAGES_SMOKE_2026-05-31.md) records a
+  live HTTPS pass covering Ruffle load, SWF fetch, focus, `A`/`D`/`Space` controls, responsive
+  layout, network responses, console observations, and the direct `file://` guard.
 - [Browser Smoke Checklist](../backlog/BROWSER_SMOKE_CHECKLIST.md) describes manual live/local
   browser checks for the player, assets, console output, responsive layout, and fallback behavior.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md) records current desktop and mobile wrapper
   screenshot evidence.
+- [Keyboard Focus Audit](../qa/KEYBOARD_FOCUS_AUDIT.md) and
+  [Keyboard Runtime Input Audit](../qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md) document the wrapper focus
+  path and runtime-confirmed `A`, `D`, and `Space` controls.
+- [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md),
+  [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md), and
+  [Gamepad Mapping Test Plan](../qa/GAMEPAD_MAPPING_TEST_PLAN.md) keep platform-specific input work
+  parked behind preservation-safe validation gates.
 
 ## Current Gaps
 
@@ -113,13 +137,16 @@ The project uses lightweight checks rather than a build pipeline:
 - GitHub Release bundling is parked until a release publish pass is explicitly started.
 - External archive submission is deferred until a release bundle, checksum, rights note, and archive
   target are ready.
+- The external portfolio-site link remains deferred until a portfolio page exists.
 
 ## Primary Links
 
 - [Live Demo](https://mikechaves.github.io/dieai-flash/)
 - [Project README](../../README.md)
 - [Modern Wrapper](../../index.html)
+- [Live GitHub Pages Smoke - 2026-05-31](../qa/LIVE_GITHUB_PAGES_SMOKE_2026-05-31.md)
 - [Original ActionScript Source](../../lib/shoot/)
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
+- [Archive Release Inventory Reconciliation](../preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md)
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)

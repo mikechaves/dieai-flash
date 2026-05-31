@@ -40,11 +40,13 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                      | Item                                                                 | Status | Validation / Exit Criteria                                                                                                                                                                                                                                  |
-| -------- | ------------------------- | -------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | QA/Runtime                | Run and document a current live GitHub Pages browser smoke pass.      | TODO   | A QA note or checklist update records live HTTPS wrapper load, Ruffle player focus, `A`/`D`/`Space` controls, fallback expectations, console/network observations, responsive spot checks, and any follow-up blockers.                                      |
-| P1       | Portfolio/Presentation    | Refresh the preservation case study against current evidence.         | TODO   | The case study links current keyboard-runtime, release-bundle dry-run, archive, QA, and control-copy evidence while keeping the external portfolio-site link deferred until a portfolio page exists.                                                        |
-| P1       | Preservation/Metadata     | Reconcile archive asset scope with the release-bundle inventory.      | TODO   | Archive-scope docs, dry-run inventory, temp-artifact exclusions, Ruffle external-runtime posture, and checksum-manifest expectations agree before any real release publish pass.                                                                            |
+No active work is selected right now.
+
+The 2026-05-31 live browser smoke pass, preservation case-study refresh, and archive release
+inventory reconciliation are complete and linked below. The remaining future backlog items are gated
+by Adobe Animate access, explicit release-publish approval, external archive prerequisites, physical
+controller hardware, runtime-vendoring requirements, or an explicit remaster decision, so they should
+stay parked until one of those gates is satisfied.
 
 ## Deferred
 
@@ -67,6 +69,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Modern Ruffle Wrapper](../../index.html)
 - [Static Wrapper Smoke Script](../../scripts/smoke-wrapper.mjs)
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md)
+- [Live GitHub Pages Smoke - 2026-05-31](../qa/LIVE_GITHUB_PAGES_SMOKE_2026-05-31.md)
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
 - [Social Preview Metadata](../qa/SOCIAL_PREVIEW_METADATA.md)
 - [Keyboard Focus Audit](../qa/KEYBOARD_FOCUS_AUDIT.md)
@@ -82,6 +85,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [GitHub Release Publish Runbook](../preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md)
 - [External Archive Submission Readiness](../preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
+- [Archive Release Inventory Reconciliation](../preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md)
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md)
 - [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md)
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md)

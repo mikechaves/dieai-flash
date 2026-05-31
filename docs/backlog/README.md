@@ -29,6 +29,8 @@ discovers new work, do one of the following in the same change:
   work.
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md): repeatable playability and wrapper
   regression checks.
+- [Live GitHub Pages Smoke - 2026-05-31](../qa/LIVE_GITHUB_PAGES_SMOKE_2026-05-31.md): current
+  live HTTPS wrapper, Ruffle, network, input, responsive, and direct-file evidence.
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md): non-playable
   story, controls, level, and game-over context for users who cannot run Flash or Ruffle.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md): temporary desktop and mobile screenshot
@@ -51,6 +53,9 @@ discovers new work, do one of the following in the same change:
   narrative draft for the Flash revival and preservation work.
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md): review map for original,
   exported, wrapper-only, documentation, and external runtime assets.
+- [Archive Release Inventory Reconciliation](../preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md):
+  alignment note for release-bundle inventory, exclusions, runtime posture, and checksum
+  expectations.
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md): GitHub
   Release bundle decision and external archive deferral.
 - [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md):

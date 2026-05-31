@@ -20,6 +20,13 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Live GitHub Pages Smoke - 2026-05-31](docs/qa/LIVE_GITHUB_PAGES_SMOKE_2026-05-31.md),
+  documenting current public HTTPS wrapper load, Ruffle focus, runtime controls, network responses,
+  responsive checks, console observations, and the direct-file guard.
+- Added the
+  [Archive Release Inventory Reconciliation](docs/preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md),
+  aligning archive asset scope, release-bundle inventory, temporary-artifact exclusions, external
+  Ruffle runtime posture, and checksum expectations.
 - Added the [Adobe Animate Scratch Publish Worksheet](docs/preservation/ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md),
   defining the environment, publish-settings, scratch output, hash, and browser-smoke capture needed
   before a full rebuild guide can be written.
@@ -78,6 +85,11 @@ project's preservation or visitor-facing posture.
 
 ### Changed
 
+- Refreshed the [DieAI Preservation Case Study](docs/portfolio/PRESERVATION_CASE_STUDY.md) against
+  current live-smoke, keyboard-runtime, release-bundle, archive, QA, and deferred-portfolio-link
+  evidence.
+- Reconciled the release publish runbook, archive distribution decision, dry-run note, and archive
+  asset scope around the same release-bundle inventory and checksum contract.
 - Expanded the first preservation release bundle gate to include all committed `docs/**` evidence.
 - Updated the public controls copy from `WASD`, arrows, `Space`, and `Esc` to the runtime-confirmed
   `A`, `D`, and `Space` inputs.
