@@ -20,6 +20,8 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Preservation Release Bundle Dry Run](docs/preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md),
+  documenting a clean-main, non-publishing bundle build, manifest verification, and archive checksum.
 - Added the [Keyboard Runtime Input Audit](docs/qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md), documenting
   browser/SWF runtime evidence for the preserved `A`, `D`, and `Space` controls.
 - Added the [Reduced Motion Posture](docs/qa/REDUCED_MOTION_POSTURE.md) decision, documenting the
@@ -67,6 +69,7 @@ project's preservation or visitor-facing posture.
 
 ### Changed
 
+- Expanded the first preservation release bundle gate to include all committed `docs/**` evidence.
 - Updated the public controls copy from `WASD`, arrows, `Space`, and `Esc` to the runtime-confirmed
   `A`, `D`, and `Space` inputs.
 - Formalized `docs/backlog/` as the active/future backlog source of truth for preservation work.

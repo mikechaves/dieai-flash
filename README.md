@@ -80,6 +80,8 @@ dieai-flash/
   `docs/preservation/ARTIFACT_METADATA.md`.
 - The archive distribution path for the FLA and release bundle is recorded in
   `docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md`.
+- The non-publishing release bundle dry run is recorded in
+  `docs/preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md`.
 - A portfolio-ready preservation case-study draft lives at
   `docs/portfolio/PRESERVATION_CASE_STUDY.md`.
 - Social preview metadata and image dimensions are documented in

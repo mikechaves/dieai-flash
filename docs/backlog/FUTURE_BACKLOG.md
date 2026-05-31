@@ -55,6 +55,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
   [Active Backlog](./ACTIVE_BACKLOG.md) as repo-owned distribution readiness work. The actual
   GitHub Release publish step remains deferred until the dry run passes and a publish pass is
   explicitly requested.
+- 2026-05-31: Completed the preservation release bundle dry run in
+  [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md);
+  the actual GitHub Release publish step remains deferred until explicitly requested.
 
 ## Preservation And Reproducibility
 

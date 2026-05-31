@@ -40,9 +40,8 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                      | Item                                                       | Status | Validation / Exit Criteria                                                                                                                                                                                                 |
-| -------- | ------------------------- | ---------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Preservation/Distribution | Dry-run the first GitHub preservation release bundle path. | TODO   | A clean-main dry run proves the bundle inventory and SHA-256 manifest can be generated in a temporary directory, records any release blockers, and does not create a tag, GitHub Release, or uploaded asset without approval. |
+No active work is currently queued. Promote the next preservation-safe item from
+[Future Backlog](./FUTURE_BACKLOG.md) before starting new implementation work.
 
 ## Deferred
 
@@ -75,6 +74,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md)
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)
+- [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md)
 - [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md)

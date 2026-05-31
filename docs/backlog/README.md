@@ -51,6 +51,8 @@ discovers new work, do one of the following in the same change:
   exported, wrapper-only, documentation, and external runtime assets.
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md): GitHub
   Release bundle decision and external archive deferral.
+- [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md):
+  non-publishing bundle inventory, manifest, and archive-checksum evidence.
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md): public-repo posture for
   bundled third-party ActionScript source.
 - [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md):

@@ -73,13 +73,20 @@ When publishing the first current preservation release:
    - `README.md`
    - `CHANGELOG.md`
    - `LICENSE`
-   - `docs/preservation/**`
-   - `docs/accessibility/**`
-   - `docs/historical/CHAVES_RHETORICAL_ANALYSIS.md`
+   - `docs/**`
 4. Generate `SHA256SUMS.txt` for the bundle contents and the final archive file.
 5. Attach the archive and checksum file to the GitHub Release.
 6. Verify the release with `gh release view <tag> --json tagName,assets,url`.
 7. Add the release URL and final archive checksum to the changelog or this decision note.
+
+## Release Bundle Dry Run
+
+The first non-publishing bundle dry run completed on 2026-05-31 and is recorded in
+[Preservation Release Bundle Dry Run](./PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md).
+
+The dry run verified that the full committed bundle inventory can be generated from clean `main`,
+that a `SHA256SUMS.txt` manifest can be produced and checked, and that a local zip archive can be
+created without creating a tag, GitHub Release, or uploaded asset.
 
 ## Backlog Impact
 
