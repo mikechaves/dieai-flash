@@ -32,6 +32,9 @@ Observed metadata:
 The broader audit manifest for the FLA, SWF, source tree, GreenSock dependency, wrapper, and
 screenshots lives in [Artifact Metadata](./ARTIFACT_METADATA.md).
 
+The review scope for original, generated, wrapper-only, documentation, and external runtime assets
+lives in [Archive Asset Scope](./ARCHIVE_ASSET_SCOPE.md).
+
 `DieAI.fla` contains a publish-history entry with `publishSize="3223681"` and
 `publishTime="1540935999"` (`2018-10-30T21:46:39Z`), which matches the byte size of the
 tracked SWF.

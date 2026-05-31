@@ -31,6 +31,8 @@ discovers new work, do one of the following in the same change:
   story, controls, level, and game-over context for users who cannot run Flash or Ruffle.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md): temporary desktop and mobile screenshot
   evidence for wrapper regression review.
+- [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md): review map for original,
+  exported, wrapper-only, documentation, and external runtime assets.
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md): preservation audit checksums, sizes,
   and manifest commands.
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md): source artifact and

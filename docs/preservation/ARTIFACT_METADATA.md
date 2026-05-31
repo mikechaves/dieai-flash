@@ -111,5 +111,7 @@ unzip -p DieAI.fla PublishSettings.xml | rg "DocumentClass|Version>|ExternalPlay
 - `DieAI.fla` emits the ZIP central-directory warning documented in
   [SWF Provenance And Rebuild Notes](./SWF_PROVENANCE.md). Automated extraction still reads the
   publish settings used above, but Adobe Animate remains the authoritative opener.
+- Asset classes and review scope are documented in
+  [Archive Asset Scope](./ARCHIVE_ASSET_SCOPE.md).
 - Ruffle runtime bytes are not tracked in this repo. The pinned CDN runtime decision is documented in
   [Ruffle Runtime Decision](./RUFFLE_RUNTIME_DECISION.md).
