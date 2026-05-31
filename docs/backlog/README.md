@@ -51,6 +51,8 @@ discovers new work, do one of the following in the same change:
   `prefers-reduced-motion` coverage, and future animation guidance.
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md): portfolio-ready
   narrative draft for the Flash revival and preservation work.
+- [Portfolio Link Handoff](../portfolio/PORTFOLIO_LINK_HANDOFF.md): requirements for adding the
+  future external portfolio-page link.
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md): review map for original,
   exported, wrapper-only, documentation, and external runtime assets.
 - [Archive Release Inventory Reconciliation](../preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md):

@@ -51,7 +51,7 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 ## Portfolio And Distribution
 
 - [ ] Add an external portfolio-site link to the case study once the portfolio page is published and
-      the active handoff requirements are satisfied.
+      the repository handoff requirements are satisfied.
 - [ ] Publish the first GitHub preservation release bundle using the approval-gated runbook after a
       release publish pass is explicitly approved; include the FLA, SWF, source, wrapper state, docs,
       the reconciled release inventory, and SHA-256 manifest from the final release commit.

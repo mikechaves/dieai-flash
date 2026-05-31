@@ -38,6 +38,18 @@ GitHub preservation zip.
 - [Flashpoint Request Form](https://flashpointarchive.org/datahub/Request_Form)
 - [Flashpoint Submission System](https://fpfss.flashpointarchive.org/web)
 
+The 2026-05-31 refresh confirmed:
+
+- Internet Archive upload pages require item metadata such as title, identifier, description, subject
+  tags, creator, date, collection, language, and license; item identifiers should use simple
+  lowercase ASCII characters, dashes, or underscores.
+- Internet Archive upload tips still advise avoiding very large single-page uploads and note that
+  item processing can take time after upload.
+- Internet Archive rights guidance still places non-infringing-use responsibility on the uploader and
+  does not guarantee item rights metadata.
+- Flashpoint curation guidance still expects a curation archive with metadata, `content/`, `logo.png`,
+  screenshot evidence, a Flash-compatible launch command, and real Flashpoint Infinity testing.
+
 ## Candidate Targets
 
 | Target           | Candidate Use                                                                                                    | Current Status                                                                                             |
@@ -53,22 +65,39 @@ release bundle is a broad preservation payload.
 
 Use the final GitHub Release, not the dry-run archive, as the upload source.
 
-| Field          | Draft Value / Guidance                                                                                                                                                 |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Title          | `DieAI Flash Game Preservation Bundle`                                                                                                                                 |
-| Creator        | `Michael Chaves`                                                                                                                                                       |
-| Date           | `2018-10-30` for the original Flash publish evidence; mention the preservation release date in the description.                                                         |
-| Description    | Preservation bundle for the 2018 DieAI Flash game, including the original Adobe Animate FLA, exported SWF, original generated HTML, ActionScript source, imagery, modern Ruffle wrapper, documentation, and checksums. |
-| Subject tags   | `Flash`; `Flash game`; `ActionScript 3`; `Adobe Animate`; `Ruffle`; `web game preservation`; `student game`; `DieAI`; `AICorp`; `Michael Chaves`                       |
-| Language       | `English`                                                                                                                                                              |
-| Mediatype      | Prefer `software` if the item is treated as a preserved playable/software artifact; confirm collection fit during the actual upload pass.                                |
-| Files          | Approved `dieai-preservation-YYYY-MM-DD.zip` plus `dieai-preservation-YYYY-MM-DD.zip.sha256`.                                                                           |
-| Source         | GitHub repository URL, GitHub Release URL, and final archive SHA-256.                                                                                                   |
-| License        | Do not select a blanket Creative Commons license for the whole bundle unless a fresh rights review approves it. Use the rights note below.                              |
+| Field | Draft Value / Guidance |
+| ----- | ---------------------- |
+| Title | `DieAI Flash Game Preservation Bundle` |
+| Identifier / page URL | Prefer `dieai-flash-game-preservation-bundle` if available; otherwise append the release date, for example `dieai-flash-game-preservation-bundle-YYYY-MM-DD`. |
+| Creator | `Michael Chaves` |
+| Date | `2018-10-30` for the original Flash publish evidence; mention the preservation release date in the description. |
+| Description | Preservation bundle for the 2018 DieAI Flash game, including the original Adobe Animate FLA, exported SWF, original generated HTML, ActionScript source, imagery, modern Ruffle wrapper, documentation, and checksums. |
+| Subject tags | `Flash`; `Flash game`; `ActionScript 3`; `Adobe Animate`; `Ruffle`; `web game preservation`; `student game`; `DieAI`; `AICorp`; `Michael Chaves` |
+| Language | `English` |
+| Mediatype | Prefer `software` if the item is treated as a preserved playable/software artifact; confirm collection fit during the actual upload pass. |
+| Collection | Let Internet Archive auto-select from the uploaded file format first, then review whether a software-related collection is more appropriate. |
+| Files | Approved `dieai-preservation-YYYY-MM-DD.zip` plus `dieai-preservation-YYYY-MM-DD.zip.sha256`. |
+| Source | GitHub repository URL, GitHub Release URL, and final archive SHA-256. |
+| License | Do not select a blanket Creative Commons license for the whole bundle unless a fresh rights review approves it. Use the rights note below. |
+| Custom metadata | Consider adding repository URL, GitHub Release URL, archive SHA-256, original publish evidence date, and `Ruffle` runtime note as custom metadata or description text. |
 
 Filename constraints are already compatible with Internet Archive guidance if the release bundle keeps
 the ASCII `dieai-preservation-YYYY-MM-DD.zip` naming pattern from
 [GitHub Release Publish Runbook](./GITHUB_RELEASE_PUBLISH_RUNBOOK.md).
+
+### Internet Archive Pre-Upload Checklist
+
+Do this only after the approved GitHub Release exists:
+
+1. Confirm the release URL and final archive SHA-256 from the published GitHub Release.
+2. Confirm the exact uploaded files are the approved zip and `.zip.sha256` assets.
+3. Confirm the item identifier is available and uses simple lowercase ASCII, dashes, or underscores.
+4. Confirm mediatype and collection fit during the actual upload pass.
+5. Paste the rights note below into the description or rights field as appropriate.
+6. Avoid selecting a blanket Creative Commons license for the whole mixed-rights bundle unless a fresh
+   rights review approves it.
+7. After upload, wait for item processing and verify the item page, file list, download links,
+   metadata, rights text, and checksum file.
 
 ## Rights Note Draft
 
@@ -109,24 +138,63 @@ Before any Flashpoint submission:
 
 Metadata starting point:
 
-| Field                | Draft Value / Guidance                                                                                       |
-| -------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Title                | `DieAI`                                                                                                      |
-| Platform             | `Flash`                                                                                                      |
-| Developer / Creator  | `Michael Chaves`                                                                                             |
-| Date                 | `2018` or `2018-10-30` if Flashpoint accepts the more precise preserved publish evidence.                     |
-| Source               | `Personal Archive` or the final GitHub Release URL, depending on curator guidance.                           |
-| Launch Command       | Must be Flashpoint-compatible HTTP or approved `localflash` structure; do not use the GitHub Pages HTTPS URL. |
-| Original Description | Use the README/project description and note the runtime-confirmed `A`, `D`, and `Space` controls.             |
-| Curation Notes       | Mention preserved source, original SWF, Ruffle wrapper context, and any localflash/personal-project rationale. |
+| Field | Draft Value / Guidance |
+| ----- | ---------------------- |
+| Title | `DieAI` |
+| Library | `Arcade` |
+| Platform | `Flash` |
+| Application Path | `FPSoftware\Flash\flashplayer_32_sa.exe`, unless local testing proves another Flash projector is required. |
+| Developer / Creator | `Michael Chaves` |
+| Release Date | `2018-10-30` if accepted, otherwise `2018`. |
+| Source | `Personal Archive: Michael Chaves` or the final GitHub Release URL, depending on curator guidance. |
+| Launch Command | Proposed preflight value: `http://localflash/dieai/DieAI.swf`. Confirm with curators because `localflash` is reserved for offline media and personal projects. Do not use the GitHub Pages HTTPS URL. |
+| Original Description | Use the README/project description and note the runtime-confirmed `A`, `D`, and `Space` controls. |
+| Notes | Mention that the curation is based on a preserved 2018 student Flash game with source, FLA, SWF, and Ruffle wrapper context in the GitHub preservation release. |
+| Curation Notes | Mention any `localflash` rationale, missing original hosted URL, release URL, checksum, and test results. |
+
+### Flashpoint Curation Preflight Plan
+
+Do this only after the GitHub preservation release exists or an explicit Flashpoint curation pass is
+started:
+
+1. Search the Flashpoint database, FPFSS, not-accepted curations, and relevant curation channels for
+   `DieAI`, `Michael Chaves`, `AICorp`, and `Buddy Bots`.
+2. Confirm eligibility as a browser-playable Flash game or personal/offline project.
+3. Create a local curation folder outside the repo, for example
+   `/tmp/dieai-flashpoint-curation-YYYY-MM-DD/`.
+4. Use Flashpoint Infinity's Curate tab to generate `meta.yaml`; do not hand-edit the metadata file
+   as the source of truth.
+5. Build this proposed content layout for local testing:
+
+   ```text
+   dieai/
+   ├── content/
+   │   └── localflash/
+   │       └── dieai/
+   │           └── DieAI.swf
+   ├── logo.png
+   ├── screenshot.png
+   └── meta.yaml
+   ```
+
+6. Use `assets/DieAI.swf` from the final GitHub Release bundle as the playable content source.
+7. Generate `logo.png` from the title/start-screen art and `screenshot.png` from active gameplay,
+   both as PNG files.
+8. Test in Flashpoint Infinity through the Curate tab with the Run button.
+9. Exercise launch, start screen, intro skip, `A`, `D`, `Space`, game-over or win-state recovery, and
+   logs for missing asset requests.
+10. Export the curation only after local testing passes.
+11. Submit through FPFSS only after Discord/curator flow and duplicate checks are complete.
 
 ## Remaining Blockers
 
 - No current GitHub preservation release URL exists yet.
 - The final release archive SHA-256 is not known yet.
 - Internet Archive collection and mediatype should be confirmed during the actual upload pass.
-- A Flashpoint curation package has not been built or tested.
-- Flashpoint duplicate and eligibility checks have not been performed.
+- Internet Archive item identifier availability has not been checked.
+- A Flashpoint curation package has not been built, exported, or tested.
+- Flashpoint duplicate, not-accepted, FPFSS, Discord, and eligibility checks have not been performed.
+- Flashpoint `localflash` launch-command suitability needs curator confirmation or local test proof.
 - Rights language should be reviewed once the final release bundle exists.
 
 ## Submission Gate

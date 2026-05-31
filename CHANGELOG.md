@@ -20,6 +20,8 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Portfolio Link Handoff](docs/portfolio/PORTFOLIO_LINK_HANDOFF.md), defining the URL,
+  placement, backlink, copy, and validation requirements for a future external portfolio-page link.
 - Added the [GitHub Release Approval Packet](docs/preservation/GITHUB_RELEASE_APPROVAL_PACKET.md),
   documenting the draft tag/title, candidate bundle path, file counts, manifest verification,
   archive size/hash, release notes, and no-publish confirmation for the first preservation release.
@@ -88,6 +90,9 @@ project's preservation or visitor-facing posture.
 
 ### Changed
 
+- Expanded [External Archive Submission Readiness](docs/preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md)
+  with Internet Archive pre-upload metadata, file expectations, rights blockers, and Flashpoint
+  curation preflight details.
 - Decided the first GitHub preservation release does not require vendored Ruffle runtime bytes,
   keeping the pinned external runtime acceptable unless approval adds a self-contained-runtime
   requirement.

@@ -46,9 +46,6 @@ preserved SWF, creating a tag, uploading release assets, or starting remaster wo
 | Priority | Area                       | Item                                                                            | Status | Validation / Exit Criteria                                                                                                                                                       |
 | -------- | -------------------------- | ------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | P1       | Preservation/Rebuild       | Run the Adobe Animate scratch-publish worksheet.                                | BLOCKED | Preflight-only attempt is recorded; resume when Adobe Animate is installed/licensed so the FLA can be opened, scratch-published, browser-smoked, and checked against clean git state. |
-| P1       | External Archive Readiness | Prepare Internet Archive pre-upload metadata against the reconciled inventory.  | TODO   | External readiness notes contain final-release placeholders, rights text, file list expectations, collection/mediatype questions, and blockers without creating an upload.        |
-| P1       | External Archive Readiness | Shape the Flashpoint curation preflight plan.                                   | TODO   | Readiness notes define duplicate search, curation package layout, launch-command decision, local test path, and blockers without creating or submitting a curation.              |
-| P2       | Portfolio/Presentation     | Define the portfolio-page handoff for the future external case-study link.      | TODO   | Case-study or backlog docs state the required published URL, link placement, and validation needed before adding an external portfolio-site link.                                |
 
 ## Deferred
 
@@ -82,6 +79,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Reduced Motion Posture](../qa/REDUCED_MOTION_POSTURE.md)
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md)
+- [Portfolio Link Handoff](../portfolio/PORTFOLIO_LINK_HANDOFF.md)
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)
 - [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md)
 - [GitHub Release Publish Runbook](../preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md)

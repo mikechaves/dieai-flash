@@ -94,6 +94,13 @@ the local bundle and manifest command shape.
 aligns the archive asset scope, release inventory, external Ruffle posture, temporary-artifact
 exclusions, and checksum expectations before any real publish pass.
 
+### Portfolio Link Handoff
+
+The future external portfolio-site link is intentionally deferred until a stable public page exists.
+[Portfolio Link Handoff](./PORTFOLIO_LINK_HANDOFF.md) defines the required URL, placement, backlink,
+copy, and validation checks for adding that link without turning this repository case study into a
+shadow planning queue.
+
 ## User Experience
 
 The modern wrapper provides:
@@ -137,7 +144,8 @@ The project uses lightweight checks rather than a build pipeline:
 - GitHub Release bundling is parked until a release publish pass is explicitly started.
 - External archive submission is deferred until a release bundle, checksum, rights note, and archive
   target are ready.
-- The external portfolio-site link remains deferred until a portfolio page exists.
+- The external portfolio-site link remains deferred until a portfolio page exists and passes the
+  [Portfolio Link Handoff](./PORTFOLIO_LINK_HANDOFF.md).
 
 ## Primary Links
 
@@ -150,3 +158,4 @@ The project uses lightweight checks rather than a build pipeline:
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
 - [Archive Release Inventory Reconciliation](../preservation/ARCHIVE_RELEASE_INVENTORY_RECONCILIATION.md)
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)
+- [Portfolio Link Handoff](./PORTFOLIO_LINK_HANDOFF.md)

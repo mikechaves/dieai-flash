@@ -90,6 +90,8 @@ dieai-flash/
   `docs/preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md`.
 - A portfolio-ready preservation case-study draft lives at
   `docs/portfolio/PRESERVATION_CASE_STUDY.md`.
+- External portfolio-link requirements live at
+  `docs/portfolio/PORTFOLIO_LINK_HANDOFF.md`.
 - Social preview metadata and image dimensions are documented in
   `docs/qa/SOCIAL_PREVIEW_METADATA.md`.
 - Ruffle keyboard focus behavior is documented in
