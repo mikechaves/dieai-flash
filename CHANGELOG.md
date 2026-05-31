@@ -20,6 +20,10 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the
+  [Archive Distribution Decision](docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md), selecting a
+  GitHub Release preservation bundle as the next FLA distribution gate while deferring external
+  archive submission.
 - Added the modern Ruffle wrapper fallback path for blocked runtime states, including the
   direct-`file://` guard and screenshot/control fallback.
 - Added static wrapper smoke validation in `scripts/smoke-wrapper.mjs` and the manual

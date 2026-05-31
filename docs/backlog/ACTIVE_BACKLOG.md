@@ -40,9 +40,9 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                 | Item                                                               | Status | Validation / Exit Criteria                                                                                                                                                 |
-| -------- | -------------------- | ------------------------------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P2       | Archive Distribution | Evaluate whether the FLA should be mirrored to a release artifact. | TODO   | A decision note compares GitHub release artifacts and external archive options, covers checksum/licensing/size concerns, and records the next publish gate or park reason. |
+| Priority | Area                 | Item                                                  | Status | Validation / Exit Criteria                                                                                                                                                           |
+| -------- | -------------------- | ----------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| P1       | Archive Distribution | Publish the first GitHub preservation release bundle. | TODO   | A dated release tag exists with a release asset containing the FLA, SWF, source, wrapper state, docs, and SHA-256 manifest; the final release URL and archive checksum are recorded. |
 
 ## Deferred
 
@@ -66,6 +66,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md)
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
+- [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md)
 - [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md)

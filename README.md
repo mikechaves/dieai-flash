@@ -78,6 +78,8 @@ dieai-flash/
   while `assets/DieAI.swf` is the playable build used by the web wrapper.
 - Preservation checksums and artifact sizes are recorded in
   `docs/preservation/ARTIFACT_METADATA.md`.
+- The archive distribution path for the FLA and release bundle is recorded in
+  `docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md`.
 - Original, exported, wrapper-only, and external runtime assets are scoped in
   `docs/preservation/ARCHIVE_ASSET_SCOPE.md`.
 - A non-playable story and screens transcript is available at

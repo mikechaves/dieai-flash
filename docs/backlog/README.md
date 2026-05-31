@@ -35,6 +35,8 @@ discovers new work, do one of the following in the same change:
   evidence for wrapper regression review.
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md): review map for original,
   exported, wrapper-only, documentation, and external runtime assets.
+- [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md): GitHub
+  Release bundle decision and external archive deferral.
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md): public-repo posture for
   bundled third-party ActionScript source.
 - [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md):

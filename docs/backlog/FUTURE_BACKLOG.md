@@ -2,7 +2,7 @@
 
 > Deferred and long-range DieAI ideas that are not in the active execution queue.
 
-_Current as of: 2026-05-30_
+_Current as of: 2026-05-31_
 
 ---
 
@@ -47,9 +47,8 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 - [ ] Add a portfolio case-study link once the case study exists.
 - [ ] Prepare a short project write-up covering original 2018 context, revival process, and tooling.
-- [ ] Publish a stable release artifact with the SWF, source snapshot, and wrapper state after the
-      archive-distribution decision gate closes.
-- [ ] Evaluate submitting the preserved build to a Flash preservation archive.
+- [ ] Evaluate submitting the preserved build to a Flash preservation archive after the GitHub
+      preservation release bundle exists and the rights/metadata note is ready.
 - [ ] Add social-preview screenshots optimized for project sharing.
 
 ## Strategic Framing
