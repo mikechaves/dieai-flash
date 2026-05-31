@@ -28,7 +28,8 @@ which can map named gamepad buttons to ActionScript key codes before the loaded 
 That gives the project a plausible future path for D-pad and face-button controls without editing
 the SWF.
 
-Keep implementation deferred until a physical-controller browser pass confirms:
+Keep implementation deferred until the physical-controller browser pass in
+[Gamepad Mapping Test Plan](./GAMEPAD_MAPPING_TEST_PLAN.md) confirms:
 
 - the exact key codes the compiled SWF accepts;
 - whether held and released mapped buttons behave like real `KeyboardEvent` input;
@@ -91,6 +92,9 @@ Do not add public gamepad copy or a controller UI until the implementation can p
 4. mapped controls still work after menu, intro, focus, and game-over transitions;
 5. keyboard controls remain unchanged;
 6. the browser smoke checklist and static wrapper smoke script pass.
+
+Use [Gamepad Mapping Test Plan](./GAMEPAD_MAPPING_TEST_PLAN.md) for the physical-controller test
+matrix and evidence requirements before reopening implementation.
 
 ## Deferred Implementation Shape
 

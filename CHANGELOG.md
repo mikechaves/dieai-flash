@@ -20,6 +20,8 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Gamepad Mapping Test Plan](docs/qa/GAMEPAD_MAPPING_TEST_PLAN.md), defining the
+  physical-controller browser pass required before any public gamepad support claim.
 - Added the [Preservation Release Bundle Dry Run](docs/preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md),
   documenting a clean-main, non-publishing bundle build, manifest verification, and archive checksum.
 - Added the [Keyboard Runtime Input Audit](docs/qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md), documenting

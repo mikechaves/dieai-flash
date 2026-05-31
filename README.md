@@ -94,6 +94,8 @@ dieai-flash/
   `docs/qa/TOUCH_CONTROL_FEASIBILITY.md`.
 - Gamepad-support feasibility is documented in
   `docs/qa/GAMEPAD_SUPPORT_FEASIBILITY.md`.
+- Physical-controller gamepad mapping validation is documented in
+  `docs/qa/GAMEPAD_MAPPING_TEST_PLAN.md`.
 - Reduced-motion posture is documented in
   `docs/qa/REDUCED_MOTION_POSTURE.md`.
 - Service-worker caching scope is documented in

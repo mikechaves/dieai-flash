@@ -43,6 +43,8 @@ discovers new work, do one of the following in the same change:
   decision and deferred implementation boundary.
 - [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md): preservation-safe gamepad
   mapping decision and physical-controller validation boundary.
+- [Gamepad Mapping Test Plan](../qa/GAMEPAD_MAPPING_TEST_PLAN.md): physical-controller browser
+  pass criteria for a future Ruffle `gamepadButtonMapping` prototype.
 - [Reduced Motion Posture](../qa/REDUCED_MOTION_POSTURE.md): wrapper-owned motion inventory,
   `prefers-reduced-motion` coverage, and future animation guidance.
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md): portfolio-ready

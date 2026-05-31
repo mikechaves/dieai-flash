@@ -42,7 +42,6 @@ Rules:
 
 | Priority | Area                      | Item                                                                 | Status | Validation / Exit Criteria                                                                                                                                                                                                                                  |
 | -------- | ------------------------- | -------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Accessibility/Input       | Draft the physical-controller gamepad mapping test plan.             | TODO   | A preservation-safe test plan defines browser/controller coverage, Ruffle `gamepadButtonMapping` values for `A`, `D`, and `Space`, focus/menu/game-over checks, pass/fail evidence, and confirms no public gamepad copy or UI ships without a physical pass. |
 | P1       | Preservation/Distribution | Write the GitHub Release publish runbook.                            | TODO   | A no-surprises publish checklist documents tag naming, clean-main preflight, bundle generation, checksum verification, release creation, asset verification, rollback notes, and the approval gate before any tag or GitHub Release is created.              |
 | P1       | Preservation/Distribution | Prepare external archive submission readiness notes.                 | TODO   | A decision note captures candidate archive targets, required metadata, rights/license language, bundle URL/checksum prerequisites, and remaining blockers without submitting the game to an external archive.                                                |
 | P1       | Preservation/Rebuild      | Draft the Adobe Animate scratch-publish worksheet.                   | TODO   | A worksheet defines the Adobe Animate version/OS fields, publish settings to verify, scratch output capture, hash comparison commands, and browser-smoke evidence needed before a full rebuild guide can be written.                                        |
@@ -77,6 +76,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Keyboard Runtime Input Audit](../qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md)
 - [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md)
 - [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md)
+- [Gamepad Mapping Test Plan](../qa/GAMEPAD_MAPPING_TEST_PLAN.md)
 - [Reduced Motion Posture](../qa/REDUCED_MOTION_POSTURE.md)
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md)

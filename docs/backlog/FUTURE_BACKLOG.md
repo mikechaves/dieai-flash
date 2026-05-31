@@ -35,9 +35,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 - [ ] Add touch controls only as an explicit remaster or wrapper-overlay track after real-device
       validation proves movement, shooting, focus, viewport scaling, and recovery can be supported
       without changing preservation semantics.
-- [ ] Prototype Ruffle `gamepadButtonMapping` only after a physical-controller test plan exists;
-      verify accepted SWF key codes, held-button release behavior, focus requirements, and control
-      copy before publishing gamepad support.
+- [ ] Prototype Ruffle `gamepadButtonMapping` only after the physical-controller test plan can be
+      run against real hardware; verify accepted SWF key codes, held-button release behavior, focus
+      requirements, and control copy before publishing gamepad support.
 
 ## Game Remaster Ideas
 
