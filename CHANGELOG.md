@@ -20,6 +20,9 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Service Worker Cache Decision](docs/preservation/SERVICE_WORKER_CACHE_DECISION.md),
+  deferring service-worker implementation while documenting the future cache scope for the SWF and
+  wrapper images.
 - Added the 2026-05-31 Ruffle CDN versus vendored-runtime review to
   [Ruffle Runtime Decision](docs/preservation/RUFFLE_RUNTIME_DECISION.md), keeping the pinned CDN
   path and deferring vendoring until a concrete archival or reliability requirement appears.

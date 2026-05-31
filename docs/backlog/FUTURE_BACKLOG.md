@@ -29,6 +29,10 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
   until a concrete reliability, privacy, or self-contained archival requirement appears.
 - 2026-05-31: Promoted service-worker caching scope to
   [Active Backlog](./ACTIVE_BACKLOG.md) as a wrapper/runtime decision before any implementation.
+- 2026-05-31: Completed the service-worker cache scope decision in
+  [Service Worker Cache Decision](../preservation/SERVICE_WORKER_CACHE_DECISION.md); implementation
+  remains deferred until there is an offline, repeat-load, GitHub Pages cache, or local-vendored
+  runtime requirement.
 
 ## Preservation And Reproducibility
 
@@ -41,7 +45,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 - [ ] Vendor the exact Ruffle runtime package files only if CDN reliability, privacy, or
       self-contained archival-release requirements justify the added runtime footprint and upgrade
       procedure.
-- Promoted: service-worker caching scope is now active as a cache-scope decision gate.
+- [ ] Add service-worker caching only if the project needs offline/repeat-load behavior, GitHub
+      Pages caching becomes insufficient, or Ruffle is vendored locally; keep the scope limited to
+      `assets/DieAI.swf` and committed wrapper images.
 
 ## Accessibility And Input
 

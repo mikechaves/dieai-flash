@@ -40,9 +40,9 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area            | Item                                                | Status | Validation / Exit Criteria                                                                                                                                                                                 |
-| -------- | --------------- | --------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P2       | Wrapper/Runtime | Decide whether service-worker caching is warranted. | TODO   | A decision note or wrapper change defines the cache scope for `assets/DieAI.swf` and static images; if implemented, browser smoke verifies first-load and repeat-load behavior without stale runtime risk. |
+| Priority | Area             | Item                        | Status | Validation / Exit Criteria                                                                                                   |
+| -------- | ---------------- | --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| _None_   | _Backlog triage_ | _No active item is queued._ | N/A    | Promote the next preservation-safe item from [Future Backlog](./FUTURE_BACKLOG.md) before starting more implementation work. |
 
 ## Deferred
 
@@ -76,6 +76,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md)
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md)
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md)
+- [Service Worker Cache Decision](../preservation/SERVICE_WORKER_CACHE_DECISION.md)
 - [Original ActionScript Source](../../lib/shoot/)
 - [Bundled GreenSock Dependency](../../com/greensock/)
 - [Project Screenshots](../../assets/images/)

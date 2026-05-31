@@ -53,6 +53,8 @@ discovers new work, do one of the following in the same change:
   rebuild-path evidence.
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md): pinned CDN versus
   vendored-runtime decision.
+- [Service Worker Cache Decision](../preservation/SERVICE_WORKER_CACHE_DECISION.md): cache-scope
+  decision for the SWF and wrapper images.
 
 ## Rules
 
