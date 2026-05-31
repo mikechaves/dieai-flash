@@ -25,11 +25,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
       requirements justify it.
 - [ ] Add optional service-worker caching for the SWF and static images if GitHub Pages caching is
       insufficient.
-- [ ] Add richer OpenGraph/Twitter preview metadata after the final project card copy is settled.
 
 ## Accessibility And Input
 
-- [ ] Research keyboard focus improvements inside the Ruffle embed.
 - [ ] Research touch controls for mobile play without changing the original desktop-first game.
 - [ ] Research gamepad support through Ruffle/browser APIs.
 - [ ] Add reduced-motion guidance for wrapper effects if animation increases.
@@ -46,12 +44,10 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 ## Portfolio And Distribution
 
 - [ ] Add a portfolio case-study link once the case study exists.
-- [ ] Prepare a short project write-up covering original 2018 context, revival process, and tooling.
 - [ ] Publish the first GitHub preservation release bundle when a release publish pass is explicitly
       started; include the FLA, SWF, source, wrapper state, docs, and SHA-256 manifest.
 - [ ] Evaluate submitting the preserved build to a Flash preservation archive after the GitHub
       preservation release bundle exists and the rights/metadata note is ready.
-- [ ] Add social-preview screenshots optimized for project sharing.
 
 ## Strategic Framing
 
