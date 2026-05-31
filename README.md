@@ -84,6 +84,8 @@ dieai-flash/
   `docs/preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md`.
 - The GitHub Release publish checklist is recorded in
   `docs/preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md`.
+- External archive submission readiness is recorded in
+  `docs/preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md`.
 - A portfolio-ready preservation case-study draft lives at
   `docs/portfolio/PRESERVATION_CASE_STUDY.md`.
 - Social preview metadata and image dimensions are documented in

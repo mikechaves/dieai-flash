@@ -42,7 +42,6 @@ Rules:
 
 | Priority | Area                      | Item                                                                 | Status | Validation / Exit Criteria                                                                                                                                                                                                                                  |
 | -------- | ------------------------- | -------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Preservation/Distribution | Prepare external archive submission readiness notes.                 | TODO   | A decision note captures candidate archive targets, required metadata, rights/license language, bundle URL/checksum prerequisites, and remaining blockers without submitting the game to an external archive.                                                |
 | P1       | Preservation/Rebuild      | Draft the Adobe Animate scratch-publish worksheet.                   | TODO   | A worksheet defines the Adobe Animate version/OS fields, publish settings to verify, scratch output capture, hash comparison commands, and browser-smoke evidence needed before a full rebuild guide can be written.                                        |
 | P1       | QA/Runtime                | Run and document a current live GitHub Pages browser smoke pass.      | TODO   | A QA note or checklist update records live HTTPS wrapper load, Ruffle player focus, `A`/`D`/`Space` controls, fallback expectations, console/network observations, responsive spot checks, and any follow-up blockers.                                      |
 | P1       | Portfolio/Presentation    | Refresh the preservation case study against current evidence.         | TODO   | The case study links current keyboard-runtime, release-bundle dry-run, archive, QA, and control-copy evidence while keeping the external portfolio-site link deferred until a portfolio page exists.                                                        |
@@ -82,6 +81,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)
 - [Preservation Release Bundle Dry Run](../preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md)
 - [GitHub Release Publish Runbook](../preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md)
+- [External Archive Submission Readiness](../preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md)
 - [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md)

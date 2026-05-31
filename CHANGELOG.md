@@ -20,6 +20,8 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [External Archive Submission Readiness](docs/preservation/EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md),
+  documenting Internet Archive and Flashpoint metadata, rights language, prerequisites, and blockers.
 - Added the [GitHub Release Publish Runbook](docs/preservation/GITHUB_RELEASE_PUBLISH_RUNBOOK.md),
   documenting the approval-gated tag, bundle upload, verification, and rollback checklist.
 - Added the [Gamepad Mapping Test Plan](docs/qa/GAMEPAD_MAPPING_TEST_PLAN.md), defining the

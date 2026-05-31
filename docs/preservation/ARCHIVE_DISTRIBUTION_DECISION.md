@@ -97,11 +97,20 @@ The runbook documents clean-main preflight, bundle generation, checksum verifica
 the approval checkpoint, publish commands, release verification, post-publish documentation, and
 rollback handling.
 
+## External Archive Readiness
+
+External archive submission metadata and blockers are recorded in
+[External Archive Submission Readiness](./EXTERNAL_ARCHIVE_SUBMISSION_READINESS.md).
+
+That note keeps Internet Archive mirroring and Flashpoint curation separate, and keeps both deferred
+until the GitHub preservation release URL, final archive checksum, rights review, target-specific
+metadata, and explicit submission approval exist.
+
 ## Backlog Impact
 
 - Remove the completed archive-distribution decision row from
   [Active Backlog](../backlog/ACTIVE_BACKLOG.md).
 - Keep the GitHub Release bundle publish step in
   [Future Backlog](../backlog/FUTURE_BACKLOG.md) until a release publish pass is explicitly started.
-- Keep external archive submission in Future Backlog until the release bundle URL, checksum, rights
-  note, and collection target are ready.
+- Keep external archive submission in Future Backlog until the release bundle URL, checksum,
+  reviewed rights note, selected target, target-specific metadata, and explicit approval are ready.
