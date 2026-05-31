@@ -2,7 +2,7 @@
 
 > Repeatable smoke checks for the DieAI Ruffle wrapper.
 
-_Current as of: 2026-05-30_
+_Current as of: 2026-05-31_
 
 ---
 
@@ -23,8 +23,8 @@ node scripts/smoke-wrapper.mjs
 ```
 
 The script is intentionally dependency-free. It checks required local assets, local file references,
-the pinned Ruffle and SWF constants, controls, fallback UI text, and the `file://` guard that prevents
-Ruffle from loading before the custom local-server message.
+the pinned Ruffle and SWF constants, controls, fallback UI text, social-preview metadata, and the
+`file://` guard that prevents Ruffle from loading before the custom local-server message.
 
 ## Targets
 
@@ -62,6 +62,14 @@ Use browser DevTools or a browser automation request log.
 - [ ] The Ruffle WASM request returns `200`.
 - [ ] Wrapper screenshots under `assets/images/` return `200`.
 - [ ] No `assets/DieAI.swf` request is made on the direct `file://` path.
+
+## Social Preview Checks
+
+- [ ] Canonical URL is `https://mikechaves.github.io/dieai-flash/`.
+- [ ] OpenGraph and Twitter/X tags use the same title, description, preview image, and image alt
+      text documented in [Social Preview Metadata](../qa/SOCIAL_PREVIEW_METADATA.md).
+- [ ] `assets/images/social-preview.png` is `1200x630`.
+- [ ] The static wrapper smoke script passes its metadata invariants.
 
 ## Console Checks
 

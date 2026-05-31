@@ -82,6 +82,8 @@ dieai-flash/
   `docs/preservation/ARCHIVE_DISTRIBUTION_DECISION.md`.
 - A portfolio-ready preservation case-study draft lives at
   `docs/portfolio/PRESERVATION_CASE_STUDY.md`.
+- Social preview metadata and image dimensions are documented in
+  `docs/qa/SOCIAL_PREVIEW_METADATA.md`.
 - Original, exported, wrapper-only, and external runtime assets are scoped in
   `docs/preservation/ARCHIVE_ASSET_SCOPE.md`.
 - A non-playable story and screens transcript is available at

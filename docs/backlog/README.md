@@ -33,6 +33,8 @@ discovers new work, do one of the following in the same change:
   story, controls, level, and game-over context for users who cannot run Flash or Ruffle.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md): temporary desktop and mobile screenshot
   evidence for wrapper regression review.
+- [Social Preview Metadata](../qa/SOCIAL_PREVIEW_METADATA.md): current OpenGraph/Twitter card copy,
+  image dimensions, and static validation contract.
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md): portfolio-ready
   narrative draft for the Flash revival and preservation work.
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md): review map for original,

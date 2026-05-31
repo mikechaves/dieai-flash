@@ -20,6 +20,8 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added dedicated social-preview metadata and a `1200x630` preview image for the wrapper, with static
+  smoke coverage and [Social Preview Metadata](docs/qa/SOCIAL_PREVIEW_METADATA.md).
 - Added the [DieAI Preservation Case Study](docs/portfolio/PRESERVATION_CASE_STUDY.md) as a
   portfolio-ready project draft covering original context, revival approach, tooling decisions, and
   artifact links.
