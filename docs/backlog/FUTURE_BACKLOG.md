@@ -24,6 +24,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
   deferred until Adobe Animate can complete a scratch publish round trip.
 - 2026-05-31: Promoted the pinned Ruffle CDN versus vendored-runtime review to
   [Active Backlog](./ACTIVE_BACKLOG.md) as decision-gated wrapper/runtime work.
+- 2026-05-31: Completed the Ruffle CDN versus vendored-runtime review in
+  [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md); vendoring remains deferred
+  until a concrete reliability, privacy, or self-contained archival requirement appears.
 - 2026-05-31: Promoted service-worker caching scope to
   [Active Backlog](./ACTIVE_BACKLOG.md) as a wrapper/runtime decision before any implementation.
 
@@ -35,7 +38,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Wrapper And Runtime
 
-- Promoted: Ruffle vendoring review is now active as a runtime decision gate.
+- [ ] Vendor the exact Ruffle runtime package files only if CDN reliability, privacy, or
+      self-contained archival-release requirements justify the added runtime footprint and upgrade
+      procedure.
 - Promoted: service-worker caching scope is now active as a cache-scope decision gate.
 
 ## Accessibility And Input

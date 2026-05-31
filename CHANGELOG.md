@@ -20,6 +20,9 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the 2026-05-31 Ruffle CDN versus vendored-runtime review to
+  [Ruffle Runtime Decision](docs/preservation/RUFFLE_RUNTIME_DECISION.md), keeping the pinned CDN
+  path and deferring vendoring until a concrete archival or reliability requirement appears.
 - Added a Flash/Animate rebuild-guide feasibility audit to
   [SWF Provenance And Rebuild Notes](docs/preservation/SWF_PROVENANCE.md), documenting the local
   toolchain blocker and the required scratch-publish gate before a full guide is written.

@@ -40,10 +40,9 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area            | Item                                                            | Status | Validation / Exit Criteria                                                                                                                                                                                 |
-| -------- | --------------- | --------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESEARCH | Wrapper/Runtime | Re-evaluate the pinned Ruffle CDN versus vendored runtime path. | TODO   | `docs/preservation/RUFFLE_RUNTIME_DECISION.md` records current runtime availability, package size/license tradeoffs, vendoring triggers, and the decision; `node scripts/smoke-wrapper.mjs` passes.        |
-| P2       | Wrapper/Runtime | Decide whether service-worker caching is warranted.             | TODO   | A decision note or wrapper change defines the cache scope for `assets/DieAI.swf` and static images; if implemented, browser smoke verifies first-load and repeat-load behavior without stale runtime risk. |
+| Priority | Area            | Item                                                | Status | Validation / Exit Criteria                                                                                                                                                                                 |
+| -------- | --------------- | --------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P2       | Wrapper/Runtime | Decide whether service-worker caching is warranted. | TODO   | A decision note or wrapper change defines the cache scope for `assets/DieAI.swf` and static images; if implemented, browser smoke verifies first-load and repeat-load behavior without stale runtime risk. |
 
 ## Deferred
 

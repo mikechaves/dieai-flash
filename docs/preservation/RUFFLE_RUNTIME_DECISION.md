@@ -2,7 +2,7 @@
 
 > Decision record for how the DieAI web wrapper loads Ruffle.
 
-_Current as of: 2026-05-24_
+_Current as of: 2026-05-31_
 
 ---
 
@@ -14,7 +14,10 @@ Keep loading Ruffle from the pinned CDN URL:
 https://unpkg.com/@ruffle-rs/ruffle@0.2.0
 ```
 
-Do not vendor Ruffle into this repo right now.
+Do not vendor Ruffle into this repo right now. The 2026-05-31 review confirmed the pinned package
+is reachable, cacheable, and still small enough to load externally, while vendoring would add the
+full runtime package footprint and a manual upgrade procedure without solving a current production
+problem.
 
 Revisit vendoring only if CDN reliability, privacy, availability, or archival requirements become
 stronger than the current need to keep the repository small and easy to inspect.
@@ -49,18 +52,68 @@ The pinned URL redirects to:
 | Vendor only selected runtime files    | Smaller than full package while reducing external runtime dependency.    | Easy to miss required core/WASM variants; source maps/licenses need explicit handling; upgrade path risky. | Defer unless full vendoring is too big. |
 | Track latest CDN package              | Receives runtime fixes automatically.                                    | Can introduce breaking changes without a repo diff.                                                        | Avoid.                                  |
 
+## 2026-05-31 Re-Evaluation
+
+Decision: keep the pinned unpkg runtime and leave vendoring deferred.
+
+Primary references checked:
+
+- [Ruffle downloads](https://ruffle.rs/downloads) lists `0.2.0` as the stable web package and
+  documents both CDN installation and self-hosting.
+- [Ruffle GitHub](https://github.com/ruffle-rs/ruffle) describes Ruffle as a Rust Flash Player
+  emulator targeting desktop and web through WebAssembly, and lists the MIT / Apache-2.0 dual
+  license.
+- `npm view @ruffle-rs/ruffle@0.2.0` reports package version `0.2.0`, license
+  `(MIT OR Apache-2.0)`, tarball integrity
+  `sha512-3SgiTrl+q4cCROpWiKZIwXyrWBpxfSFB42sNUINq1X4IcLNy/lq00UBbIonMB99Onmo1nx91lWxkI83I2tMwvw==`,
+  and unpacked size `29,000,511` bytes.
+- `npm pack @ruffle-rs/ruffle@0.2.0 --dry-run --json` reports tarball size `10,176,886` bytes,
+  unpacked size `29,000,511` bytes, and `12` package files.
+- `https://unpkg.com/@ruffle-rs/ruffle@0.2.0/?meta` reports the same `12` package files and
+  per-file integrity values.
+
+Current HTTP checks:
+
+| URL or asset                                                | Result | Relevant headers / notes                                                                                           |
+| ----------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| `https://unpkg.com/@ruffle-rs/ruffle@0.2.0`                 | `301`  | Redirects to `/@ruffle-rs/ruffle@0.2.0/ruffle.js`.                                                                 |
+| `https://unpkg.com/@ruffle-rs/ruffle@0.2.0/ruffle.js`       | `200`  | `content-type: text/javascript; charset=utf-8`; `cache-control: public, max-age=31536000`; `cf-cache-status: HIT`. |
+| `core.ruffle.a6584f4c154875f3f805.js`                       | `200`  | Versioned core JavaScript returned with one-year public cache headers.                                             |
+| `core.ruffle.f8e79026a9aea0a4e05d.js`                       | `200`  | Versioned core JavaScript returned with one-year public cache headers.                                             |
+| `bae0d5b86e41210ba443.wasm`                                 | `200`  | `content-type: application/wasm`; one-year public cache headers.                                                   |
+| `ecc5e233d534bdc785c1.wasm`                                 | `200`  | `content-type: application/wasm`; one-year public cache headers.                                                   |
+| `https://mikechaves.github.io/dieai-flash/`                 | `200`  | GitHub Pages page returned `content-length: 29693` and `cache-control: max-age=600`.                               |
+| `https://mikechaves.github.io/dieai-flash/assets/DieAI.swf` | `200`  | GitHub Pages SWF returned `content-length: 3223681` and `content-type: application/x-shockwave-flash`.             |
+
+Runtime package footprint if vendored:
+
+| Package file                          | Size                 |
+| ------------------------------------- | -------------------- |
+| `ruffle.js`                           | `457,962`            |
+| `core.ruffle.a6584f4c154875f3f805.js` | `102,936`            |
+| `core.ruffle.f8e79026a9aea0a4e05d.js` | `110,264`            |
+| `bae0d5b86e41210ba443.wasm`           | `13,872,777`         |
+| `ecc5e233d534bdc785c1.wasm`           | `12,974,369`         |
+| Source maps                           | `1,468,637` combined |
+| License/readme/package metadata       | `13,566` combined    |
+
+Vendoring remains unjustified for the live wrapper because the project has no current CDN outage,
+privacy prohibition, or self-contained release requirement. If a future preservation release needs
+every runtime byte, vendor the exact package files above, preserve `LICENSE_APACHE` and
+`LICENSE_MIT`, update `RUFFLE_SRC`, and re-run the browser smoke checklist.
+
 ## Evidence
 
 Observed package metadata for `@ruffle-rs/ruffle@0.2.0`:
 
 - Version: `0.2.0`.
 - License: `(MIT OR Apache-2.0)`.
-- Package tarball size: about `10.2 MB`.
-- Unpacked size: about `29.0 MB`.
+- Package tarball size: `10,176,886` bytes.
+- Unpacked size: `29,000,511` bytes.
 - Runtime files include:
-  - `ruffle.js` (`458.0 kB`).
-  - Two core JavaScript files (`102.9 kB` and `110.3 kB`).
-  - Two WASM files (`13.9 MB` and `13.0 MB`).
+  - `ruffle.js` (`457,962` bytes).
+  - Two core JavaScript files (`102,936` and `110,264` bytes).
+  - Two WASM files (`13,872,777` and `12,974,369` bytes).
   - Source maps and license files.
 
 Observed HTTP behavior:
