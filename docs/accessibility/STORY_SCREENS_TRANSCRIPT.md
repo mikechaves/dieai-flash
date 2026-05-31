@@ -2,7 +2,7 @@
 
 > Non-playable transcript for the preserved DieAI Flash game screens.
 
-_Current as of: 2026-05-30_
+_Current as of: 2026-05-31_
 
 ---
 
@@ -15,13 +15,12 @@ the 2018 game artifact.
 
 ## Controls
 
-| Input              | Action                     |
-| ------------------ | -------------------------- |
-| `WASD`             | Move around the arena      |
-| Arrow keys         | Alternate movement control |
-| `Space`            | Attack or interact         |
-| `Esc`              | Pause or restart           |
-| Mouse click or Tab | Focus the Ruffle player    |
+| Input              | Action                  |
+| ------------------ | ----------------------- |
+| `A`                | Move left               |
+| `D`                | Move right              |
+| `Space`            | Fire                    |
+| Mouse click or Tab | Focus the Ruffle player |
 
 ## Screen Transcript
 

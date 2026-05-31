@@ -40,9 +40,8 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                | Item                                                                | Status | Validation / Exit Criteria                                                                                                                                                                          |
-| -------- | ------------------- | ------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Accessibility/Input | Reconcile documented keyboard controls with runtime input evidence. | TODO   | A browser/SWF runtime pass confirms which documented controls actually work, updates wrapper/transcript/checklist copy if needed, and keeps any remaster-specific control changes parked in future. |
+No active work is currently queued. Promote the next preservation-safe item from
+[Future Backlog](./FUTURE_BACKLOG.md) before starting new implementation work.
 
 ## Deferred
 
@@ -68,6 +67,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
 - [Social Preview Metadata](../qa/SOCIAL_PREVIEW_METADATA.md)
 - [Keyboard Focus Audit](../qa/KEYBOARD_FOCUS_AUDIT.md)
+- [Keyboard Runtime Input Audit](../qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md)
 - [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md)
 - [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md)
 - [Reduced Motion Posture](../qa/REDUCED_MOTION_POSTURE.md)

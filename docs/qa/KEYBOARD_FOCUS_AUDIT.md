@@ -38,8 +38,9 @@ pointer click. Improve the wrapper without modifying the preserved SWF by:
 - making the `Start game` control request player focus after the runtime is ready;
 - updating the status line to distinguish loaded and focused states.
 
-The wrapper does not intercept `WASD`, arrow, `Space`, or `Esc`; those inputs remain owned by the
-original Flash runtime through Ruffle.
+The wrapper does not intercept `A`, `D`, or `Space`; those inputs remain owned by the original Flash
+runtime through Ruffle. The runtime-supported key set is documented separately in
+[Keyboard Runtime Input Audit](./KEYBOARD_RUNTIME_INPUT_AUDIT.md).
 
 ## Validation
 

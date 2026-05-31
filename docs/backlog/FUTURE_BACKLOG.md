@@ -48,6 +48,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
   include reduced-motion coverage before shipping.
 - 2026-05-31: Promoted documented-keyboard-controls reconciliation to
   [Active Backlog](./ACTIVE_BACKLOG.md) after the reduced-motion review cleared the active queue.
+- 2026-05-31: Completed documented-keyboard-controls reconciliation in
+  [Keyboard Runtime Input Audit](../qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md); public control copy now
+  reflects the runtime-confirmed `A`, `D`, and `Space` inputs.
 
 ## Preservation And Reproducibility
 
@@ -69,8 +72,6 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 - [ ] Add touch controls only as an explicit remaster or wrapper-overlay track after real-device
       validation proves movement, shooting, focus, viewport scaling, and recovery can be supported
       without changing preservation semantics.
-- Promoted: documented-keyboard-controls reconciliation is now active as a preservation-safe runtime
-  evidence pass.
 - [ ] Prototype Ruffle `gamepadButtonMapping` only after a physical-controller test plan exists;
       verify accepted SWF key codes, held-button release behavior, focus requirements, and control
       copy before publishing gamepad support.

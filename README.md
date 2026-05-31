@@ -9,9 +9,9 @@ Player.
 
 ## How to play
 
-- `WASD` or arrow keys: move
-- `Space`: attack / interact
-- `Esc`: pause / restart
+- `A`: move left
+- `D`: move right
+- `Space`: fire
 
 If keyboard input does not respond, click once inside the game player or tab to
 the player after it loads to focus the Ruffle canvas.
@@ -86,6 +86,8 @@ dieai-flash/
   `docs/qa/SOCIAL_PREVIEW_METADATA.md`.
 - Ruffle keyboard focus behavior is documented in
   `docs/qa/KEYBOARD_FOCUS_AUDIT.md`.
+- Runtime keyboard control evidence is documented in
+  `docs/qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md`.
 - Touch-control feasibility is documented in
   `docs/qa/TOUCH_CONTROL_FEASIBILITY.md`.
 - Gamepad-support feasibility is documented in

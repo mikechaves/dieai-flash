@@ -37,6 +37,8 @@ discovers new work, do one of the following in the same change:
   image dimensions, and static validation contract.
 - [Keyboard Focus Audit](../qa/KEYBOARD_FOCUS_AUDIT.md): Ruffle focus behavior, wrapper decision,
   and manual validation notes.
+- [Keyboard Runtime Input Audit](../qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md): browser/SWF evidence for
+  the public `A`, `D`, and `Space` controls.
 - [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md): preservation-safe touch-input
   decision and deferred implementation boundary.
 - [Gamepad Support Feasibility](../qa/GAMEPAD_SUPPORT_FEASIBILITY.md): preservation-safe gamepad

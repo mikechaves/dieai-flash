@@ -37,15 +37,15 @@ Keep implementation deferred until a physical-controller browser pass confirms:
 
 ## Source And Runtime Findings
 
-| Area                       | Finding                                                                                                                                       | Impact                                                                                                                                        |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ruffle mapping surface     | Ruffle documents an experimental `gamepadButtonMapping` load option that maps gamepad button names to ActionScript key codes.                 | The wrapper could prototype gamepad buttons as keyboard input without changing the SWF.                                                       |
-| Pinned runtime             | The published `@ruffle-rs/ruffle@0.2.0` `ruffle.js` bundle contains `gamepadButtonMapping` and named buttons such as `dpad-left`.             | The current pinned runtime appears to include the needed option; a version upgrade is not required for a prototype.                           |
-| Native Flash gamepad APIs  | The DieAI source contains no `flash.ui.GameInput`, `GameInputDevice`, `GameInputControl`, or gamepad-specific ActionScript.                   | The original game does not request native Flash gamepad input; support must be wrapper/runtime translation.                                   |
-| Browser-to-SWF bridge      | The source contains no `ExternalInterface` or `fscommand` gameplay callback for input.                                                        | A custom JavaScript `navigator.getGamepads()` loop has no safe public ActionScript hook for setting movement or firing state.                 |
-| Gameplay movement          | `DieAIGame` uses `KeyboardEvent.KEY_DOWN` / `KEY_UP`; source-visible movement is `Keyboard.A` and `Keyboard.D`, with `Keyboard.SPACE` firing. | A prototype should test `DPadLeft -> A`, `DPadRight -> D`, and one face button or trigger mapped to `Space`; arrow and `Esc` support is open. |
-| Analog sticks and axes     | Ruffle's public mapping option is button-name based; the documented enum covers face buttons, triggers, start/select, and D-pad directions.   | Analog-stick movement is not covered by this preservation-safe path.                                                                          |
-| Current wrapper load state | `index.html` calls `player.load({ url: SWF_URL, backgroundColor: "#000000" })` without a gamepad mapping.                                     | The live wrapper has no gamepad-support behavior today.                                                                                       |
+| Area                       | Finding                                                                                                                                     | Impact                                                                                                                                                                        |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ruffle mapping surface     | Ruffle documents an experimental `gamepadButtonMapping` load option that maps gamepad button names to ActionScript key codes.               | The wrapper could prototype gamepad buttons as keyboard input without changing the SWF.                                                                                       |
+| Pinned runtime             | The published `@ruffle-rs/ruffle@0.2.0` `ruffle.js` bundle contains `gamepadButtonMapping` and named buttons such as `dpad-left`.           | The current pinned runtime appears to include the needed option; a version upgrade is not required for a prototype.                                                           |
+| Native Flash gamepad APIs  | The DieAI source contains no `flash.ui.GameInput`, `GameInputDevice`, `GameInputControl`, or gamepad-specific ActionScript.                 | The original game does not request native Flash gamepad input; support must be wrapper/runtime translation.                                                                   |
+| Browser-to-SWF bridge      | The source contains no `ExternalInterface` or `fscommand` gameplay callback for input.                                                      | A custom JavaScript `navigator.getGamepads()` loop has no safe public ActionScript hook for setting movement or firing state.                                                 |
+| Gameplay movement          | `DieAIGame` uses `KeyboardEvent.KEY_DOWN` / `KEY_UP`; runtime-confirmed controls are `Keyboard.A`, `Keyboard.D`, and `Keyboard.SPACE`.      | A prototype should test `DPadLeft -> A`, `DPadRight -> D`, and one face button or trigger mapped to `Space`; arrows and `Esc` are not in the current public control contract. |
+| Analog sticks and axes     | Ruffle's public mapping option is button-name based; the documented enum covers face buttons, triggers, start/select, and D-pad directions. | Analog-stick movement is not covered by this preservation-safe path.                                                                                                          |
+| Current wrapper load state | `index.html` calls `player.load({ url: SWF_URL, backgroundColor: "#000000" })` without a gamepad mapping.                                   | The live wrapper has no gamepad-support behavior today.                                                                                                                       |
 
 ## Browser Constraints
 
@@ -79,8 +79,9 @@ await player.load({
 });
 ```
 
-Those values match source-visible `A`, `D`, and `Space` key codes only. They are not a shipped
-control contract until runtime testing proves the compiled SWF behaves the same way as the source.
+Those values match runtime-confirmed `A`, `D`, and `Space` key codes only. They are not a shipped
+gamepad contract until controller testing proves the compiled SWF behaves correctly through Ruffle's
+mapping layer.
 
 Do not add public gamepad copy or a controller UI until the implementation can prove:
 

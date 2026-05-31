@@ -178,11 +178,10 @@ const requiredSnippets = [
   ["reduced motion media query", "@media (prefers-reduced-motion: reduce)"],
   ["reduced motion scroll fallback", "scroll-behavior: auto;"],
   ["ready status", "Game loaded. Click inside the player or tab to it"],
-  ["focused status", "Player focused. Use WASD"],
-  ["WASD control", "<kbd>WASD</kbd>"],
-  ["arrow control", "<kbd>Arrows</kbd>"],
+  ["focused status", "Player focused. Use A, D, and space"],
+  ["A control", "<kbd>A</kbd>"],
+  ["D control", "<kbd>D</kbd>"],
   ["space control", "<kbd>Space</kbd>"],
-  ["escape control", "<kbd>Esc</kbd>"],
 ];
 
 for (const [label, snippet] of requiredSnippets) {

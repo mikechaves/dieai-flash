@@ -47,7 +47,7 @@ viewport.
 - [ ] `Start game` scrolls to the player and requests focus after the Ruffle player loads.
 - [ ] Clicking inside the player focuses keyboard input and shows the player focus state.
 - [ ] Tab navigation can reach the loaded Ruffle player on HTTP targets.
-- [ ] `WASD`, arrow keys, `Space`, and `Esc` are still documented next to the player.
+- [ ] `A`, `D`, and `Space` are still documented next to the player.
 - [ ] The direct `file://` path shows `Local server required` with the `python3 -m http.server 8000`
       instruction.
 - [ ] If Ruffle cannot initialize on an HTTP target, the player frame shows the non-playable
@@ -90,6 +90,14 @@ Use browser DevTools or a browser automation request log.
 - [ ] The status line changes from the loaded instruction to the focused-controls instruction after
       focus enters the player.
 - [ ] Focus changes are wrapper-only; the wrapper does not intercept gameplay keys.
+
+## Runtime Keyboard Checks
+
+- [ ] `A` moves the player left in the preserved SWF.
+- [ ] `D` moves the player right in the preserved SWF.
+- [ ] `Space` fires in the preserved SWF.
+- [ ] Arrow keys, `W`, `S`, and `Esc` are not documented as supported controls unless a future
+      runtime pass proves otherwise.
 
 ## Responsive Checks
 

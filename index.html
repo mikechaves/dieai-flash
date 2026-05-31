@@ -833,10 +833,9 @@
           <aside class="controls-panel" aria-labelledby="controls-title">
             <h2 id="controls-title">Controls</h2>
             <ul class="control-list">
-              <li><kbd>WASD</kbd><span>Move around the arena</span></li>
-              <li><kbd>Arrows</kbd><span>Alternate movement controls</span></li>
-              <li><kbd>Space</kbd><span>Attack and interact</span></li>
-              <li><kbd>Esc</kbd><span>Pause or restart</span></li>
+              <li><kbd>A</kbd><span>Move left</span></li>
+              <li><kbd>D</kbd><span>Move right</span></li>
+              <li><kbd>Space</kbd><span>Fire</span></li>
             </ul>
             <p class="panel-note">
               Ruffle emulates the Flash runtime in WebAssembly, preserving the original ActionScript game without a browser plugin.
@@ -916,8 +915,8 @@
       const container = document.getElementById("ruffle");
       const status = document.getElementById("player-status");
       const focusLink = document.querySelector("[data-focus-ruffle]");
-      const readyStatus = "Game loaded. Click inside the player or tab to it to focus controls, then use WASD, arrows, space, or escape.";
-      const focusedStatus = "Player focused. Use WASD, arrows, space, or escape for the preserved Flash controls.";
+      const readyStatus = "Game loaded. Click inside the player or tab to it to focus controls, then use A, D, and space.";
+      const focusedStatus = "Player focused. Use A, D, and space for the preserved Flash controls.";
       let activePlayer = null;
       let pendingPlayerFocus = false;
 
@@ -980,10 +979,9 @@
               <p>${message}</p>
               ${command ? `<code class="player-fallback__command">${command}</code>` : ""}
               <ul class="player-fallback__keys" aria-label="DieAI controls">
-                <li><kbd>WASD</kbd><span>Move</span></li>
-                <li><kbd>Arrows</kbd><span>Move</span></li>
-                <li><kbd>Space</kbd><span>Attack</span></li>
-                <li><kbd>Esc</kbd><span>Pause</span></li>
+                <li><kbd>A</kbd><span>Move left</span></li>
+                <li><kbd>D</kbd><span>Move right</span></li>
+                <li><kbd>Space</kbd><span>Fire</span></li>
               </ul>
               <div class="player-fallback__actions">
                 ${primaryAction}

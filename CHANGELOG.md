@@ -20,6 +20,8 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Keyboard Runtime Input Audit](docs/qa/KEYBOARD_RUNTIME_INPUT_AUDIT.md), documenting
+  browser/SWF runtime evidence for the preserved `A`, `D`, and `Space` controls.
 - Added the [Reduced Motion Posture](docs/qa/REDUCED_MOTION_POSTURE.md) decision, documenting the
   wrapper-owned motion inventory, `prefers-reduced-motion` coverage, and future animation guidance.
 - Added the [Gamepad Support Feasibility](docs/qa/GAMEPAD_SUPPORT_FEASIBILITY.md) decision,
@@ -65,5 +67,7 @@ project's preservation or visitor-facing posture.
 
 ### Changed
 
+- Updated the public controls copy from `WASD`, arrows, `Space`, and `Esc` to the runtime-confirmed
+  `A`, `D`, and `Space` inputs.
 - Formalized `docs/backlog/` as the active/future backlog source of truth for preservation work.
 - Documented the current external Ruffle CDN decision and the conditions that would reopen vendoring.
