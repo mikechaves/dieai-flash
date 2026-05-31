@@ -40,9 +40,8 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area      | Item                                                                              | Status | Validation / Exit Criteria                                                                                                                             |
-| -------- | --------- | --------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| P2       | Licensing | Confirm public-repo licensing posture for bundled GreenSock ActionScript sources. | TODO   | LICENSE/README notes clearly distinguish original DieAI code, bundled third-party source, and any redistribution constraints discovered during review. |
+No active rows are queued. Promote work from [Future Backlog](./FUTURE_BACKLOG.md) only when it has
+clear validation, a reason to beat the current queue, and a preservation-safe implementation path.
 
 ## Deferred
 
@@ -66,6 +65,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
+- [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md)
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md)
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md)
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md)

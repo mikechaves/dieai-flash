@@ -113,5 +113,7 @@ unzip -p DieAI.fla PublishSettings.xml | rg "DocumentClass|Version>|ExternalPlay
   publish settings used above, but Adobe Animate remains the authoritative opener.
 - Asset classes and review scope are documented in
   [Archive Asset Scope](./ARCHIVE_ASSET_SCOPE.md).
+- Bundled GreenSock source licensing posture is documented in
+  [GreenSock License Review](./GREENSOCK_LICENSE_REVIEW.md).
 - Ruffle runtime bytes are not tracked in this repo. The pinned CDN runtime decision is documented in
   [Ruffle Runtime Decision](./RUFFLE_RUNTIME_DECISION.md).

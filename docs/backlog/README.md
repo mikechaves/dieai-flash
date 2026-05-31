@@ -33,6 +33,8 @@ discovers new work, do one of the following in the same change:
   evidence for wrapper regression review.
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md): review map for original,
   exported, wrapper-only, documentation, and external runtime assets.
+- [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md): public-repo posture for
+  bundled third-party ActionScript source.
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md): preservation audit checksums, sizes,
   and manifest commands.
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md): source artifact and

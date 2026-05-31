@@ -19,3 +19,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Third-Party Source Notice
+
+The MIT License above applies to Michael Chaves-authored portions of this
+archive unless a file says otherwise. It does not relicense bundled third-party
+source. The `com/greensock/**` ActionScript files are GreenSock source preserved
+for compatibility with the original Flash project and retain the GreenSock
+copyright and terms notices in those files.
+
+See `docs/preservation/GREENSOCK_LICENSE_REVIEW.md` for the current project
+posture and review evidence.

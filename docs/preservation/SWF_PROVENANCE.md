@@ -154,8 +154,8 @@ Use this only when intentionally regenerating `assets/DieAI.swf`.
   expects the playable build at `assets/DieAI.swf`.
 - Rebuilding may produce a different SWF hash even when behavior is unchanged because Animate can
   rewrite timeline/library metadata.
-- Third-party licensing for bundled GreenSock ActionScript source is tracked separately in the
-  active backlog.
+- Third-party licensing posture for bundled GreenSock ActionScript source is documented in
+  [GreenSock License Review](./GREENSOCK_LICENSE_REVIEW.md).
 
 ## Verification Commands
 

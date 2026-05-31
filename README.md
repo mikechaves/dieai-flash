@@ -94,4 +94,9 @@ dieai-flash/
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE) for Michael Chaves-authored portions of this archive unless
+a file says otherwise.
+
+The bundled `com/greensock/**` ActionScript source is third-party GreenSock code preserved for
+source/rebuild compatibility. It retains its own copyright and terms notices and is not relicensed by
+this repo. See [GreenSock License Review](docs/preservation/GREENSOCK_LICENSE_REVIEW.md).
