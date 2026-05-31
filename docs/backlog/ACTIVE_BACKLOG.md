@@ -37,15 +37,23 @@ Rules:
 - `P2`: Worth shaping, but not allowed to displace P0/P1 preservation work without an explicit
   decision.
 - `RESEARCH`: Needs a technical or product decision before implementation.
+- `GATED`: Ready to track, but blocked by explicit approval, external artifacts, or hardware.
 
 ## Active Workboard
 
-The current active queue focuses on unblocking a future preservation release without changing the
-preserved SWF, creating a tag, uploading release assets, or starting remaster work.
+The current active queue tracks the next preservation-safe gates after the release-readiness docs
+pass. Do not change the preserved SWF, create tags, upload release assets, submit external archives,
+or start remaster work unless the row's gate has been explicitly cleared.
 
-| Priority | Area                       | Item                                                                            | Status | Validation / Exit Criteria                                                                                                                                                       |
-| -------- | -------------------------- | ------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Preservation/Rebuild       | Run the Adobe Animate scratch-publish worksheet.                                | BLOCKED | Preflight-only attempt is recorded; resume when Adobe Animate is installed/licensed so the FLA can be opened, scratch-published, browser-smoked, and checked against clean git state. |
+| Priority | Area                       | Item                                                                            | Status  | Validation / Exit Criteria                                                                                                                                                                          |
+| -------- | -------------------------- | ------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P1       | Preservation/Rebuild       | Run the Adobe Animate scratch-publish worksheet.                                | BLOCKED | Preflight-only attempt is recorded; resume when Adobe Animate is installed/licensed so the FLA can be opened, scratch-published, browser-smoked, and checked against clean git state.                |
+| P1       | Preservation/Rebuild       | Write the full Flash/Animate rebuild guide.                                     | BLOCKED | Only start after the scratch-publish worksheet proves `DieAI.fla` opens and publishes cleanly; guide captures Animate version, publish settings, emitted files, hashes, warnings, and smoke results. |
+| P1       | Preservation/Distribution  | Publish the first GitHub preservation release bundle.                           | GATED   | Start only after explicit release-publish approval; rebuild from final clean `main`, generate fresh manifest/checksum values, create the tag/release, upload assets, verify downloads, and record URL/checksum. |
+| P1       | External Archive Readiness | Evaluate Internet Archive or Flashpoint submission from the published release.   | GATED   | Start only after the GitHub Release URL and final archive SHA-256 exist; finalize target-specific metadata, rights review, duplicate checks, and Flashpoint local curation testing before any submission. |
+| P1       | Wrapper/Runtime            | Vendor the exact Ruffle runtime package files if a release trigger clears.      | GATED   | Start only if CDN reliability, privacy, availability, or self-contained archive requirements justify the footprint; update runtime docs, license coverage, wrapper path, and smoke checks. |
+| P2       | Wrapper/Runtime            | Add service-worker caching if an offline or local-runtime trigger clears.       | GATED   | Start only if offline/repeat-load behavior, GitHub Pages caching gaps, or local Ruffle vendoring create a real need; scope cache behavior to wrapper-owned assets with recovery tests. |
+| P2       | Accessibility/Input        | Prototype Ruffle `gamepadButtonMapping` with a physical controller.             | GATED   | Start only when physical-controller testing is available; verify accepted SWF key codes, held-button release behavior, focus requirements, game-over recovery, and public control-copy boundaries. |
 
 ## Deferred
 
@@ -53,8 +61,9 @@ The following remain intentionally non-active:
 
 - Native JavaScript or canvas remaster work.
 - New levels, enemies, scoring systems, or mechanics.
-- Touch/gamepad implementation and mobile-specific gameplay tuning beyond preservation-safe
-  feasibility notes.
+- Touch implementation and mobile-specific gameplay tuning beyond preservation-safe feasibility
+  notes.
+- Public gamepad support copy or UI before a physical-controller prototype passes.
 - Leaderboards, analytics, or account-backed features.
 - Broad portfolio-site integration beyond a stable project link.
 
