@@ -2,7 +2,7 @@
 
 > Deferred and long-range DieAI ideas that are not in the active execution queue.
 
-_Current as of: 2026-05-24_
+_Current as of: 2026-05-30_
 
 ---
 
@@ -18,9 +18,6 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 ## Preservation And Reproducibility
 
 - [ ] Create a full Flash/Animate rebuild guide if the original toolchain can be reproduced.
-- [ ] Convert the supporting project analysis document into accessible Markdown if it is useful
-      as historical context.
-- [ ] Evaluate whether the FLA should be mirrored to a release artifact or external archive.
 
 ## Wrapper And Runtime
 
@@ -29,7 +26,6 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 - [ ] Add optional service-worker caching for the SWF and static images if GitHub Pages caching is
       insufficient.
 - [ ] Add richer OpenGraph/Twitter preview metadata after the final project card copy is settled.
-- [ ] Add a lightweight changelog or release notes once wrapper changes become more frequent.
 
 ## Accessibility And Input
 
@@ -51,7 +47,8 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 - [ ] Add a portfolio case-study link once the case study exists.
 - [ ] Prepare a short project write-up covering original 2018 context, revival process, and tooling.
-- [ ] Publish a stable release artifact with the SWF, source snapshot, and wrapper state.
+- [ ] Publish a stable release artifact with the SWF, source snapshot, and wrapper state after the
+      archive-distribution decision gate closes.
 - [ ] Evaluate submitting the preserved build to a Flash preservation archive.
 - [ ] Add social-preview screenshots optimized for project sharing.
 
