@@ -85,6 +85,9 @@ project's preservation or visitor-facing posture.
 
 ### Changed
 
+- Refreshed the [Preservation Release Bundle Dry Run](docs/preservation/PRESERVATION_RELEASE_BUNDLE_DRY_RUN.md)
+  from current `main`, including manifest verification, archive checksum, and zip integrity
+  evidence.
 - Recorded a blocked Adobe Animate scratch-publish attempt in the
   [Adobe Animate Scratch Publish Worksheet](docs/preservation/ADOBE_ANIMATE_SCRATCH_PUBLISH_WORKSHEET.md),
   keeping the full rebuild guide deferred until Animate can open and publish the FLA.

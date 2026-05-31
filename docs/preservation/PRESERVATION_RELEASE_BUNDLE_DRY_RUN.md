@@ -27,10 +27,10 @@ not tested in this dry run.
 
 ## Inputs
 
-- Source commit: `9e06d71` (`Refresh preservation backlogs`)
+- Source commit: `bc2badb` (`Record Animate scratch publish blocker`)
 - Branch state before dry run: `main` matched `origin/main` (`0 0` ahead/behind)
 - Wrapper preflight: `node scripts/smoke-wrapper.mjs` passed `58` checks
-- Temporary output root: `/tmp/dieai-preservation-release-dry-run-20260531/`
+- Temporary output root: `/tmp/dieai-preservation-release-dry-run-20260531-current/`
 - Bundle directory name: `dieai-preservation-2026-05-31`
 
 The dry run used this committed inventory:
@@ -64,13 +64,14 @@ expecting these exact counts.
 
 | Output                  | Result                                                                  |
 | ----------------------- | ----------------------------------------------------------------------- |
-| Bundle directory        | `/tmp/dieai-preservation-release-dry-run-20260531/dieai-preservation-2026-05-31/` |
-| Bundle archive          | `/tmp/dieai-preservation-release-dry-run-20260531/dieai-preservation-2026-05-31.zip` |
-| Files in bundle         | `171` files including `SHA256SUMS.txt`                                  |
-| Manifest entries        | `170` tracked bundle files                                              |
+| Bundle directory        | `/tmp/dieai-preservation-release-dry-run-20260531-current/dieai-preservation-2026-05-31/` |
+| Bundle archive          | `/tmp/dieai-preservation-release-dry-run-20260531-current/dieai-preservation-2026-05-31.zip` |
+| Files in bundle         | `178` files including `SHA256SUMS.txt`                                  |
+| Manifest entries        | `177` tracked bundle files                                              |
 | Manifest verification   | `shasum -a 256 -c SHA256SUMS.txt` passed for all entries                |
-| Archive size            | `47M`                                                                   |
-| Archive SHA-256         | `ef01c916a69e452230ef57fa40ac1e25ca9d846c2d20e449b8fb2247ed8bbc40`      |
+| Zip integrity           | `unzip -t dieai-preservation-2026-05-31.zip` passed                     |
+| Archive size            | `46M`                                                                   |
+| Archive SHA-256         | `6ac01267d7314a9a6d2e0089b2017d2a8e968423aeb1a75fa1fced0cf5b570a2`      |
 
 Sample verified manifest entries:
 
@@ -80,6 +81,13 @@ Sample verified manifest entries:
 ./LICENSE: OK
 ./README.md: OK
 ./assets/DieAI.html: OK
+./assets/DieAI.swf: OK
+./assets/images/game-over.png: OK
+./assets/images/intro-good.png: OK
+./assets/images/intro-hacked.png: OK
+./assets/images/level-one.png: OK
+./assets/images/main-image.png: OK
+./assets/images/social-preview.png: OK
 ./lib/shoot/DieAIDoc.as: OK
 ./lib/shoot/DieAIGame.as: OK
 ./lib/shoot/Particle.as: OK
@@ -90,7 +98,7 @@ Sample verified manifest entries:
 ## Dry-Run Command Shape
 
 ```bash
-DRY_ROOT=/tmp/dieai-preservation-release-dry-run-20260531
+DRY_ROOT=/tmp/dieai-preservation-release-dry-run-20260531-current
 BUNDLE_NAME=dieai-preservation-2026-05-31
 
 rm -rf "$DRY_ROOT"
@@ -120,6 +128,7 @@ shasum -a 256 -c SHA256SUMS.txt
 cd "$DRY_ROOT"
 zip -qr "$BUNDLE_NAME.zip" "$BUNDLE_NAME"
 shasum -a 256 "$BUNDLE_NAME.zip" > "$BUNDLE_NAME.zip.sha256"
+unzip -t "$BUNDLE_NAME.zip"
 ```
 
 ## Publish Gate
