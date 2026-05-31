@@ -13,8 +13,8 @@ Player.
 - `Space`: attack / interact
 - `Esc`: pause / restart
 
-If keyboard input does not respond, click once inside the game player to focus
-the Ruffle canvas.
+If keyboard input does not respond, click once inside the game player or tab to
+the player after it loads to focus the Ruffle canvas.
 
 For a non-playable text walkthrough of the preserved story, controls, level,
 and game-over screens, read the
@@ -84,6 +84,8 @@ dieai-flash/
   `docs/portfolio/PRESERVATION_CASE_STUDY.md`.
 - Social preview metadata and image dimensions are documented in
   `docs/qa/SOCIAL_PREVIEW_METADATA.md`.
+- Ruffle keyboard focus behavior is documented in
+  `docs/qa/KEYBOARD_FOCUS_AUDIT.md`.
 - Original, exported, wrapper-only, and external runtime assets are scoped in
   `docs/preservation/ARCHIVE_ASSET_SCOPE.md`.
 - A non-playable story and screens transcript is available at

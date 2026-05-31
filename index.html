@@ -307,6 +307,19 @@
       height: 100%;
     }
 
+    #ruffle:focus-within {
+      border-color: var(--accent-strong);
+      box-shadow:
+        inset 0 0 34px rgba(0, 0, 0, 0.9),
+        0 0 0 3px rgba(5, 230, 255, 0.24),
+        0 0 34px rgba(5, 230, 255, 0.44);
+    }
+
+    #ruffle > *:focus-visible {
+      outline: 3px solid var(--accent-strong);
+      outline-offset: -6px;
+    }
+
     #ruffle.has-fallback {
       min-height: clamp(410px, 52vw, 540px);
       aspect-ratio: auto;
@@ -802,7 +815,7 @@
             Stop AICorp's Buddy Bots before the launch gets out of control.
           </p>
           <div class="actions" aria-label="Project links">
-            <a class="button" href="#ruffle">Start game</a>
+            <a class="button" href="#ruffle" data-focus-ruffle>Start game</a>
             <a class="button button--secondary" href="https://github.com/mikechaves/dieai-flash" target="_blank" rel="noopener">View source</a>
           </div>
         </div>
@@ -813,7 +826,7 @@
               <div class="player-message"><strong>Loading</strong>&nbsp;Ruffle player</div>
             </div>
             <p class="player-status" id="player-status">
-              The game loads the original Flash build through Ruffle. Click the player once if keyboard input is not active.
+              The game loads the original Flash build through Ruffle. Click inside the player or tab to it after it loads if keyboard input is not active.
             </p>
           </div>
 
@@ -902,6 +915,11 @@
       const SWF_URL = "assets/DieAI.swf";
       const container = document.getElementById("ruffle");
       const status = document.getElementById("player-status");
+      const focusLink = document.querySelector("[data-focus-ruffle]");
+      const readyStatus = "Game loaded. Click inside the player or tab to it to focus controls, then use WASD, arrows, space, or escape.";
+      const focusedStatus = "Player focused. Use WASD, arrows, space, or escape for the preserved Flash controls.";
+      let activePlayer = null;
+      let pendingPlayerFocus = false;
 
       const setStatus = (message, state) => {
         status.textContent = message;
@@ -911,6 +929,35 @@
           status.classList.add(state);
         }
       };
+
+      const focusActivePlayer = () => {
+        if (!activePlayer) {
+          pendingPlayerFocus = true;
+          return;
+        }
+
+        if (typeof activePlayer.focus === "function") {
+          activePlayer.focus({ preventScroll: true });
+        }
+
+        pendingPlayerFocus = false;
+        window.requestAnimationFrame(syncPlayerFocusStatus);
+      };
+
+      const syncPlayerFocusStatus = () => {
+        if (activePlayer && container.matches(":focus-within")) {
+          setStatus(focusedStatus, "is-ready");
+        }
+      };
+
+      focusLink?.addEventListener("click", () => {
+        pendingPlayerFocus = true;
+        window.requestAnimationFrame(focusActivePlayer);
+      });
+
+      container.addEventListener("click", () => {
+        window.requestAnimationFrame(syncPlayerFocusStatus);
+      });
 
       const renderFallback = ({
         title,
@@ -978,6 +1025,11 @@
 
         const player = ruffle.createPlayer();
         player.setAttribute("aria-label", "Playable DieAI Flash game");
+        player.setAttribute("aria-describedby", "player-status");
+        player.setAttribute("tabindex", "0");
+        player.addEventListener("focus", syncPlayerFocusStatus);
+        player.addEventListener("blur", () => setStatus(readyStatus, "is-ready"));
+        activePlayer = player;
         container.replaceChildren(player);
 
         await player.load({
@@ -985,10 +1037,11 @@
           backgroundColor: "#000000"
         });
 
-        setStatus(
-          "Game loaded. Click inside the player to focus controls, then use WASD, arrows, space, or escape.",
-          "is-ready"
-        );
+        setStatus(readyStatus, "is-ready");
+
+        if (pendingPlayerFocus || window.location.hash === "#ruffle") {
+          window.requestAnimationFrame(focusActivePlayer);
+        }
       } catch (error) {
         renderFallback({
           title: "Ruffle is temporarily unavailable",

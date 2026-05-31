@@ -35,6 +35,8 @@ discovers new work, do one of the following in the same change:
   evidence for wrapper regression review.
 - [Social Preview Metadata](../qa/SOCIAL_PREVIEW_METADATA.md): current OpenGraph/Twitter card copy,
   image dimensions, and static validation contract.
+- [Keyboard Focus Audit](../qa/KEYBOARD_FOCUS_AUDIT.md): Ruffle focus behavior, wrapper decision,
+  and manual validation notes.
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md): portfolio-ready
   narrative draft for the Flash revival and preservation work.
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md): review map for original,

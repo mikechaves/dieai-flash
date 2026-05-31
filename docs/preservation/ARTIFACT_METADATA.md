@@ -18,7 +18,7 @@ screenshots, browser traces, local generated output, and this note itself are in
 
 | Scope            | Files | Bytes      | Manifest SHA-256                                                   |
 | ---------------- | ----- | ---------- | ------------------------------------------------------------------ |
-| Preservation set | `145` | `59129200` | `403431afcb6bb69919801df556d0e5ffb0ae75389391ee4866e5fc6b4c141b1a` |
+| Preservation set | `145` | `59131113` | `d88324fe63c9c106f6e44488fc21df6c8a92db42cea94bef3e7b3e173eacf61b` |
 
 The preservation set covers the core artifacts listed below plus `lib/shoot`, `com/greensock`, and
 `assets/images`. Its manifest is the SHA-256 of sorted per-file SHA-256 lines for that set.
@@ -30,7 +30,7 @@ The preservation set covers the core artifacts listed below plus `lib/shoot`, `c
 | `DieAI.fla`                           | `50392143` | Zip archive data                               | `a38a6fa7b614a73c1c710fdd9c69d8e05b0af1dd9d200a94369448b779a093df` | Original Adobe Animate / Flash authoring file |
 | `assets/DieAI.swf`                    | `3223681`  | Macromedia Flash data (compressed), version 37 | `1cb333d6a97c41752e2a76e617921ae5509b5ae6cd33f71bcc33f673e0992f9e` | Playable build loaded by Ruffle               |
 | `assets/DieAI.html`                   | `2018`     | HTML document text, UTF-8 with BOM             | `c1f6e1b8e71a154e7a0aaf05193f874a18551daa2e23fa6138dfbc52e64d121a` | Legacy Flash embed output                     |
-| `index.html`                          | `27780`    | HTML document text, ASCII text                 | `8a4df5c2e867365862656ef775e1a3c115a6233aedf1b4eaf7536751c6beb4f6` | Modern Ruffle wrapper                         |
+| `index.html`                          | `29693`    | HTML document text, ASCII text                 | `d5035852260580630894e2cc69fc269fb318985c321ac4fe55c3d7845e40f98d` | Modern Ruffle wrapper                         |
 | `docs/Chaves_rhetoricalAnalysis.docx` | `21012`    | Microsoft Word 2007+                           | `dd925df8dbecaba8abbf3acbf392a6f57ef75f64ab42c9491ffe367b942322cd` | Supporting historical project document        |
 
 ## Tree Manifests

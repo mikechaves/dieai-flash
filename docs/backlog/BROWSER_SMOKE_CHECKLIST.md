@@ -23,8 +23,9 @@ node scripts/smoke-wrapper.mjs
 ```
 
 The script is intentionally dependency-free. It checks required local assets, local file references,
-the pinned Ruffle and SWF constants, controls, fallback UI text, social-preview metadata, and the
-`file://` guard that prevents Ruffle from loading before the custom local-server message.
+the pinned Ruffle and SWF constants, controls, focus affordances, fallback UI text,
+social-preview metadata, and the `file://` guard that prevents Ruffle from loading before the
+custom local-server message.
 
 ## Targets
 
@@ -43,7 +44,9 @@ viewport.
 - [ ] Hero, primary actions, player frame, controls panel, screenshots, preservation section, and
       footer render without missing images.
 - [ ] The Ruffle player area reaches the start screen on HTTP targets.
-- [ ] Clicking inside the player focuses keyboard input.
+- [ ] `Start game` scrolls to the player and requests focus after the Ruffle player loads.
+- [ ] Clicking inside the player focuses keyboard input and shows the player focus state.
+- [ ] Tab navigation can reach the loaded Ruffle player on HTTP targets.
 - [ ] `WASD`, arrow keys, `Space`, and `Esc` are still documented next to the player.
 - [ ] The direct `file://` path shows `Local server required` with the `python3 -m http.server 8000`
       instruction.
@@ -78,6 +81,15 @@ Use browser DevTools or a browser automation request log.
 - [ ] The direct `file://` path has no uncaught JavaScript exceptions.
 - [ ] If Ruffle fails to download on HTTP targets, the wrapper shows the screenshot/control fallback
       with a retry action instead of a bare error.
+
+## Keyboard Focus Checks
+
+- [ ] The loaded Ruffle element has `tabindex="0"`.
+- [ ] `document.activeElement` becomes the loaded Ruffle element after clicking inside the player.
+- [ ] The player frame matches `:focus-within` while Ruffle has focus.
+- [ ] The status line changes from the loaded instruction to the focused-controls instruction after
+      focus enters the player.
+- [ ] Focus changes are wrapper-only; the wrapper does not intercept gameplay keys.
 
 ## Responsive Checks
 
@@ -115,6 +127,7 @@ direct-file path manually in a regular browser.
 The smoke pass is complete when:
 
 - Live and local HTTP targets load the game.
+- Click and keyboard tab paths can focus the Ruffle player.
 - Direct file launch shows the custom local-server instruction.
 - SWF, Ruffle, and image assets are reachable where expected.
 - Desktop and mobile layouts have no horizontal overflow.
