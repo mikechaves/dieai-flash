@@ -60,6 +60,10 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
   the actual GitHub Release publish step remains deferred until explicitly requested.
 - 2026-05-31: Promoted the physical-controller gamepad mapping test plan to
   [Active Backlog](./ACTIVE_BACKLOG.md) as the prerequisite for any future Ruffle gamepad prototype.
+- 2026-05-31: Expanded [Active Backlog](./ACTIVE_BACKLOG.md) to the next seven preservation-safe
+  slices: gamepad test planning, release publish runbook, external archive readiness, Animate
+  scratch-publish worksheet, live browser smoke evidence, case-study refresh, and archive-scope
+  reconciliation.
 
 ## Preservation And Reproducibility
 
