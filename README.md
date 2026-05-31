@@ -82,6 +82,9 @@ dieai-flash/
 - A non-playable story and screens transcript is available at
   `docs/accessibility/STORY_SCREENS_TRANSCRIPT.md` for users who cannot run Flash
   or Ruffle.
+- The original rhetorical analysis document is preserved as DOCX at
+  `docs/Chaves_rhetoricalAnalysis.docx` and as accessible Markdown at
+  `docs/historical/CHAVES_RHETORICAL_ANALYSIS.md`.
 - Current and deferred project work lives in `docs/backlog/`.
 
 ## Credits

@@ -2,7 +2,7 @@
 
 > Source-of-truth notes for the preserved DieAI Flash build.
 
-_Current as of: 2026-05-24_
+_Current as of: 2026-05-30_
 
 ---
 
@@ -16,7 +16,7 @@ _Current as of: 2026-05-24_
 | `lib/shoot/*.as`                      | ActionScript 3 game source                         | Document controller, game controller, particle base class, and robot enemy class.               |
 | `com/greensock/`                      | Bundled ActionScript GreenSock dependency          | Required by `DieAIDoc` for intro animation and by any timeline/source references.               |
 | `assets/images/*.png`                 | Modern wrapper screenshots and promotional artwork | Used for the web revival page; not required to rebuild the SWF.                                 |
-| `docs/Chaves_rhetoricalAnalysis.docx` | Supporting historical project document             | Not part of the SWF build path.                                                                 |
+| `docs/Chaves_rhetoricalAnalysis.docx` | Supporting historical project document             | Not part of the SWF build path; accessible Markdown transcription lives in `docs/historical/`.  |
 
 ## Current SWF
 

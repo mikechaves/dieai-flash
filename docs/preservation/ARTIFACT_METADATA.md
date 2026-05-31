@@ -108,6 +108,8 @@ unzip -p DieAI.fla PublishSettings.xml | rg "DocumentClass|Version>|ExternalPlay
 
 - File modification times in a local checkout are useful for detecting local drift, but they are not
   original creation dates. Prefer embedded FLA publish metadata for historical dating.
+- The accessible Markdown transcription for `docs/Chaves_rhetoricalAnalysis.docx` lives at
+  [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md).
 - `DieAI.fla` emits the ZIP central-directory warning documented in
   [SWF Provenance And Rebuild Notes](./SWF_PROVENANCE.md). Automated extraction still reads the
   publish settings used above, but Adobe Animate remains the authoritative opener.

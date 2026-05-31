@@ -42,7 +42,6 @@ Rules:
 
 | Priority | Area                 | Item                                                                | Status | Validation / Exit Criteria                                                                                                                                                 |
 | -------- | -------------------- | ------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Historical Access    | Convert the supporting project analysis document into Markdown.     | TODO   | Accessible Markdown exists for `docs/Chaves_rhetoricalAnalysis.docx`, links back to the preserved DOCX, and is reachable from README or preservation docs.                 |
 | P2       | Release Hygiene      | Add lightweight release notes or a changelog for preservation work. | TODO   | A changelog or release-notes file records the recent wrapper/preservation updates, documents the update convention, and is linked from README or backlog evidence.         |
 | P2       | Archive Distribution | Evaluate whether the FLA should be mirrored to a release artifact.  | TODO   | A decision note compares GitHub release artifacts and external archive options, covers checksum/licensing/size concerns, and records the next publish gate or park reason. |
 
@@ -69,6 +68,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
 - [Archive Asset Scope](../preservation/ARCHIVE_ASSET_SCOPE.md)
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md)
+- [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md)
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md)
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md)
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md)

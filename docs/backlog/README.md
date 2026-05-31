@@ -35,6 +35,8 @@ discovers new work, do one of the following in the same change:
   exported, wrapper-only, documentation, and external runtime assets.
 - [GreenSock License Review](../preservation/GREENSOCK_LICENSE_REVIEW.md): public-repo posture for
   bundled third-party ActionScript source.
+- [Historical Rhetorical Analysis Markdown](../historical/CHAVES_RHETORICAL_ANALYSIS.md):
+  accessible Markdown transcription of the preserved DOCX analysis.
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md): preservation audit checksums, sizes,
   and manifest commands.
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md): source artifact and
