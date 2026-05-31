@@ -2,7 +2,7 @@
 
 > Current execution queue for DieAI preservation and web revival work.
 
-_Current as of: 2026-05-24_
+_Current as of: 2026-05-30_
 
 ---
 
@@ -40,12 +40,11 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area          | Item                                                                                  | Status | Validation / Exit Criteria                                                                                                                                  |
-| -------- | ------------- | ------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P1       | Accessibility | Add a non-playable story/screens transcript for users who cannot run Flash.           | TODO   | A Markdown transcript captures the start, story, controls, level, and game-over context, links to screenshots, and is reachable from README or the wrapper. |
-| P1       | Runtime QA    | Add a tiny static smoke-test script for the wrapper.                                  | TODO   | Script checks local static assets and wrapper invariants without a build step; smoke checklist documents when to run it.                                    |
-| P2       | Archive Trust | Add an archive note explaining which assets are original, generated, or wrapper-only. | TODO   | Preservation docs distinguish original 2018 files, exported artifacts, later wrapper files, and screenshots so redistribution/review scope is clear.        |
-| P2       | Licensing     | Confirm public-repo licensing posture for bundled GreenSock ActionScript sources.     | TODO   | LICENSE/README notes clearly distinguish original DieAI code, bundled third-party source, and any redistribution constraints discovered during review.      |
+| Priority | Area          | Item                                                                                  | Status | Validation / Exit Criteria                                                                                                                             |
+| -------- | ------------- | ------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| P1       | Runtime QA    | Add a tiny static smoke-test script for the wrapper.                                  | TODO   | Script checks local static assets and wrapper invariants without a build step; smoke checklist documents when to run it.                               |
+| P2       | Archive Trust | Add an archive note explaining which assets are original, generated, or wrapper-only. | TODO   | Preservation docs distinguish original 2018 files, exported artifacts, later wrapper files, and screenshots so redistribution/review scope is clear.   |
+| P2       | Licensing     | Confirm public-repo licensing posture for bundled GreenSock ActionScript sources.     | TODO   | LICENSE/README notes clearly distinguish original DieAI code, bundled third-party source, and any redistribution constraints discovered during review. |
 
 ## Deferred
 
@@ -66,6 +65,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Modern Ruffle Wrapper](../../index.html)
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md)
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
+- [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md)
 - [SWF Provenance And Rebuild Notes](../preservation/SWF_PROVENANCE.md)
 - [Ruffle Runtime Decision](../preservation/RUFFLE_RUNTIME_DECISION.md)

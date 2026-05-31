@@ -27,6 +27,8 @@ discovers new work, do one of the following in the same change:
 - [Future Backlog](./FUTURE_BACKLOG.md): deferred, long-range, or decision-bound work.
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md): repeatable playability and wrapper
   regression checks.
+- [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md): non-playable
+  story, controls, level, and game-over context for users who cannot run Flash or Ruffle.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md): temporary desktop and mobile screenshot
   evidence for wrapper regression review.
 - [Artifact Metadata](../preservation/ARTIFACT_METADATA.md): preservation audit checksums, sizes,

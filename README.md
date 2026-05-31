@@ -16,6 +16,10 @@ Player.
 If keyboard input does not respond, click once inside the game player to focus
 the Ruffle canvas.
 
+For a non-playable text walkthrough of the preserved story, controls, level,
+and game-over screens, read the
+[story and screens transcript](docs/accessibility/STORY_SCREENS_TRANSCRIPT.md).
+
 ## Running locally
 
 Clone the repository:
@@ -65,6 +69,9 @@ dieai-flash/
   while `assets/DieAI.swf` is the playable build used by the web wrapper.
 - Preservation checksums and artifact sizes are recorded in
   `docs/preservation/ARTIFACT_METADATA.md`.
+- A non-playable story and screens transcript is available at
+  `docs/accessibility/STORY_SCREENS_TRANSCRIPT.md` for users who cannot run Flash
+  or Ruffle.
 - Current and deferred project work lives in `docs/backlog/`.
 
 ## Credits
