@@ -36,6 +36,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 - 2026-05-31: Promoted touch-control feasibility, gamepad-support feasibility, and reduced-motion
   posture review to [Active Backlog](./ACTIVE_BACKLOG.md) as preservation-safe accessibility/input
   decision work.
+- 2026-05-31: Completed the touch-control feasibility audit in
+  [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md); implementation remains deferred
+  unless it becomes an explicit remaster or experimental wrapper-overlay track.
 
 ## Preservation And Reproducibility
 
@@ -54,7 +57,11 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Accessibility And Input
 
-- Promoted: touch-control feasibility is now active as a preservation-safe input decision gate.
+- [ ] Add touch controls only as an explicit remaster or wrapper-overlay track after real-device
+      validation proves movement, shooting, focus, viewport scaling, and recovery can be supported
+      without changing preservation semantics.
+- [ ] Reconcile documented keyboard controls with a browser/SWF runtime input pass if source-only
+      evidence continues to differ from the wrapper's `WASD`, arrows, and `Esc` guidance.
 - Promoted: gamepad-support feasibility is now active as a preservation-safe input decision gate.
 - Promoted: reduced-motion posture review is now active as a wrapper/accessibility decision gate.
 

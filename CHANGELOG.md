@@ -20,6 +20,9 @@ project's preservation or visitor-facing posture.
 
 ### Added
 
+- Added the [Touch Control Feasibility](docs/qa/TOUCH_CONTROL_FEASIBILITY.md) decision, deferring
+  touch-control implementation while documenting the preserved SWF, Ruffle, and browser-input
+  constraints.
 - Added the [Service Worker Cache Decision](docs/preservation/SERVICE_WORKER_CACHE_DECISION.md),
   deferring service-worker implementation while documenting the future cache scope for the SWF and
   wrapper images.

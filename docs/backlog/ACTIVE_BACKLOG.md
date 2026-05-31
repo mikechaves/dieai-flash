@@ -42,7 +42,6 @@ Rules:
 
 | Priority | Area                | Item                                                                 | Status | Validation / Exit Criteria                                                                                                                                                                           |
 | -------- | ------------------- | -------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESEARCH | Accessibility/Input | Audit touch-control feasibility for the preserved Ruffle build.      | TODO   | A decision note records browser/Ruffle/SWF constraints, whether touch can be supported without changing the original game, and any implementation remains parked unless preservation-safe.           |
 | RESEARCH | Accessibility/Input | Audit gamepad-support feasibility for the preserved Ruffle build.    | TODO   | A decision note records whether Ruffle or browser gamepad APIs can route input into the preserved SWF, the testing path, and whether support stays deferred as remaster/platform-specific work.      |
 | P2       | Accessibility/Input | Review reduced-motion posture for wrapper effects and documentation. | TODO   | A decision note or wrapper/checklist update confirms current motion behavior, verifies `prefers-reduced-motion` coverage, and leaves future animation guidance clear without changing game behavior. |
 
@@ -70,6 +69,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
 - [Social Preview Metadata](../qa/SOCIAL_PREVIEW_METADATA.md)
 - [Keyboard Focus Audit](../qa/KEYBOARD_FOCUS_AUDIT.md)
+- [Touch Control Feasibility](../qa/TOUCH_CONTROL_FEASIBILITY.md)
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)
 - [DieAI Preservation Case Study](../portfolio/PRESERVATION_CASE_STUDY.md)
 - [Archive Distribution Decision](../preservation/ARCHIVE_DISTRIBUTION_DECISION.md)
