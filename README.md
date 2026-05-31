@@ -60,6 +60,7 @@ dieai-flash/
 ├── docs/                   # supporting project documentation
 ├── lib/shoot/              # original ActionScript game source
 ├── scripts/                # static validation helpers
+├── CHANGELOG.md            # preservation release notes
 ├── DieAI.fla               # original Flash authoring file
 ├── index.html              # modern Ruffle web wrapper
 ├── LICENSE
@@ -85,6 +86,7 @@ dieai-flash/
 - The original rhetorical analysis document is preserved as DOCX at
   `docs/Chaves_rhetoricalAnalysis.docx` and as accessible Markdown at
   `docs/historical/CHAVES_RHETORICAL_ANALYSIS.md`.
+- Preservation release notes and the update convention live in `CHANGELOG.md`.
 - Current and deferred project work lives in `docs/backlog/`.
 
 ## Credits

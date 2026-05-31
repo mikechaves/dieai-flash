@@ -2,7 +2,7 @@
 
 > Current execution queue for DieAI preservation and web revival work.
 
-_Current as of: 2026-05-30_
+_Current as of: 2026-05-31_
 
 ---
 
@@ -40,10 +40,9 @@ Rules:
 
 ## Active Workboard
 
-| Priority | Area                 | Item                                                                | Status | Validation / Exit Criteria                                                                                                                                                 |
-| -------- | -------------------- | ------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| P2       | Release Hygiene      | Add lightweight release notes or a changelog for preservation work. | TODO   | A changelog or release-notes file records the recent wrapper/preservation updates, documents the update convention, and is linked from README or backlog evidence.         |
-| P2       | Archive Distribution | Evaluate whether the FLA should be mirrored to a release artifact.  | TODO   | A decision note compares GitHub release artifacts and external archive options, covers checksum/licensing/size concerns, and records the next publish gate or park reason. |
+| Priority | Area                 | Item                                                               | Status | Validation / Exit Criteria                                                                                                                                                 |
+| -------- | -------------------- | ------------------------------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P2       | Archive Distribution | Evaluate whether the FLA should be mirrored to a release artifact. | TODO   | A decision note compares GitHub release artifacts and external archive options, covers checksum/licensing/size concerns, and records the next publish gate or park reason. |
 
 ## Deferred
 
@@ -60,6 +59,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 ## Evidence
 
 - [Project README](../../README.md)
+- [Changelog](../../CHANGELOG.md)
 - [Live Demo](https://mikechaves.github.io/dieai-flash/)
 - [Modern Ruffle Wrapper](../../index.html)
 - [Static Wrapper Smoke Script](../../scripts/smoke-wrapper.mjs)

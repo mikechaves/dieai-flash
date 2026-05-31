@@ -25,6 +25,8 @@ discovers new work, do one of the following in the same change:
 
 - [Active Backlog](./ACTIVE_BACKLOG.md): current preservation and web-wrapper execution queue.
 - [Future Backlog](./FUTURE_BACKLOG.md): deferred, long-range, or decision-bound work.
+- [Changelog](../../CHANGELOG.md): release notes and update convention for completed preservation
+  work.
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md): repeatable playability and wrapper
   regression checks.
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md): non-playable
