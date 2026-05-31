@@ -42,7 +42,6 @@ Rules:
 
 | Priority | Area          | Item                                                                                  | Status | Validation / Exit Criteria                                                                                                                             |
 | -------- | ------------- | ------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| P1       | Runtime QA    | Add a tiny static smoke-test script for the wrapper.                                  | TODO   | Script checks local static assets and wrapper invariants without a build step; smoke checklist documents when to run it.                               |
 | P2       | Archive Trust | Add an archive note explaining which assets are original, generated, or wrapper-only. | TODO   | Preservation docs distinguish original 2018 files, exported artifacts, later wrapper files, and screenshots so redistribution/review scope is clear.   |
 | P2       | Licensing     | Confirm public-repo licensing posture for bundled GreenSock ActionScript sources.     | TODO   | LICENSE/README notes clearly distinguish original DieAI code, bundled third-party source, and any redistribution constraints discovered during review. |
 
@@ -63,6 +62,7 @@ See [Future Backlog](./FUTURE_BACKLOG.md) for the full parking lot.
 - [Project README](../../README.md)
 - [Live Demo](https://mikechaves.github.io/dieai-flash/)
 - [Modern Ruffle Wrapper](../../index.html)
+- [Static Wrapper Smoke Script](../../scripts/smoke-wrapper.mjs)
 - [Browser Smoke Checklist](./BROWSER_SMOKE_CHECKLIST.md)
 - [Baseline Screenshot QA](../qa/BASELINE_SCREENSHOTS.md)
 - [Story And Screens Transcript](../accessibility/STORY_SCREENS_TRANSCRIPT.md)

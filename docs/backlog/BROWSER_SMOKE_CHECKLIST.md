@@ -2,7 +2,7 @@
 
 > Repeatable smoke checks for the DieAI Ruffle wrapper.
 
-_Current as of: 2026-05-24_
+_Current as of: 2026-05-30_
 
 ---
 
@@ -14,6 +14,17 @@ configuration, GitHub Pages settings, or browser-facing documentation.
 The goal is not full gameplay QA. The goal is to confirm that the preserved Flash build is reachable,
 the wrapper behaves predictably, and visitors get a clear path whether they open the live demo, run the
 repo locally, or accidentally open `index.html` as a local file.
+
+Run the static wrapper smoke script before the manual browser checks whenever the wrapper or bundled
+assets change:
+
+```bash
+node scripts/smoke-wrapper.mjs
+```
+
+The script is intentionally dependency-free. It checks required local assets, local file references,
+the pinned Ruffle and SWF constants, controls, fallback UI text, and the `file://` guard that prevents
+Ruffle from loading before the custom local-server message.
 
 ## Targets
 
@@ -72,6 +83,10 @@ Use browser DevTools or a browser automation request log.
 
 These commands are optional helpers for local verification. Do not commit generated screenshots,
 Playwright traces, or temporary output.
+
+```bash
+node scripts/smoke-wrapper.mjs
+```
 
 ```bash
 python3 -m http.server 8000

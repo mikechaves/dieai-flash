@@ -41,6 +41,13 @@ Do not open `index.html` directly from your file manager. Ruffle cannot run the
 SWF from a `file://` URL because browsers block required runtime features for
 local files.
 
+Run the static wrapper smoke check before browser QA after changing the wrapper
+or bundled assets:
+
+```bash
+node scripts/smoke-wrapper.mjs
+```
+
 ## Project structure
 
 ```text
@@ -52,6 +59,7 @@ dieai-flash/
 ├── com/greensock/          # bundled GreenSock ActionScript dependency
 ├── docs/                   # supporting project documentation
 ├── lib/shoot/              # original ActionScript game source
+├── scripts/                # static validation helpers
 ├── DieAI.fla               # original Flash authoring file
 ├── index.html              # modern Ruffle web wrapper
 ├── LICENSE
