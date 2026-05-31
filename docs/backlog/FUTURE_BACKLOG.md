@@ -23,9 +23,9 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Wrapper And Runtime
 
-- [ ] Vendor the exact Ruffle runtime package files only if CDN reliability, privacy, or
-      self-contained archival-release requirements justify the added runtime footprint and upgrade
-      procedure.
+- [ ] Vendor the exact Ruffle runtime package files only if CDN reliability, privacy, or a
+      self-contained preservation-release requirement justifies the added runtime footprint and
+      upgrade procedure.
 - [ ] Add service-worker caching only if the project needs offline/repeat-load behavior, GitHub
       Pages caching becomes insufficient, or Ruffle is vendored locally; keep the scope limited to
       `assets/DieAI.swf` and committed wrapper images.
@@ -50,13 +50,14 @@ here or in [Active Backlog](./ACTIVE_BACKLOG.md). Otherwise it is context, not w
 
 ## Portfolio And Distribution
 
-- [ ] Add an external portfolio-site link to the case study once the portfolio page is published.
+- [ ] Add an external portfolio-site link to the case study once the portfolio page is published and
+      the active handoff requirements are satisfied.
 - [ ] Publish the first GitHub preservation release bundle using the approval-gated runbook after a
-      release publish pass is explicitly started; include the FLA, SWF, source, wrapper state, docs,
-      the reconciled release inventory, and SHA-256 manifest.
+      release publish pass is explicitly approved; include the FLA, SWF, source, wrapper state, docs,
+      the reconciled release inventory, and SHA-256 manifest from the final release commit.
 - [ ] Evaluate submitting the preserved build to Internet Archive or Flashpoint after the GitHub
-      preservation release bundle exists, the final checksum is recorded, target-specific metadata is
-      finalized, and any Flashpoint curation package passes local testing.
+      preservation release bundle exists, the final checksum is recorded, target-specific metadata
+      is finalized, and any Flashpoint curation package passes local testing.
 
 ## Strategic Framing
 

@@ -40,13 +40,18 @@ Rules:
 
 ## Active Workboard
 
-No active work is selected right now.
+The current active queue focuses on unblocking a future preservation release without changing the
+preserved SWF, creating a tag, uploading release assets, or starting remaster work.
 
-The 2026-05-31 live browser smoke pass, preservation case-study refresh, and archive release
-inventory reconciliation are complete and linked below. The remaining future backlog items are gated
-by Adobe Animate access, explicit release-publish approval, external archive prerequisites, physical
-controller hardware, runtime-vendoring requirements, or an explicit remaster decision, so they should
-stay parked until one of those gates is satisfied.
+| Priority | Area                       | Item                                                                            | Status | Validation / Exit Criteria                                                                                                                                                       |
+| -------- | -------------------------- | ------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P1       | Preservation/Rebuild       | Run the Adobe Animate scratch-publish worksheet.                                | TODO   | Worksheet records Animate version, FLA open result, publish settings comparison, scratch output sizes/hashes/warnings, scratch SWF browser-smoke evidence, and clean git state.   |
+| P1       | Release/Packaging          | Refresh the preservation release bundle dry run from current `main`.            | TODO   | Dry-run evidence records the current commit, bundle inventory, file count, manifest count, zip size, archive SHA-256, `SHA256SUMS.txt` verification, and zip integrity result.   |
+| P1       | Release/Packaging          | Prepare the first GitHub Release approval packet without publishing.            | TODO   | Approval checkpoint values are ready for review: proposed tag/title, release commit, bundle path, file count, manifest count, archive size, archive hash, and no tag/release made. |
+| P1       | Runtime/Distribution       | Decide whether the first preservation release must be self-contained for Ruffle. | TODO   | Runtime/release docs state whether the pinned CDN wrapper remains acceptable for the first release or vendoring must happen before publishing.                                    |
+| P1       | External Archive Readiness | Prepare Internet Archive pre-upload metadata against the reconciled inventory.  | TODO   | External readiness notes contain final-release placeholders, rights text, file list expectations, collection/mediatype questions, and blockers without creating an upload.        |
+| P1       | External Archive Readiness | Shape the Flashpoint curation preflight plan.                                   | TODO   | Readiness notes define duplicate search, curation package layout, launch-command decision, local test path, and blockers without creating or submitting a curation.              |
+| P2       | Portfolio/Presentation     | Define the portfolio-page handoff for the future external case-study link.      | TODO   | Case-study or backlog docs state the required published URL, link placement, and validation needed before adding an external portfolio-site link.                                |
 
 ## Deferred
 
